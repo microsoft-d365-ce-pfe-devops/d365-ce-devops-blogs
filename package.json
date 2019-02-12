@@ -1,0 +1,14 @@
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "husky": "^1.3.1",
+    "markdownlint": "^0.12.0",
+    "markdownlint-cli": "^0.13.0"
+  }
+}
