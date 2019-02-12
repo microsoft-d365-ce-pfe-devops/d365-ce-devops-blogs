@@ -1,1 +1,1 @@
-# d365-PFE-Blogs
+# Dynamics 365 PFE Blogs
