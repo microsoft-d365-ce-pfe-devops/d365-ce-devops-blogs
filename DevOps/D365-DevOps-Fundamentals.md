@@ -49,7 +49,7 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
     ##
     Remove-Item nuget.exe   
 ```
-The code above was sourced from the following Microsoft Docs article [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
+*The code above was sourced from the [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget) Microsoft Docs article.
 
 **TODO**
 - Export Contoso University solution
@@ -70,7 +70,7 @@ The code above was sourced from the following Microsoft Docs article [*Download 
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
  [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjU1NDY1ODAsMTM2NDIyMTM2MCwxMD
+eyJoaXN0b3J5IjpbLTE1OTIyNjQ1NzEsMTM2NDIyMTM2MCwxMD
 Q4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3
 NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04OD
 Q3NzUyNjNdfQ==
