@@ -11,7 +11,7 @@ An explanation of what DevOps is and a deeper look into the practices, processes
 
 ## Getting started
 
-In the most basic setup of Dynamics 365 CE development, deployment, and testing is a manual process. We modify, export, and import the solution into some downstream environment, then manually test to ensure there are no issue with solution layering, integrations, etc. That gets old quick, what we really want is to automate as much as is reasonable given some set budget, level of expertise and set of business constraints. The first step we can take is implement the practice of version control for our solutions and automate migrating our solutions between environments. To accomplish this we will be using Azure DevOps.
+The most basic setup of Dynamics 365 CE development, deployment, and testing is a manual process. We modify, export, and import a solution(s) into a downstream environment, then manually test to ensure there are no issues with solution layering, integrations, etc. That gets old quickwhat we really want is to automate as much as is reasonable given some set budget, level of expertise and set of business constraints. The first step we can take is implement the practice of version control for our solutions and automate migrating our solutions between environments. To accomplish this we will be using Azure DevOps.
 
 If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. Once you have setup of the basic environment and have an empty project jump back over here. 
 
@@ -34,7 +34,7 @@ TODO
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MzAwODg5OCwxMDQ4OTI1NzcwLDEyMT
-AxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2
-LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbNjk4NjQ2OTQzLDEwNDg5MjU3NzAsMTIxMD
+E0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYs
+MTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M119
 -->
