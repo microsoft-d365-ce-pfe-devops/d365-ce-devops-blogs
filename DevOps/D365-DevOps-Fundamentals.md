@@ -1,5 +1,5 @@
 
-# Introduction to DevOps for Dynamics 365
+# Introduction to DevOps for Dynamics 365 Customer Engagement
   
 In this blog series, we will explore building out DevOps processes and practices for Dynamics 365 Customer Engagement (CE) by following the growth of our fictional company Contoso University. If you want to learn the
 
@@ -9,21 +9,21 @@ An explanation of what DevOps is and a deeper look into the practices, processes
 
 **Disclaimer**: This is by no means an exhaustive look into DevOps practices and principles. The intent is to take an applied look at how one may approach building out a DevOps practice and evolving their implementation over time. We will be sticking to YAML based build pipelines to build an understanding in the components and technologies used to achieve our goal. YAML pipelines will also allow us to easily submit each lesson into version control and share our examples.
 
-## Getting Started
+## Getting started
 
 In the most basic setup of Dynamics 365 CE development, deployment and testing is a manual process. We modify a solution, export the solution and import that solution into some downstream environment, then manually test to ensure there are no issue with solution layering, integrations, etc. That gets old quick, what we really want is to automate as much as is reasonable given some set budget, level of expertise and set of business constraints. The first step we can take is implement the practice of version control for our solutions; To do this we will be using Azure DevOps.
 
-If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. Once you have setup the basic environment and an empty project jump back over here. 
+If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. Once you have setup of the basic environment and have an empty project jump back over here. 
 
-## Version Control for Solutions
+## Version control for solutions
 Dynamics 365 CE solutions can be version controlled 
 
-## Moving our Solution Between Environments
+## Moving solutions between environments
 
 ## Resources
 
 - https://aka.ms/DevOps
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MjcwNjk3NiwtNTQxNjYwNzQyLC04OD
+eyJoaXN0b3J5IjpbLTgwNDI3OTgwOSwtNTQxNjYwNzQyLC04OD
 Q3NzUyNjNdfQ==
 -->
