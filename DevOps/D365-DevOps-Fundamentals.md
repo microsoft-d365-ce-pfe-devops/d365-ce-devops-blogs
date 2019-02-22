@@ -17,7 +17,7 @@ If you are unfamiliar with Azure DevOps and need to setup a new account please s
 
 ## Version control for solutions
 Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). The tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog we will include this in our automation process, for now let's learn the basics.
-
+What does solution packager do? Essentially the tool takes our solution zip file and breaks it down into logical chunks, e.g. Entities, webr 
 
 TODO
 - How to download PowerShell/other
@@ -34,7 +34,7 @@ TODO
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NTA1MzMzNiwtNjI2MzcyNzc4LDc0MD
-A0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQy
-LC04ODQ3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbNzQ2NjYzODY0LC02MjYzNzI3NzgsNzQwMD
+Q3ODc0LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIs
+LTg4NDc3NTI2M119
 -->
