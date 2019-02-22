@@ -23,7 +23,7 @@ What does solution packager do? Essentially the tool takes our solution zip file
 ### Download solution packager
 To get started we will need to download a copy of the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) locally, which includes Solution Packager. 
 
-**Steps to download solution packager**
+**Steps to download**
 1. Open a PowerShell Terminal
 2. Navigate to the directory that you want the tools downloaded to. Note that the code below will create the folder structure *Tools\CoreTools* in the current directory
 3. Copy & paste the code below into the terminal or new script window if using PowerShell ISE and run the script.
@@ -70,7 +70,7 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
  [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTIyNjQ1NzEsMTM2NDIyMTM2MCwxMD
+eyJoaXN0b3J5IjpbLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMD
 Q4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3
 NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04OD
 Q3NzUyNjNdfQ==
