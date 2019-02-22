@@ -1,7 +1,9 @@
 
 # Introduction to DevOps for Dynamics 365 Customer Engagement
   
-In this blog series, we will explore building out DevOps processes and practices for Dynamics 365 Customer Engagement (CE) by following the growth of our fictional company Contoso University. 
+In this blog series, we will explore building out DevOps processes and practices for Dynamics 365 Customer Engagement *[CE]:Customer Engagement by following the growth of our fictional company Contoso University. 
+
+*[HTML]: HyperText Markup Language
 
 An explanation of what DevOps is and a deeper look into the practices, processes, and principles as they apply more broadly can be found at [aka.ms/DevOps](https://aka.ms/Devops). For quick reference, we'll just include a note on what DevOps is before we move on...
 
@@ -70,8 +72,8 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
  [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMD
-Q4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3
-NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04OD
-Q3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbLTExMzczMzUyMDQsLTIwNTUxNDg4MTQsMT
+M2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2Mzcy
+Nzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNT
+QxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
 -->
