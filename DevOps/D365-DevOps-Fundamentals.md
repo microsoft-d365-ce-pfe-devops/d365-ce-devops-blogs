@@ -21,7 +21,27 @@ Dynamics 365 CE solutions can be version controlled using [Solution Packager](ht
 What does solution packager do? Essentially the tool takes our solution zip file and breaks it down into logical chunks, e.g. Entities, web resources and plugins. 
 
 TODO
-- How to download PowerShell/other
+
+    $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
+    $targetNugetExe = ".\nuget.exe"
+    Remove-Item .\Tools -Force -Recurse -ErrorAction Ignore
+    Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe
+    Set-Alias nuget $targetNugetExe -Scope Global -Verbose
+    
+    ##
+    ##Download CoreTools
+    ##
+    ./nuget install  Microsoft.CrmSdk.CoreTools -O .\Tools
+    md .\Tools\CoreTools
+    $coreToolsFolder = Get-ChildItem ./Tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.CoreTools.'}
+    move .\Tools\$coreToolsFolder\content\bin\coretools\*.* .\Tools\CoreTools
+    Remove-Item .\Tools\$coreToolsFolder -Force -Recurse
+    
+    ##
+    ##Remove NuGet.exe
+    ##
+    Remove-Item nuget.exe   
+
 - Command to unpack
 - Checking in to version control
 
@@ -35,7 +55,8 @@ TODO
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMT
-AxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2
-LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbLTE1OTc1ODUxNTMsMTM2NDIyMTM2MCwxMD
+Q4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3
+NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04OD
+Q3NzUyNjNdfQ==
 -->
