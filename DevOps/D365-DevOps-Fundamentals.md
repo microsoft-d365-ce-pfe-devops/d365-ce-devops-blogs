@@ -57,7 +57,10 @@ The code above was sourced from the following Microsoft Docs article [*Download 
 
 ## Moving solutions between environments
 **TODO**
--
+- Create new YAML script
+- Build YAML and in pieces to document purpose of each step
+- Demonstrate working version
+- Links to GitHub repo
 ## Resources
 
 - https://aka.ms/DevOps
@@ -66,8 +69,8 @@ The code above was sourced from the following Microsoft Docs article [*Download 
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
  [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDc5MzMxNzksMTM2NDIyMTM2MCwxMD
-Q4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3
-NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04OD
-Q3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbMTY2MjMzNjY5MCwxMzY0MjIxMzYwLDEwND
+g5MjU3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0
+LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4ND
+c3NTI2M119
 -->
