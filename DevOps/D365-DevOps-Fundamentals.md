@@ -23,7 +23,10 @@ Dynamics 365 CE solutions can be version controlled
 ## Resources
 
 - https://aka.ms/DevOps
+- [What is DevOps?](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-devops)
+- [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNDI3OTgwOSwtNTQxNjYwNzQyLC04OD
-Q3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4ND
+c3NTI2M119
 -->
