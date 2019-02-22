@@ -11,16 +11,18 @@ An explanation of what DevOps is and a deeper look into the practices, processes
 
 ## Getting Started
 
-In the most basic setup of Dynamics 365 CE development, deployment and testing is a manual process. We modify a solution, export the solution and import that solution into some downstream environment, then manually test to ensure there are no issue with solution layering, integrations, etc. That gets old quick, what we really want is to automate as much as is reasonable given some set budget, level of expertise and set of business constraints. The first step we can take is implement the practice of version control for our solutions.
+In the most basic setup of Dynamics 365 CE development, deployment and testing is a manual process. We modify a solution, export the solution and import that solution into some downstream environment, then manually test to ensure there are no issue with solution layering, integrations, etc. That gets old quick, what we really want is to automate as much as is reasonable given some set budget, level of expertise and set of business constraints. The first step we can take is implement the practice of version control for our solutions; To do this we will be using Azure DevOps.
 
-## Setup an Azure D
+## Setup Azure DevOps 
 
 ## Version Control for Solutions
 Dynamics 365 CE solutions can be version controlled 
+
+## Moving our Solution Between Environments
 
 ## Resources
 
 - https://aka.ms/DevOps
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4MzkxNDkzOSwtODg0Nzc1MjYzXX0=
+eyJoaXN0b3J5IjpbLTE1NTg2NTYwMTQsLTg4NDc3NTI2M119
 -->
