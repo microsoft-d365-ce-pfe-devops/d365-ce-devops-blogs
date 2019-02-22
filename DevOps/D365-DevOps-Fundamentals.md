@@ -20,7 +20,7 @@ Dynamics 365 CE solutions can be version controlled using [Solution Packager](ht
 
 What does solution packager do? Essentially the tool takes our solution zip file and breaks it down into logical chunks, e.g. Entities, web resources and plugins. 
 
-Download a copy of the Core Tools locally which includes Solution Packager using the example code below from a PowerShell terminal. Code sourced from the follwoing https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget 
+Download a copy of the Core Tools locally which includes Solution Packager using the example code below from a PowerShell terminal. Code sourced from the following article [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
 ```PowerShell
     $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
     $targetNugetExe = ".\nuget.exe"
@@ -53,10 +53,10 @@ Download a copy of the Core Tools locally which includes Solution Packager using
 - [What is DevOps?](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-devops)
 - [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops)
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
-
+ [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNjU0MDcxMiwxMzY0MjIxMzYwLDEwND
-g5MjU3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0
-LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4ND
-c3NTI2M119
+eyJoaXN0b3J5IjpbLTEwNjc5NDI4ODQsMTM2NDIyMTM2MCwxMD
+Q4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3
+NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04OD
+Q3NzUyNjNdfQ==
 -->
