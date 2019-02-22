@@ -3,7 +3,7 @@
   
 In this blog series, we will explore building out DevOps processes and practices for Dynamics 365 Customer Engagement (CE) by following the growth of our fictional company Contoso University. If you want to learn the
 
-An explanation of what DevOps is and a deeper look into the practices, processes, and principles as they apply more broadly can be found at [aka.ms/DevOps](https://aka.ms/Devops). For quick reference, we'll just include a quick note on what DevOps is before we move on...
+An explanation of what DevOps is and a deeper look into the practices, processes, and principles as they apply more broadly can be found at [aka.ms/DevOps](https://aka.ms/Devops). For quick reference, we'll just include a note on what DevOps is before we move on...
 
 >DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. The contraction of “Dev” and “Ops” refers to replacing siloed Development and Operations to create multidisciplinary teams that now work together with shared and efficient practices and tools. Essential DevOps practices include agile planning, continuous integration, continuous delivery, and monitoring of applications. (Sam Guckenheimer, [What is DevOps?](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-devops))
 
@@ -19,5 +19,5 @@ In the most basic setup of Dynamics 365 CE development, deployment and testing i
 
 - https://aka.ms/DevOps
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NDc3NTI2M119
+eyJoaXN0b3J5IjpbMTY3NzQ5NzM1OCwtODg0Nzc1MjYzXX0=
 -->
