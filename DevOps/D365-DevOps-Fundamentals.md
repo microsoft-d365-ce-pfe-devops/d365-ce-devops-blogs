@@ -11,9 +11,9 @@ An explanation of what DevOps is and a deeper look into the practices, processes
 
 ## Getting started
 
-The most basic setup of Dynamics 365 CE development, deployment, and testing is a manual process. We modify, export, and import a solution(s) into a downstream environment, then manually test to ensure there are no issues with solution layering, integrations, etc. That gets old quickwhat we really want is to automate as much as is reasonable given some set budget, level of expertise and set of business constraints. The first step we can take is implement the practice of version control for our solutions and automate migrating our solutions between environments. To accomplish this we will be using Azure DevOps.
+The most basic setup of Dynamics 365 CE development, deployment, and testing is a manual process. We modify, export, and import a solution(s) into a downstream environment, then manually test to ensure there are no issues with solution layering, integrations, etc. That gets old quick; what we really want is to automate as much as is reasonable given some set budget, level of expertise and business constraints. The first step we can take is to implement the practice of version control for our solutions and automate migration between environments. To accomplish this we will be using Azure DevOps.
 
-If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. Once you have setup of the basic environment and have an empty project jump back over here. 
+If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. Once you have setup of the basic environment and have an empty project jump back to this point in the blog. 
 
 ## Version control for solutions
 Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). The tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog we will include this in our automation process, for now let's learn the basics.
@@ -34,7 +34,7 @@ TODO
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk4NjQ2OTQzLDEwNDg5MjU3NzAsMTIxMD
-E0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYs
-MTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M119
+eyJoaXN0b3J5IjpbLTgwMDAwOTAzOSwxMDQ4OTI1NzcwLDEyMT
+AxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2
+LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
 -->
