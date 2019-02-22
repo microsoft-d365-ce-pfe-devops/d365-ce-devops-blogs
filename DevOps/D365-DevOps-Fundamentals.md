@@ -21,8 +21,9 @@ Dynamics 365 CE solutions can be version controlled using [Solution Packager](ht
 What does solution packager do? Essentially the tool takes our solution zip file and breaks it down into logical chunks, e.g. Entities, web resources and plugins. An unpacked solution can be version controlled far at a more granular level than a solution zip file so make it a good practice to always unpack solutions before committing them to your repository.  
 
 ### Download Solution Packager
-To get started we will need to download a copy of the Dynamics 365 CE Core Tools Nuget package locally which includes Solution Packager using the example code below from a PowerShell terminal. 
+To get started we will need to download a copy of the Dynamics 365 CE Core Tools Nuget package locally, which includes Solution Packager. 
 
+**Steps to download solution packager**
 1. Open a PowerShell Terminal
 2. Navigate to the directory that you want the tools downloaded to. Note that the code below will create the folder structure *Tools\CoreTools* in the current directory
 3. Copy & paste the code below into the terminal or new script window if using PowerShell ISE and run the script.
@@ -69,8 +70,8 @@ The code above was sourced from the following Microsoft Docs article [*Download 
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
  [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyOTY2NDQ4NSwxMzY0MjIxMzYwLDEwND
-g5MjU3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0
-LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4ND
-c3NTI2M119
+eyJoaXN0b3J5IjpbOTgxOTI1ODU1LDEzNjQyMjEzNjAsMTA0OD
+kyNTc3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQs
+LTMwODM1Nzc1NiwxOTUxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nz
+c1MjYzXX0=
 -->
