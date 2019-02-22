@@ -18,9 +18,9 @@ If you are unfamiliar with Azure DevOps and need to setup a new account please s
 ## Version control for solutions
 Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog we will include this in our automation process, for now let's learn the basics.
 
-What does solution packager do? Essentially the tool takes our solution zip file and breaks it down into logical chunks, e.g. Entities, web resources and plugins. An unpacked solution can be version controlled far at a more granular level than a solution zip file so make it a good practice to always unpack  
+What does solution packager do? Essentially the tool takes our solution zip file and breaks it down into logical chunks, e.g. Entities, web resources and plugins. An unpacked solution can be version controlled far at a more granular level than a solution zip file so make it a good practice to always unpack solutions before committing them to your repository.  
 
-Download a copy of the Core Tools locally which includes Solution Packager using the example code below from a PowerShell terminal. Code sourced from the following article [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
+To get started we will need to download a copy of the Dynamics 365 CE Core Tools Nuget package locally which includes Solution Packager using the example code below from a PowerShell terminal. Code sourced from the following article [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
 ```PowerShell
     $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
     $targetNugetExe = ".\nuget.exe"
@@ -54,8 +54,8 @@ Download a copy of the Core Tools locally which includes Solution Packager using
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
  [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDkyODk4NDUsMTM2NDIyMTM2MCwxMD
-Q4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3
-NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04OD
-Q3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbNTkwOTUzOTE5LDEzNjQyMjEzNjAsMTA0OD
+kyNTc3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQs
+LTMwODM1Nzc1NiwxOTUxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nz
+c1MjYzXX0=
 -->
