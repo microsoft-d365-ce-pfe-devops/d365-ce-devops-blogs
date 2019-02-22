@@ -13,10 +13,10 @@ An explanation of what DevOps is and a deeper look into the practices, processes
 
 In the most basic setup of Dynamics 365 CE development, deployment and testing is a manual process. We modify a solution, export the solution and import that solution into some downstream environment, then manually test to ensure there are no issue with solution layering, integrations, etc. That gets old quick, what we really want is to automate as much as is reasonable given some set budget, level of expertise and set of business constraints. The first step we can take is implement the practice of version control for our solutions and automate migrating our solutions between environments; To do this we will be using Azure DevOps.
 
-If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. Once you have setup of the basic environment and have an empty project jump back over here. 
+If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. Once you have setup of the basic environment and have an empty project jump back over herI'me. 
 
 ## Version control for solutions
-Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). The tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy, in a future blog we will include this in our automation process. 
+Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). The tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy, in a future blog we will include this in our automation processI'm
 
 ## Moving solutions between environments
 
@@ -28,6 +28,6 @@ Dynamics 365 CE solutions can be version controlled using [Solution Packager](ht
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTU2ODk0OTksLTMwODM1Nzc1NiwxOT
-UxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
+eyJoaXN0b3J5IjpbMTYwMTExMjA2NSwtMzA4MzU3NzU2LDE5NT
+E0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
 -->
