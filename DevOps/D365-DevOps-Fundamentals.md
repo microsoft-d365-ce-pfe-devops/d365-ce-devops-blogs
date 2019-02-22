@@ -24,7 +24,8 @@ What does solution packager do? Essentially the tool takes our solution zip file
 To get started we will need to download a copy of the Dynamics 365 CE Core Tools Nuget package locally which includes Solution Packager using the example code below from a PowerShell terminal. 
 
 1. Open a PowerShell Terminal
-2. Navigate to the directory where you want the tools downloaded. The code below will create the folder structure tools\
+2. Navigate to the directory where you want the tools downloaded. The code below will create the folder structure *Tools\CoreTools* in the current directory
+3. Copy & paste the code below into the terminal or 
 
 ```PowerShell
     $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
@@ -60,8 +61,8 @@ The code above was sourced from the following Microsoft Docs article [*Download 
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
  [Download tools from NuGet](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODQzMDQ3MDMsMTM2NDIyMTM2MCwxMD
-Q4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3
-NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04OD
-Q3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbMjM3NzU3MjM5LDEzNjQyMjEzNjAsMTA0OD
+kyNTc3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQs
+LTMwODM1Nzc1NiwxOTUxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nz
+c1MjYzXX0=
 -->
