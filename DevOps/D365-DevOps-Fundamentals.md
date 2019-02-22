@@ -16,8 +16,9 @@ The most basic setup of Dynamics 365 CE development, deployment, and testing is 
 If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. Once you have setup of the basic environment and have an empty project jump back to this point in the blog. 
 
 ## Version control for solutions
-Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). The tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog we will include this in our automation process, for now let's learn the basics.
-What does solution packager do? Essentially the tool takes our solution zip file and breaks it down into logical chunks, e.g. Entities, web resources  {{thel
+Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog we will include this in our automation process, for now let's learn the basics.
+
+What does solution packager do? Essentially the tool takes our solution zip file and breaks it down into logical chunks, e.g. Entities, web resources and plugins. 
 
 TODO
 - How to download PowerShell/other
@@ -34,7 +35,7 @@ TODO
 - [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMDAwOTAzOSwxMDQ4OTI1NzcwLDEyMT
+eyJoaXN0b3J5IjpbMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMT
 AxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2
 LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
 -->
