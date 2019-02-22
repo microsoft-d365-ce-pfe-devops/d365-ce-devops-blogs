@@ -16,7 +16,7 @@ In the most basic setup of Dynamics 365 CE development, deployment and testing i
 If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. Once you have setup of the basic environment and have an empty project jump back over here. 
 
 ## Version control for solutions
-Dynamics 365 CE solutions can be version controlled using Solution Packager 
+Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
 
 ## Moving solutions between environments
 
@@ -25,8 +25,9 @@ Dynamics 365 CE solutions can be version controlled using Solution Packager
 - https://aka.ms/DevOps
 - [What is DevOps?](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-devops)
 - [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops)
+- [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg4MDUyNDkyLDE5NTE0NzU3NCwtNTQxNj
-YwNzQyLC04ODQ3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbLTMwODM1Nzc1NiwxOTUxNDc1NzQsLTU0MT
+Y2MDc0MiwtODg0Nzc1MjYzXX0=
 -->
