@@ -59,7 +59,7 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 *The code above was sourced from the [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget) Microsoft Docs article.
 
 ### Unpacking a solution
-Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???} copy of your solution or grab a copy of the Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial).
+Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???}** copy of your solution or grab a copy of the Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial).
 
 ```PowerShell
 .\Tools\CoreTools\SolutionPackager.exe /action extract /zipfile {Path to file}\ContosoUniversity_1_0_0_0.zip /folder {Ouptut path}
@@ -68,6 +68,8 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 ### Checking in to version control
 
 ![AzureRepo-initial (Edited).png](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/AzureRepo-initial%20(Edited).png?raw=true)
+
+There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), 
 
 ## Moving solutions between environments
 **TODO**
@@ -85,10 +87,10 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NTY0NTA2NiwtMTI0MDE0NzQ4MSwtMT
-QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
-Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
-AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
-NTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M1
-19
+eyJoaXN0b3J5IjpbMTYxMTMzNzg0LC0xMjQwMTQ3NDgxLC0xND
+IzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2
+OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MC
+wxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1
+Nzc1NiwxOTUxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX
+0=
 -->
