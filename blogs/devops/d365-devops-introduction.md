@@ -94,8 +94,10 @@ trigger:
 pool:
   vmImage: 'vs2017-win2016'
 ```
+Explanation:
 
-
+ - name - represents build number format. Default build numbers are whole number, we can do better than that.
+ - trigger - 
 
 **TODO**
 - Create new YAML script
@@ -112,10 +114,10 @@ pool:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MDgwMzY0MSwyMDI1MjIwNjY1LC02OT
-kwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMy
-OTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MT
-QsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2
-MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NC
-wtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbNjE1Mzk2NDkwLDIwMjUyMjA2NjUsLTY5OT
+A3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5
+NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0ODgxNC
+wxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02MjYz
+NzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC
+01NDE2NjA3NDIsLTg4NDc3NTI2M119
 -->
