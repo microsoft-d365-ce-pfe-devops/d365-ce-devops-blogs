@@ -51,7 +51,8 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 ```
 *The code above was sourced from the [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget) Microsoft Docs article.
 
-
+### Version solution
+Now that we have Solution Packager downloaded we can work on version 
 - Unpack solution
 - Checking in to version control
 
@@ -71,7 +72,7 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NTUwNTkyMCwxMTQ5MDA2OTczLC0yMD
+eyJoaXN0b3J5IjpbLTgwMDA0NDMxMSwxMTQ5MDA2OTczLC0yMD
 U1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEwMTQ2
 OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1Nzc1NiwxOT
 UxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
