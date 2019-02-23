@@ -11,6 +11,8 @@ An explanation of what DevOps is and a deeper look into the practices, processes
 
 ## Getting started
 
+If you already have an Dynamics 365 CE environment, Azure d
+
 The most basic setup of Dynamics 365 CE development, deployment, and testing is a manual process. We modify, export, and import a solution(s) into a downstream environment, then manually test to ensure there are no issues with solution layering, integrations, etc. That gets old quick; what we really want is to automate as much as is reasonable given some set budget, level of expertise and business constraints. The first step we can take is to implement the practice of version control for our solutions and automate migration between environments. To accomplish this we will be using Azure DevOps.
 
 **What we will need**
@@ -65,7 +67,7 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 ### Checking in to version control
 
-![AzureRepo-initial (Edited).png](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/AzureRepo-initial%20(Edited).png)
+![AzureRepo-initial (Edited).png](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/AzureRepo-initial%20(Edited).png?raw=true)
 
 ## Moving solutions between environments
 **TODO**
@@ -83,9 +85,10 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMT
-E5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUx
-NDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OC
-wtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0
-NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbLTIzMDI5OTM5OCwtMTI0MDE0NzQ4MSwtMT
+QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
+Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
+AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
+NTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M1
+19
 -->
