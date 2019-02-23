@@ -11,15 +11,15 @@ An explanation of what DevOps is and a deeper look into the practices, processes
 
 ## Getting started
 
-If you already have an Dynamics 365 CE environment, Azure DevOps and a solution ready to go skip to [Moving solutions between environments](#moving-solutions-between-environments)
+If you already have an Dynamics 365 CE environment, Azure DevOps and a solution ready to go skip to [Moving solutions between environments](#moving-solutions-between-environments). If you are new to all of this please continue from here. 
 
 The most basic setup of Dynamics 365 CE development, deployment, and testing is a manual process. We modify, export, and import a solution(s) into a downstream environment, then manually test to ensure there are no issues with solution layering, integrations, etc. That gets old quick; what we really want is to automate as much as is reasonable given some set budget, level of expertise and business constraints. The first step we can take is to implement the practice of version control for our solutions and automate migration between environments. To accomplish this we will be using Azure DevOps.
 
 **What we will need**
 
  - Azure Repo
-	 - If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. 
- - [Dynamics 365 CE environment trial](https://trials.dynamics.com/) or follow along using your own environment
+	 - If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation, then come back to this blog.  
+ - [Dynamics 365 CE environment trial](https://trials.dynamics.com/) or follow along using your own environment.
  - Solution Packager
 
 ## Version control for solutions
@@ -85,10 +85,10 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjMyMzQ1OTksLTEyNDAxNDc0ODEsLT
-E0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkw
-MDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nz
-cwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4
-MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNj
-NdfQ==
+eyJoaXN0b3J5IjpbMjEwNjI3ODg2MCwtMTI0MDE0NzQ4MSwtMT
+QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
+Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
+AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
+NTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M1
+19
 -->
