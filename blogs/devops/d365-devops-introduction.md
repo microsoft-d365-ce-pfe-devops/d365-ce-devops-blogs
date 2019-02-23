@@ -22,7 +22,11 @@ The most basic setup of Dynamics 365 CE development, deployment, and testing is 
  - [Dynamics 365 CE environment trial](https://trials.dynamics.com/) or follow along using your own environment.
  - Solution Packager
 
-Asuu
+**Assumptions**
+
+ - Some experience with customizing Dynamics 365 CE (CRM). 
+ - A basic understanding of version control
+
 ## Version control for solutions
 Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog we will include this in our automation process, for now let's learn the basics.
 
@@ -88,10 +92,10 @@ To setup your repository locally you can navigate to the directory on your local
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDY2MDU1NjMsLTEyNDAxNDc0ODEsLT
-E0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkw
-MDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nz
-cwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4
-MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNj
-NdfQ==
+eyJoaXN0b3J5IjpbMTg0ODEwNjY3MSwtMTI0MDE0NzQ4MSwtMT
+QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
+Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
+AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
+NTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M1
+19
 -->
