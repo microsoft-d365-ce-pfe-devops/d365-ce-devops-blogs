@@ -22,6 +22,7 @@ The most basic setup of Dynamics 365 CE development, deployment, and testing is 
  - [Dynamics 365 CE environment trial](https://trials.dynamics.com/) or follow along using your own environment.
  - Solution Packager
 
+Asuu
 ## Version control for solutions
 Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog we will include this in our automation process, for now let's learn the basics.
 
@@ -67,11 +68,9 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 ### Checking in to version control
 
-![AzureRepo-initial (Edited).png](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/AzureRepo-initial%20(Edited).png?raw=true)
+There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series I will show only the initial checkin and expect that you already know how to use Git, will use some tool, or will [learn Git](https://try.github.io/).
 
-There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series I will show only the initial checkin and expect that you already know how to use Git, will use some tool, or will learn Git.
-
-
+To setup your repository locally you can navigate to the directory on your local machine where you want git installed
 
 ## Moving solutions between environments
 **TODO**
@@ -89,10 +88,10 @@ There are a number of tools to make version control easier such as [GitHub Deskt
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMTc1ODI1LC0xMjQwMTQ3NDgxLC0xND
-IzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2
-OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MC
-wxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1
-Nzc1NiwxOTUxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX
-0=
+eyJoaXN0b3J5IjpbLTE5MDY2MDU1NjMsLTEyNDAxNDc0ODEsLT
+E0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkw
+MDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nz
+cwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4
+MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNj
+NdfQ==
 -->
