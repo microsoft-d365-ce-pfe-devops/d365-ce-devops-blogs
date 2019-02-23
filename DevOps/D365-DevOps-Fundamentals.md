@@ -16,11 +16,9 @@ The most basic setup of Dynamics 365 CE development, deployment, and testing is 
 **What we will need**
 
  - Azure Repo
-	 - If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. Once you have setup of the basic environment and have an empty project jump back to this point in the blog. 
- - [Dynamics 365 CE environment trial](https://trials.dynamics.com/) or existing environment
+	 - If you are unfamiliar with Azure DevOps and need to setup a new account please start with the [Get started guide for Azure Repos](https://docs.microsoft.com/en-us/azure/devops/repos/get-started/?view=azure-devops) documentation. 
+ - [Dynamics 365 CE environment trial](https://trials.dynamics.com/) or follow along using your own environment
  - Solution Packager
-
-
 
 ## Version control for solutions
 Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog we will include this in our automation process, for now let's learn the basics.
@@ -59,7 +57,7 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 *The code above was sourced from the [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget) Microsoft Docs article.
 
 ### Version solution
-Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control
+Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control.
 - Unpack solution
 - Checking in to version control
 
@@ -79,7 +77,7 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NjEzMzg3NCwxMTQ5MDA2OTczLC0yMD
+eyJoaXN0b3J5IjpbLTYyNzczMDY3MiwxMTQ5MDA2OTczLC0yMD
 U1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEwMTQ2
 OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1Nzc1NiwxOT
 UxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
