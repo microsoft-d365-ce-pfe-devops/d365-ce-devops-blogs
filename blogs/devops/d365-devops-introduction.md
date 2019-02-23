@@ -26,7 +26,8 @@ The most basic setup of Dynamics 365 CE development, deployment, and testing is 
 
  - Some experience with customizing Dynamics 365 CE (CRM). 
  - A basic understanding of version control
-	 - There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series it is expected that you know the basics or will [learn Git] (https://try.github.io/) before hand.
+	 - There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series, it is expected that you know the basics or will [learn Git](https://try.github.io/) for version control.
+- Basic PowerShell knowledge or that you can copy/paste. 
 
 
 ## Version control for solutions
@@ -93,7 +94,7 @@ To setup your repository locally you can navigate to the directory on your local
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2Mzc1MDA4OCwtMTI0MDE0NzQ4MSwtMT
+eyJoaXN0b3J5IjpbLTkxNzk2MDMzNCwtMTI0MDE0NzQ4MSwtMT
 QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
 Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
 AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
