@@ -78,13 +78,14 @@ Once unpacked add your new files, commit and push. For this tutorial we are not 
 
 Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following steps:
 
- - Trigger on commit to master
+ - Define name, trigger, and pool on commit to master
  - Download Nuget
  - Download Solution Packager
  - Pack Solution from repository 
  - Create a build artifact (packed solution)
  - Deploy the build artifact to a target Dynamics 365 CE environment
 
+D
 ```YAML
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r) 
 
@@ -98,7 +99,7 @@ Explanation of schema:
 
  - **name** - represents build number format. Default build numbers are whole number, we can do better than that.
  - **trigger** - specific branch to trigger on, if no branch is provided commits to any branch will trigger continuous integration.
- - **Pool** - Essentially the type of OS and tools set you want to have your build run on, in this case Visual Studio 2017 on Windows Server 2016. There are other [available build agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent) as we
+ - **Pool** - Essentially the type of OS and tools set you want to have your build run on. In this case, we are using Visual Studio 2017 on Windows Server 2016, there are other [available build agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent) as well.
 
 **TODO**
 - Create new YAML script
@@ -115,10 +116,10 @@ Explanation of schema:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNTQ5NjU3NiwyMDI1MjIwNjY1LC02OT
-kwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMy
-OTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MT
-QsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2
-MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NC
-wtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbOTQ3NjE2NDUxLDIwMjUyMjA2NjUsLTY5OT
+A3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5
+NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0ODgxNC
+wxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02MjYz
+NzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC
+01NDE2NjA3NDIsLTg4NDc3NTI2M119
 -->
