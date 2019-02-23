@@ -65,16 +65,13 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 *The code above was sourced from the [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget) Microsoft Docs article.
 
 ### Unpacking a solution
-Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???}** copy of your solution or grab a copy of the Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial).
+Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???}** copy of your solution or grab a copy of the unpacked Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial).
 
+Powershell command to unpack Dynamics 365 CE solution:
 ```PowerShell
-.\Tools\CoreTools\SolutionPackager.exe /action extract /zipfile {Path to file}\ContosoUniversity_1_0_0_0.zip /folder {Ouptut path}
+.\Tools\CoreTools\SolutionPackager.exe /action extract /zipfile {Path to file}\ContosoUniversity_1_0_0_0.zip /folder {Path to local }
 ```
 
-### Checking in to version control
-
-
-To setup your repository locally you can navigate to the directory on your local machine where you want git installed
 
 ## Moving solutions between environments
 **TODO**
@@ -92,7 +89,7 @@ To setup your repository locally you can navigate to the directory on your local
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTU2MTM5ODIsLTEyNDAxNDc0ODEsLT
+eyJoaXN0b3J5IjpbLTIxMjQ5MzE4NTQsLTEyNDAxNDc0ODEsLT
 E0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkw
 MDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nz
 cwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4
