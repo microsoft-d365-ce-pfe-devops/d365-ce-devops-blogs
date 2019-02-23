@@ -78,13 +78,24 @@ Once unpacked add your new files, commit and push. For this tutorial we are not 
 
 Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following steps:
 
+ - Trigger on commit to master
  - Download Nuget
  - Download Solution Packager
  - Pack Solution from repository 
  - Create a build artifact (packed solution)
  - Deploy the build artifact to a target Dynamics 365 CE environment
 
+```YAML
+name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
 
+trigger:
+
+- master
+
+pool:
+
+vmImage: 'vs2017-win2016'
+```
 
 **TODO**
 - Create new YAML script
@@ -101,10 +112,10 @@ Now that we have an unpacked solution checked into version control we can work o
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMT
-QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
-Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
-AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
-NTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M1
-19
+eyJoaXN0b3J5IjpbMTIzMDEwMzI4OSwtNjk5MDc4MDkwLC0xMj
+QwMTQ3NDgxLC0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2
+MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNj
+AsMTA0ODkyNTc3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAw
+NDc4NzQsLTMwODM1Nzc1NiwxOTUxNDc1NzQsLTU0MTY2MDc0Mi
+wtODg0Nzc1MjYzXX0=
 -->
