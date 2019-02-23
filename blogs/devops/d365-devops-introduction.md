@@ -26,6 +26,8 @@ The most basic setup of Dynamics 365 CE development, deployment, and testing is 
 
  - Some experience with customizing Dynamics 365 CE (CRM). 
  - A basic understanding of version control
+	 - There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series it is expected that you know the basics or will [learn Git] (https://try.github.io/) before hand.
+
 
 ## Version control for solutions
 Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog we will include this in our automation process, for now let's learn the basics.
@@ -72,7 +74,6 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 ### Checking in to version control
 
-There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series I will show only the initial checkin and expect that you already know how to use Git, will use some tool, or will [learn Git](https://try.github.io/).
 
 To setup your repository locally you can navigate to the directory on your local machine where you want git installed
 
@@ -92,7 +93,7 @@ To setup your repository locally you can navigate to the directory on your local
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg0ODEwNjY3MSwtMTI0MDE0NzQ4MSwtMT
+eyJoaXN0b3J5IjpbMTM2Mzc1MDA4OCwtMTI0MDE0NzQ4MSwtMT
 QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
 Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
 AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
