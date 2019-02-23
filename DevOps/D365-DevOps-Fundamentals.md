@@ -59,13 +59,11 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 ### Unpacking a solution
 Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export an *unmanaged* copy of your solution or grab a copy of the Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial).
 
-
 ```PowerShell
 .\Tools\CoreTools\SolutionPackager.exe /action extract /zipfile {Path to file}\ContosoUniversity_1_0_0_0.zip /folder {Ouptut path}
 ```
 
-
-- Checking in to version control
+## Checking in to version control
 
 ## Moving solutions between environments
 **TODO**
@@ -83,9 +81,9 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMT
-Q5MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODky
-NTc3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLT
-MwODM1Nzc1NiwxOTUxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1
-MjYzXX0=
+eyJoaXN0b3J5IjpbLTUxOTY0ODA3NywtMTE5NTMyOTU0OCwxMD
+Y2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIy
+MTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LD
+c0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYw
+NzQyLC04ODQ3NzUyNjNdfQ==
 -->
