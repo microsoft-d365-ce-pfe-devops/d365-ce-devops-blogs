@@ -89,12 +89,10 @@ Now that we have an unpacked solution checked into version control we can work o
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
 
 trigger:
-
 - master
 
 pool:
-
-vmImage: 'vs2017-win2016'
+  vmImage: 'vs2017-win2016'
 ```
 
 **TODO**
@@ -112,7 +110,7 @@ vmImage: 'vs2017-win2016'
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMDEwMzI4OSwtNjk5MDc4MDkwLC0xMj
+eyJoaXN0b3J5IjpbMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMj
 QwMTQ3NDgxLC0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2
 MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNj
 AsMTA0ODkyNTc3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAw
