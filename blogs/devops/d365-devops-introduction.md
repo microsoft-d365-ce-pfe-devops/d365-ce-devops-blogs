@@ -86,7 +86,7 @@ Now that we have an unpacked solution checked into version control we can work o
  - Deploy the build artifact to a target Dynamics 365 CE environment
 
 ```YAML
-name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
+name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r) 
 
 trigger:
 - master
@@ -94,6 +94,8 @@ trigger:
 pool:
   vmImage: 'vs2017-win2016'
 ```
+
+
 
 **TODO**
 - Create new YAML script
@@ -110,10 +112,10 @@ pool:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMj
-QwMTQ3NDgxLC0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2
-MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNj
-AsMTA0ODkyNTc3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAw
-NDc4NzQsLTMwODM1Nzc1NiwxOTUxNDc1NzQsLTU0MTY2MDc0Mi
-wtODg0Nzc1MjYzXX0=
+eyJoaXN0b3J5IjpbMTc2MDgwMzY0MSwyMDI1MjIwNjY1LC02OT
+kwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMy
+OTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MT
+QsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2
+MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NC
+wtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
 -->
