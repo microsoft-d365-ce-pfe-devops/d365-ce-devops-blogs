@@ -51,8 +51,7 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 ```
 *The code above was sourced from the [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget) Microsoft Docs article.
 
-**TODO**
-- Export Contoso University solution
+
 - Unpack solution
 - Checking in to version control
 
@@ -72,8 +71,8 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0OTAwNjk3MywtMjA1NTE0ODgxNCwxMz
-Y0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02MjYzNzI3
-NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC01ND
-E2NjA3NDIsLTg4NDc3NTI2M119
+eyJoaXN0b3J5IjpbLTk2NTUwNTkyMCwxMTQ5MDA2OTczLC0yMD
+U1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEwMTQ2
+OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1Nzc1NiwxOT
+UxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
 -->
