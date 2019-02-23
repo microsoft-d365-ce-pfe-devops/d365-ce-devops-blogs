@@ -80,8 +80,10 @@ Now that we have an unpacked solution checked into version control we can work o
  - Download Nuget
  - Download Solution Packager
  - Pack Solution from repository 
- - Create a build artifact (packed so
- - Deploy
+ - Create a build artifact (packed solution)
+ - Deploy the build artifact to a target Dynamics 365 CE environment
+
+
 
  
 
@@ -100,10 +102,10 @@ Now that we have an unpacked solution checked into version control we can work o
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIyNjY4MDIzOSwtMTI0MDE0NzQ4MSwtMT
-QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
-Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
-AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
-NTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M1
-19
+eyJoaXN0b3J5IjpbLTE1NDA1OTM0NDYsLTEyNDAxNDc0ODEsLT
+E0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkw
+MDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nz
+cwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4
+MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNj
+NdfQ==
 -->
