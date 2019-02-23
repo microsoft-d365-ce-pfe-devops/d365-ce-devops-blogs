@@ -94,11 +94,11 @@ trigger:
 pool:
   vmImage: 'vs2017-win2016'
 ```
-Explanation:
+Explanation of schema:
 
- - name - represents build number format. Default build numbers are whole number, we can do better than that.
- - trigger - specific branch to trigger on, if no branch is provided commits to any branch will trigger continuous integration.
- - Pool - Essentially the type of 
+ - **name** - represents build number format. Default build numbers are whole number, we can do better than that.
+ - **trigger** - specific branch to trigger on, if no branch is provided commits to any branch will trigger continuous integration.
+ - **Pool** - Essentially the type of OS you want to have your build run on, in this case Visual Studio 2017 on Windows Server 2016.
 
 **TODO**
 - Create new YAML script
@@ -115,10 +115,10 @@ Explanation:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDU5NzAwMzQsMjAyNTIyMDY2NSwtNj
-k5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0NzQsLTExOTUz
-Mjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MTQ4OD
-E0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEwMTQ2OTgsLTYy
-NjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1Nzc1NiwxOTUxNDc1Nz
-QsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
+eyJoaXN0b3J5IjpbODgzMzAyNTM0LDIwMjUyMjA2NjUsLTY5OT
+A3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5
+NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0ODgxNC
+wxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02MjYz
+NzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC
+01NDE2NjA3NDIsLTg4NDc3NTI2M119
 -->
