@@ -75,7 +75,15 @@ Once unpacked add your new files, commit and push. For this tutorial we are not 
 
 ## Moving solutions between environments
 
-Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. 
+Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following steps:
+
+ - Download Nuget
+ - Download Solution Packager
+ - Pack Solution from repository 
+ - Create a build artifact (packed so
+ - Deploy
+
+ 
 
 **TODO**
 - Create new YAML script
@@ -92,7 +100,7 @@ Now that we have an unpacked solution checked into version control we can work o
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1NjE4NDk1NSwtMTI0MDE0NzQ4MSwtMT
+eyJoaXN0b3J5IjpbLTIyNjY4MDIzOSwtMTI0MDE0NzQ4MSwtMT
 QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
 Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
 AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
