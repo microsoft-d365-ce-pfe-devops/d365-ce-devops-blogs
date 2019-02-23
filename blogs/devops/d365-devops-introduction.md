@@ -74,18 +74,18 @@ Powershell command to unpack Dynamics 365 CE solution:
 ```
 Once unpacked add your new files, commit and push. For this tutorial we are not going to worry about version control branching strategies but I tend to prefer [GitHub Flow](https://guides.github.com/introduction/flow/).
 
-## Moving solutions between environments
+## Moving solutions between environments using a YAML script
 
 Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following steps:
 
- - Define name, trigger, and pool on commit to master
+ - Define name, trigger, and pool type
  - Download Nuget
  - Download Solution Packager
  - Pack Solution from repository 
  - Create a build artifact (packed solution)
  - Deploy the build artifact to a target Dynamics 365 CE environment
 
-D
+Define name, trigger and pool type
 ```YAML
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r) 
 
@@ -116,10 +116,10 @@ Explanation of schema:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ3NjE2NDUxLDIwMjUyMjA2NjUsLTY5OT
-A3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5
-NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0ODgxNC
-wxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02MjYz
-NzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC
-01NDE2NjA3NDIsLTg4NDc3NTI2M119
+eyJoaXN0b3J5IjpbLTE3MTQ4MjkzNTgsMjAyNTIyMDY2NSwtNj
+k5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0NzQsLTExOTUz
+Mjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MTQ4OD
+E0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEwMTQ2OTgsLTYy
+NjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1Nzc1NiwxOTUxNDc1Nz
+QsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
 -->
