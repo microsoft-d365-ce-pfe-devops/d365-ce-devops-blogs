@@ -69,7 +69,7 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 ![AzureRepo-initial (Edited).png](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/AzureRepo-initial%20(Edited).png?raw=true)
 
-There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), 
+There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few.
 
 ## Moving solutions between environments
 **TODO**
@@ -87,7 +87,7 @@ There are a number of tools to make version control easier such as [GitHub Deskt
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMTMzNzg0LC0xMjQwMTQ3NDgxLC0xND
+eyJoaXN0b3J5IjpbODIxNjYzODYwLC0xMjQwMTQ3NDgxLC0xND
 IzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2
 OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MC
 wxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1
