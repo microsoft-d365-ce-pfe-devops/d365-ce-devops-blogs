@@ -98,7 +98,7 @@ Explanation of schema:
 
  - **name** - represents build number format. Default build numbers are whole number, we can do better than that.
  - **trigger** - specific branch to trigger on, if no branch is provided commits to any branch will trigger continuous integration.
- - **Pool** - Essentially the type of OS you want to have your build run on, in this case Visual Studio 2017 on Windows Server 2016.
+ - **Pool** - Essentially the type of OS and tools set you want to have your build run on, in this case Visual Studio 2017 on Windows Server 2016. There are other [available build agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent) as we
 
 **TODO**
 - Create new YAML script
@@ -115,10 +115,10 @@ Explanation of schema:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgzMzAyNTM0LDIwMjUyMjA2NjUsLTY5OT
-A3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5
-NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0ODgxNC
-wxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02MjYz
-NzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC
-01NDE2NjA3NDIsLTg4NDc3NTI2M119
+eyJoaXN0b3J5IjpbLTYyNTQ5NjU3NiwyMDI1MjIwNjY1LC02OT
+kwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMy
+OTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MT
+QsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2
+MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NC
+wtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
 -->
