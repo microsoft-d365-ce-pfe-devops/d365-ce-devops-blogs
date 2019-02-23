@@ -36,7 +36,7 @@ What does solution packager do? Essentially the tool takes our solution zip file
 ### Download solution packager
 To get started we will need to download a copy of the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) locally, which includes Solution Packager. 
 
-**Steps to download**
+#### Steps to download
 1. Open a PowerShell Terminal
 2. Navigate to the directory that you want the tools downloaded to. Note that the code below will create the folder structure *Tools\CoreTools* in the current directory
 3. Copy & paste the code below into the terminal or new script window if using PowerShell ISE and run the script.
@@ -65,6 +65,7 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 *The code above was sourced from the [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget) Microsoft Docs article.
 
 ### Unpacking a solution
+
 Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???}** copy of your solution or grab a copy of the unpacked Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial).
 
 Powershell command to unpack Dynamics 365 CE solution:
@@ -85,8 +86,6 @@ Now that we have an unpacked solution checked into version control we can work o
 
 
 
- 
-
 **TODO**
 - Create new YAML script
 - Build YAML and in pieces to document purpose of each step
@@ -102,10 +101,10 @@ Now that we have an unpacked solution checked into version control we can work o
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDA1OTM0NDYsLTEyNDAxNDc0ODEsLT
-E0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkw
-MDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nz
-cwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4
-MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNj
-NdfQ==
+eyJoaXN0b3J5IjpbLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMT
+QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
+Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
+AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
+NTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M1
+19
 -->
