@@ -65,7 +65,7 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 ### Checking in to version control
 
-
+![Azure Repo initialization screen]([AzureRepo-initial (Edited).png](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/AzureRepo-initial%20(Edited).png "AzureRepo-initial (Edited).png")
 
 ## Moving solutions between environments
 **TODO**
@@ -83,9 +83,9 @@ Now that we have Solution Packager downloaded we can work on adding our Contoso 
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMD
-Y2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIy
-MTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LD
-c0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYw
-NzQyLC04ODQ3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbLTE0NDYxMjg4MzEsLTE0MjMyNTQ3NCwtMT
+E5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUx
+NDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OC
+wtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0
+NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
 -->
