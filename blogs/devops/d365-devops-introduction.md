@@ -71,9 +71,11 @@ Powershell command to unpack Dynamics 365 CE solution:
 ```PowerShell
 .\Tools\CoreTools\SolutionPackager.exe /action extract /zipfile {Path to file}\ContosoUniversity_1_0_0_0.zip /folder {Path to local repository}
 ```
-Once unpacked add your new files, commit and push. For this tutorial we are not going to worry about version control branching strategies but I tend to prefer [GitFlow](https://guides.github.com/introduction/flow/).
+Once unpacked add your new files, commit and push. For this tutorial we are not going to worry about version control branching strategies but I tend to prefer [GitHub Flow](https://guides.github.com/introduction/flow/).
 
 ## Moving solutions between environments
+
+Now that we have an unpacked solution checked into version control we can work on automating deployment of that 
 **TODO**
 - Create new YAML script
 - Build YAML and in pieces to document purpose of each step
@@ -89,10 +91,10 @@ Once unpacked add your new files, commit and push. For this tutorial we are not 
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NDUxODA2MCwtMTI0MDE0NzQ4MSwtMT
-QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
-Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
-AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
-NTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M1
-19
+eyJoaXN0b3J5IjpbLTE0MjY5MzY2ODEsLTEyNDAxNDc0ODEsLT
+E0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkw
+MDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nz
+cwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4
+MzU3NzU2LDE5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNj
+NdfQ==
 -->
