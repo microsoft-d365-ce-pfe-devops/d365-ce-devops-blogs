@@ -76,7 +76,7 @@ Once unpacked add your new files, commit and push. For this tutorial we are not 
 
 ## Moving solutions between environments using a YAML script
 
-Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following outlined below. For a deeper look into YAML for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
+Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following outlined below. For a full explanation of YAML  for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
 
 ### Yaml script steps
  - Define name, trigger, and pool type
@@ -127,10 +127,7 @@ displayName: 'Download nuget.exe'
     Remove-Item "tools\\$coreToolsFolder" -Force -Recurse
 displayName: 'Install CoreTools'
 ```
-Explanation of Schema and example code
- - **Steps**
- -  **script**
- -   **displayName**
+
 #### Pack Solution from repository 
 ```YAML
 ```
@@ -155,10 +152,10 @@ Explanation of Schema and example code
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYwODAwMTY0LDU4NzQ3NTg3MSwyMDI1Mj
-IwNjY1LC02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3
-NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLT
-IwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAx
-NDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LD
-E5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbMTcxMTUyNDc4Miw1ODc0NzU4NzEsMjAyNT
+IyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0
+NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC
+0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEw
+MTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1Nzc1Ni
+wxOTUxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
 -->
