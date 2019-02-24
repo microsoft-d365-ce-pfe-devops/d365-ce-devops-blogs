@@ -102,7 +102,7 @@ Explanation of schema:
  - **trigger** - specific branch to trigger on, if no branch is provided commits to any branch will trigger continuous integration.
  - **Pool** - Essentially the type of OS and tools set you want to have your build run on. In this case, we are using Visual Studio 2017 on Windows Server 2016, there are other [available build agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent) as well.
 
-#### Download Solution Packager
+#### Download and install Solution Packager
 Our build agent is provided to us as a blank work space so we will need to download and install the necessary tools to complete our build. To install Solution Packager we will need to download and install Nuget, then install the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools).
  
 ```YAML
@@ -149,11 +149,11 @@ displayName: 'Install CoreTools'
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNT
-g3NDc1ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0
-NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OT
-QsMTE0OTAwNjk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEw
-NDg5MjU3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3OD
-c0LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4
-NDc3NTI2M119
+eyJoaXN0b3J5IjpbOTQxMzcxODUxLC0xMzAyMDc4NDM5LC0yMD
+Y2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02OTkwNzgw
+OTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMyOTU0OC
+wxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MTQsMTM2
+NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNz
+c4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQx
+NjYwNzQyXX0=
 -->
