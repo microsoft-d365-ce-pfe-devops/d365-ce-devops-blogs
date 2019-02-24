@@ -103,7 +103,7 @@ Explanation of schema:
  - **Pool** - Essentially the type of OS and tools set you want to have your build run on. In this case, we are using Visual Studio 2017 on Windows Server 2016, there are other [available build agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent) as well.
 
 #### Download Solution Packager
-Our build agent is provided to us as a blank work space so we will need to download and install the necessary tools to complete our build. To w
+Our build agent is provided to us as a blank work space so we will need to download and install the necessary tools to complete our build. To install Solution Packager we will need to download and install Nuget, then install Dynamics 365 CE Core Tools, 
  
 ```YAML
 steps:
@@ -149,10 +149,10 @@ displayName: 'Install CoreTools'
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY3MTM1NTMzMyw1ODc0NzU4NzEsMjAyNT
-IyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0
-NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC
-0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEw
-MTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1Nzc1Ni
-wxOTUxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
+eyJoaXN0b3J5IjpbLTIwNjY5NjcyMDIsNTg3NDc1ODcxLDIwMj
+UyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1
+NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3My
+wtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIx
+MDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NT
+YsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M119
 -->
