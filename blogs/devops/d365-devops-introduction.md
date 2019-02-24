@@ -88,7 +88,7 @@ Now that we have an unpacked solution checked into version control we can work o
 #### Define name, trigger and pool type
 Our first step will be to setup the basics of our YAML script by defining how we can identify and trigger our build as well as what OS and tool set to use to complete our build.
 ```YAML
-name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r) 
+name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
 
 trigger:
 - master
@@ -114,7 +114,7 @@ steps:
     Invoke-WebRequest `
       -Uri https://dist.nuget.org/win-x86-commandline/latest/nuget.exe `
       -OutFile tools\\nuget.exe
-displayName: 'Download nuget.exe'
+  displayName: 'Download nuget.exe'
 
 - powershell: |
     tools\\nuget.exe install Microsoft.CrmSdk.CoreTools -O tools
@@ -122,14 +122,39 @@ displayName: 'Download nuget.exe'
     $coreToolsFolder = Get-ChildItem tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.CoreTools.'}
     move "tools\\$coreToolsFolder\\content\\bin\\coretools\\*.*" "tools\\CoreTools"
     Remove-Item "tools\\$coreToolsFolder" -Force -Recurse
-displayName: 'Install CoreTools'
+  displayName: 'Install CoreTools'
 ```
 
 #### Pack Solution from repository 
 ```YAML
+- powershell: |
+    Start-Process tools/CoreTools/SolutionPackager.exe `
+    -ArgumentList `
+      "/action: Pack", `
+      "/zipfile: packedSolution\$env:SolutionName.zip", `
+      "/folder: $env:SolutionPath", `
+      "/packagetype: Managed" `
+    -Wait `
+    -NoNewWindow
+  env:
+    SolutionPath: $(Solution.Path)
+    SolutionName: $(Solution.Name)
+  displayName: 'Solution Packager: pack solution'
+
 ```
 #### Create a build artifact (packed solution)
 ```YAML
+- task: CopyFiles@2
+  inputs:
+    contents: 'packedSolution**\*'
+    targetFolder: $(Build.ArtifactStagingDirectory)
+  displayName: 'Copy packed solution to artifact staging directory'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: drop
+
 ```
 #### Deploy the build artifact to a target Dynamics 365 CE environment
 
@@ -149,11 +174,11 @@ displayName: 'Install CoreTools'
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQxMzcxODUxLC0xMzAyMDc4NDM5LC0yMD
-Y2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02OTkwNzgw
-OTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMyOTU0OC
-wxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MTQsMTM2
-NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNz
-c4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NCwtNTQx
-NjYwNzQyXX0=
+eyJoaXN0b3J5IjpbMTAzMzIyNjAyMSw5NDEzNzE4NTEsLTEzMD
+IwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1ODcxLDIwMjUyMjA2
+NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC
+0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1
+NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Nj
+k4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYsMTk1
+MTQ3NTc0XX0=
 -->
