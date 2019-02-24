@@ -76,8 +76,9 @@ Once unpacked add your new files, commit and push. For this tutorial we are not 
 
 ## Moving solutions between environments using a YAML script
 
-Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following steps:
+Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following outlined below. For a deeper look into YAML for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
 
+### Yaml script steps
  - Define name, trigger, and pool type
  - Download Nuget
  - Download Solution Packager
@@ -85,7 +86,7 @@ Now that we have an unpacked solution checked into version control we can work o
  - Create a build artifact (packed solution)
  - Deploy the build artifact to a target Dynamics 365 CE environment
 
-Define name, trigger and pool type
+#### Define name, trigger and pool type
 ```YAML
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r) 
 
@@ -116,10 +117,10 @@ Explanation of schema:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTQ4MjkzNTgsMjAyNTIyMDY2NSwtNj
-k5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0NzQsLTExOTUz
-Mjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MTQ4OD
-E0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEwMTQ2OTgsLTYy
-NjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1Nzc1NiwxOTUxNDc1Nz
-QsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
+eyJoaXN0b3J5IjpbMTIyMTYzOTkxMywyMDI1MjIwNjY1LC02OT
+kwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMy
+OTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MT
+QsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2
+MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NC
+wtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
 -->
