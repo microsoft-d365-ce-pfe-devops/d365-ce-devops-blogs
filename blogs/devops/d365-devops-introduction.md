@@ -108,7 +108,7 @@ Our build agent is provided to us as a blank work space so we will need to downl
 ```YAML
 ```
 #### Download Solution Packager
-In the following sample code we begin our actual build script by creating a tools dir
+In the following sample code we begin our actual build script by creating a tools directory, downlaoding the latest version of Nuget, and installing Dynamics  365 CE Core Tools. To keep things clean and in logical order we wi
 ```YAML
 steps:
 - script: md tools
@@ -153,7 +153,7 @@ displayName: 'Install CoreTools'
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEzMTM4OTA0NCw1ODc0NzU4NzEsMjAyNT
+eyJoaXN0b3J5IjpbMTY5NzU3MTgyNyw1ODc0NzU4NzEsMjAyNT
 IyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0
 NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC
 0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEw
