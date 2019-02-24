@@ -127,6 +127,10 @@ displayName: 'Download nuget.exe'
     Remove-Item "tools\\$coreToolsFolder" -Force -Recurse
 displayName: 'Install CoreTools'
 ```
+Explanation of Schema and example code
+ - **Steps**
+ -  **script**
+ -   **displayName**
 #### Pack Solution from repository 
 ```YAML
 ```
@@ -151,10 +155,10 @@ displayName: 'Install CoreTools'
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTA5NjE5MjUsNTg3NDc1ODcxLDIwMj
-UyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1
-NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3My
-wtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIx
-MDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NT
-YsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M119
+eyJoaXN0b3J5IjpbODYwODAwMTY0LDU4NzQ3NTg3MSwyMDI1Mj
+IwNjY1LC02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3
+NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLT
+IwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAx
+NDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LD
+E5NTE0NzU3NCwtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
 -->
