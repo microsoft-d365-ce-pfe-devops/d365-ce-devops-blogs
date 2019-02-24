@@ -76,7 +76,7 @@ Once unpacked add your new files, commit and push. For this tutorial we are not 
 
 ## Moving solutions between environments using a YAML script
 
-Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following outlined below. For a full explanation of YAML  for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
+Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following outlined below. For a full explanation of YAML schema for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
 
 ### Yaml script steps
  - Define name, trigger, and pool type
@@ -108,6 +108,7 @@ Our build agent is provided to us as a blank work space so we will need to downl
 ```YAML
 ```
 #### Download Solution Packager
+In the following sample code we begin our build script 
 ```YAML
 steps:
 - script: md tools
@@ -152,10 +153,10 @@ displayName: 'Install CoreTools'
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMTUyNDc4Miw1ODc0NzU4NzEsMjAyNT
-IyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0
-NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC
-0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEw
-MTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1Nzc1Ni
-wxOTUxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
+eyJoaXN0b3J5IjpbLTIwNTA1MTMwOTEsNTg3NDc1ODcxLDIwMj
+UyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1
+NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3My
+wtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIx
+MDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NT
+YsMTk1MTQ3NTc0LC01NDE2NjA3NDIsLTg4NDc3NTI2M119
 -->
