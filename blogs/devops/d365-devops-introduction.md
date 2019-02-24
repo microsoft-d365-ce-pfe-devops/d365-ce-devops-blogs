@@ -87,6 +87,7 @@ Now that we have an unpacked solution checked into version control we can work o
  - Deploy the build artifact to a target Dynamics 365 CE environment
 
 #### Define name, trigger and pool type
+Our first step will be to setup the basics of 
 ```YAML
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r) 
 
@@ -101,6 +102,13 @@ Explanation of schema:
  - **name** - represents build number format. Default build numbers are whole number, we can do better than that.
  - **trigger** - specific branch to trigger on, if no branch is provided commits to any branch will trigger continuous integration.
  - **Pool** - Essentially the type of OS and tools set you want to have your build run on. In this case, we are using Visual Studio 2017 on Windows Server 2016, there are other [available build agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent) as well.
+
+#### Download Nuget
+#### Download Solution Packager
+#### Pack Solution from repository 
+#### Create a build artifact (packed solution)
+#### Deploy the build artifact to a target Dynamics 365 CE environment
+
 
 **TODO**
 - Create new YAML script
@@ -117,7 +125,7 @@ Explanation of schema:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyMTYzOTkxMywyMDI1MjIwNjY1LC02OT
+eyJoaXN0b3J5IjpbMTQ2NDgxMzMwMiwyMDI1MjIwNjY1LC02OT
 kwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMy
 OTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MT
 QsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2
