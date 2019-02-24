@@ -110,37 +110,21 @@ Our build agent is provided to us as a blank work space so we will need to downl
 #### Download Solution Packager
 ```YAML
 steps:
-
-- script: md tools
-
+    - script: md tools
 displayName: 'Create tools directory'
 
-  
-
 - powershell: |
-
-Invoke-WebRequest `
-
--Uri https://dist.nuget.org/win-x86-commandline/latest/nuget.exe `
-
--OutFile tools\\nuget.exe
-
+    Invoke-WebRequest `
+      -Uri https://dist.nuget.org/win-x86-commandline/latest/nuget.exe `
+      -OutFile tools\\nuget.exe
 displayName: 'Download nuget.exe'
 
-  
-
 - powershell: |
-
-tools\\nuget.exe install Microsoft.CrmSdk.CoreTools -O tools
-
-md "tools\\CoreTools"
-
-$coreToolsFolder = Get-ChildItem tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.CoreTools.'}
-
-move "tools\\$coreToolsFolder\\content\\bin\\coretools\\*.*" "tools\\CoreTools"
-
-Remove-Item "tools\\$coreToolsFolder" -Force -Recurse
-
+    tools\\nuget.exe install Microsoft.CrmSdk.CoreTools -O tools
+    md "tools\\CoreTools"
+    $coreToolsFolder = Get-ChildItem tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.CoreTools.'}
+    move "tools\\$coreToolsFolder\\content\\bin\\coretools\\*.*" "tools\\CoreTools"
+    Remove-Item "tools\\$coreToolsFolder" -Force -Recurse
 displayName: 'Install CoreTools'
 ```
 #### Pack Solution from repository 
@@ -167,10 +151,10 @@ displayName: 'Install CoreTools'
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg3NDc1ODcxLDIwMjUyMjA2NjUsLTY5OT
-A3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5
-NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0ODgxNC
-wxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02MjYz
-NzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC
-01NDE2NjA3NDIsLTg4NDc3NTI2M119
+eyJoaXN0b3J5IjpbLTIwOTc4OTI1Myw1ODc0NzU4NzEsMjAyNT
+IyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0
+NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC
+0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEw
+MTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMwODM1Nzc1Ni
+wxOTUxNDc1NzQsLTU0MTY2MDc0MiwtODg0Nzc1MjYzXX0=
 -->
