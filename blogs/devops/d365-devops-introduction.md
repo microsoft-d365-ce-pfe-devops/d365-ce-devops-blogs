@@ -104,10 +104,51 @@ Explanation of schema:
  - **Pool** - Essentially the type of OS and tools set you want to have your build run on. In this case, we are using Visual Studio 2017 on Windows Server 2016, there are other [available build agents](https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/hosted?view=azure-devops&tabs=yaml#use-a-microsoft-hosted-agent) as well.
 
 #### Download Nuget
-Our build agent is provided to us as a blank work space so we will need to downla
+Our build agent is provided to us as a blank work space so we will need to download and install the necessary tools to complete our build.
+```YAML
+```
 #### Download Solution Packager
+```YAML
+steps:
+
+- script: md tools
+
+displayName: 'Create tools directory'
+
+  
+
+- powershell: |
+
+Invoke-WebRequest `
+
+-Uri https://dist.nuget.org/win-x86-commandline/latest/nuget.exe `
+
+-OutFile tools\\nuget.exe
+
+displayName: 'Download nuget.exe'
+
+  
+
+- powershell: |
+
+tools\\nuget.exe install Microsoft.CrmSdk.CoreTools -O tools
+
+md "tools\\CoreTools"
+
+$coreToolsFolder = Get-ChildItem tools | Where-Object {$_.Name -match 'Microsoft.CrmSdk.CoreTools.'}
+
+move "tools\\$coreToolsFolder\\content\\bin\\coretools\\*.*" "tools\\CoreTools"
+
+Remove-Item "tools\\$coreToolsFolder" -Force -Recurse
+
+displayName: 'Install CoreTools'
+```
 #### Pack Solution from repository 
+```YAML
+```
 #### Create a build artifact (packed solution)
+```YAML
+```
 #### Deploy the build artifact to a target Dynamics 365 CE environment
 
 
@@ -126,10 +167,10 @@ Our build agent is provided to us as a blank work space so we will need to downl
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMDMwNzg3NiwyMDI1MjIwNjY1LC02OT
-kwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMy
-OTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MT
-QsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2
-MzcyNzc4LDc0MDA0Nzg3NCwtMzA4MzU3NzU2LDE5NTE0NzU3NC
-wtNTQxNjYwNzQyLC04ODQ3NzUyNjNdfQ==
+eyJoaXN0b3J5IjpbNTg3NDc1ODcxLDIwMjUyMjA2NjUsLTY5OT
+A3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5
+NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0ODgxNC
+wxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02MjYz
+NzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYsMTk1MTQ3NTc0LC
+01NDE2NjA3NDIsLTg4NDc3NTI2M119
 -->
