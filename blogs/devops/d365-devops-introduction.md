@@ -27,7 +27,7 @@ The most basic workflow of Dynamics 365 CE development, deployment, and testing 
 	 - There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series, it is expected that you know the basics or will [learn Git](https://try.github.io/) for version control.
 
 ## Version control for solutions
-Solutions in Dynamics 365 CE are in essence the way we move our customizations from one environment to another. When exported they are in the form of a zip file that if extracted contains  folders for any custom code you've made an; in addition to,  solutions can be prepared for version control by using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog, we will include this in our automation process, for now let's learn the basics.
+Solutions in Dynamics 365 CE are in essence the way we move our customizations from one environment to another. When exported they are in the form of a zip file that when extracted contains folders for plugins, web resources a you've made and XML files defining the; in addition to,  solutions can be prepared for version control by using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog, we will include this in our automation process, for now let's learn the basics.
 
 ### What does solution packager do? 
 Essentially Solution Packager takes our Dynamics 365 CE exported solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. 
@@ -205,11 +205,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTExNjgxMDEsMTUwNjg1NDE2NCw3MD
-AxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0OTI4
-Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3ODQzOS
-wtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwtNjk5
-MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0NzQsLTExOTUzMj
-k1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MTQ4ODE0
-LDEzNjQyMjEzNjBdfQ==
+eyJoaXN0b3J5IjpbMTI5NDQwNjAxOSwxNTA2ODU0MTY0LDcwMD
+E2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5Mjg3
+OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4NDM5LC
+0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02OTkw
+NzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMyOT
+U0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MTQs
+MTM2NDIyMTM2MF19
 -->
