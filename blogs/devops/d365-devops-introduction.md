@@ -11,7 +11,7 @@ What is DevOps?
 
 If you already have an Dynamics 365 CE environment, Azure DevOps and a solution ready to go skip to [Moving solutions between environments](#moving-solutions-between-environments). If you are new to all of this, please continue from here. 
 
-The most basic workflow of Dynamics 365 CE development, deployment, and functional testing consists primarily of manual processes. We modify, export, and import a solution(s) into a downstream environment, then manually test to ensure there are no issues with solution layering, integrations, etc. That gets old quick, what we really want is to automate as much as is reasonable given some set budget, level of expertise and business constraints. The first step we can take is to implement the practice of version control for our solutions and automate migration between environments. To accomplish this we will be using Azure DevOps .
+The most basic workflow of Dynamics 365 CE development, deployment, and functional testing consists primarily of manual processes. We modify, export, and import a solution(s) into a downstream environment, then manually test to ensure there are no issues with solution layering, integrations, etc. That gets old quick, what we really want is to automate as much as is reasonable given some set budget, level of expertise and business constraints. The first step we can take is to implement the practice of version control for our solutions and automate migration between environments. To accomplish this we will be using Azure DevOps.
 
 **What we will need**
 
@@ -22,12 +22,12 @@ The most basic workflow of Dynamics 365 CE development, deployment, and function
 
 **Assumptions**
 
- - Some experience with customizing Dynamics 365 CE (CRM). 
+ - Some experience with customizing Dynamics 365 CE
  - A basic understanding of version control
 	 - There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series, it is expected that you know the basics or will [learn Git](https://try.github.io/) for version control.
 
 ## Version control for solutions
-Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments; effectively solutions allow us to share the awesomeness we've created. When exported solutions are in the form of a zip file that when extracted contains folders for plugins, web resources, and workflows you've made as well as XML files defining the schema of any customization we have done. In this format, all of our schema is contained in one massive file, consider this as a binary file or distributed package. 
+Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments. Effectively solutions allow us to share the awesomeness we've created with others. When exported, solutions are in the form of a zip file that when extracted contains folders for plugins, web resources, and workflows you've made as well as XML files defining the schema of any customization we have done. In this format, all of our schema is contained in one massive file, consider this as a binary file or distributed package. 
 
 Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution provides far more granularity. This is a great solution for team development as your developers can pack and import a solution from the repository, then export, unpack and commit changes back to the repository. For more on the benefits of using solution packager check out the article [*Use source control with solution files*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-source-control-solution-files) on Microsoft Docs. 
 
@@ -195,11 +195,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MjcwODcxNiwtMjEwNjQ4NDczNiwtNz
-Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
-MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
-cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
-Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4ND
-M5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02
-OTkwNzgwOTBdfQ==
+eyJoaXN0b3J5IjpbLTEwMjI3MTA4NzUsLTIxMDY0ODQ3MzYsLT
+c0OTg1NzU2OSwxNDE4ODU1NTMwLDE4MDY3MTAwNzYsLTE2MDQy
+OTIxODksMTE0MzM4NjA1OSwxMjgyMTAzMzMsMTUwNjg1NDE2NC
+w3MDAxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0
+OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3OD
+QzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwt
+Njk5MDc4MDkwXX0=
 -->
