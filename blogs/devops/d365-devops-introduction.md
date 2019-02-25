@@ -83,7 +83,7 @@ Now that we have an unpacked solution checked into version control we can work o
  - [Download and install Solution Packager](#download-and-install-solution-packager)
  - [Pack solution from repository](#pack-solution-from-repository) 
  - [Create a build artifact](#create-a-build-artifact ) 
- - [Deploy the build artifact to a target Dynamics 365 CE environment](#deploy-the-build-artifact-to-a-target-dynamics-365-ce environment)
+ - [Deploy the build artifact to a target Dynamics 365 CE environment](#deploy-the-build-artifact-to-a-target-dynamics-365-ce-environment)
 
 #### Define name, trigger, and pool type
 Our first step will be to setup the basics of our YAML script by defining how we can identify and trigger our build as well as what OS and tool set to use to complete our build.
@@ -126,6 +126,7 @@ steps:
 ```
 
 #### Pack Solution from repository 
+While our extracted solution is ideal for version control it's not going to help us with importing our solution into downstream environments. We will need to pack the solution up, essentially reversing the extraction process a
 ```YAML
 - powershell: |
     Start-Process tools/CoreTools/SolutionPackager.exe `
@@ -174,7 +175,7 @@ steps:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDY5OTEzNTgsMTAzMzIyNjAyMSw5ND
+eyJoaXN0b3J5IjpbLTEwNTk2NDk1NTksMTAzMzIyNjAyMSw5ND
 EzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1
 ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MS
 wtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0
