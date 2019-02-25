@@ -40,21 +40,7 @@ Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-
  - soluitons.xml
 
 #### Example extracted solution directory structure
- - AppModules
- - AppModuleSiteMaps
- - Entities
-	 - Accounts
-	 - Contacts
-	 - etc.
-- InteractionCentricDashboards
-- OptionSets
-- Other
-- PluginAssemblies
-- Roles
-- SdkMessageProcessingSteps
-- Templates
-- WebResources
-- Workflows
+ext-solution-dir-structure.png
 
 ### Download solution packager
 To get started we will need to download a copy of the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) locally, which includes Solution Packager. 
@@ -212,11 +198,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0MzM4NjA1OSwxMjgyMTAzMzMsMTUwNj
-g1NDE2NCw3MDAxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIz
-OTgsLTM0OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMT
-MwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIy
-MDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0Nz
-QsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC0y
-MDU1MTQ4ODE0XX0=
+eyJoaXN0b3J5IjpbLTE2MDQyOTIxODksMTE0MzM4NjA1OSwxMj
+gyMTAzMzMsMTUwNjg1NDE2NCw3MDAxNjMzMzksLTE5NDc2ODY4
+NzksLTEzNjk5OTIzOTgsLTM0OTI4Nzk0MiwxMDMzMjI2MDIxLD
+k0MTM3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0
+NzU4NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3ND
+gxLC0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwx
+MTQ5MDA2OTczXX0=
 -->
