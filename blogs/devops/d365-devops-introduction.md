@@ -29,15 +29,17 @@ The most basic workflow of Dynamics 365 CE development, deployment, and function
 ## Version control for solutions
 Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments. Effectively solutions allow us to share the awesomeness we've created with others. When exported from an environment solutions are in the form of a zip file. When extracted a solution directory contains folders for plugins, web resources, and any workflows you've made as well as XML files defining the schema of any customization we have done. In this format, all of our schema is contained in one massive file, consider this as a binary file or a tidy package with a fancy bow; in other words, it's not really easy to see whats inside. 
 
-Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). Solution packager essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution provides far more granularity. This is a great solution for team development as your developers can pack and import a solution from the repository, then export, unpack and commit changes back to the repository. For more on the benefits of using solution packager check out the article [*Use source control with solution files*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-source-control-solution-files) on Microsoft Docs. 
-
-**Note:** Solution Packager does not completely remove merge conflicts but does make them easier to manage.
+Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). Solution packager essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution provides far more granularity. 
 
 #### Example zip file directory structure
 ![Example zip file directory structure](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/zip-file-dir-structure.png?raw=true)
 
 #### Example extracted solution directory structure
 ![Example extracted solution directory structure](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/ext-solution-dir-structure.png?raw=true)
+
+Solution Packager is a great solution for team development as your developers can pack and import a solution from your repository, make changes, then export, unpack, and commit changes back to the repository. For more on the benefits of using solution packager check out the article [*Use source control with solution files*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-source-control-solution-files) on Microsoft Docs. 
+
+**Note:** Solution Packager does not completely remove merge conflicts but does make them easier to manage.
 
 ### Download solution packager
 To get started we will need to download a copy of the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) locally, which includes Solution Packager. 
@@ -195,11 +197,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTI5NTQwOTgsLTIxMDY0ODQ3MzYsLT
-c0OTg1NzU2OSwxNDE4ODU1NTMwLDE4MDY3MTAwNzYsLTE2MDQy
-OTIxODksMTE0MzM4NjA1OSwxMjgyMTAzMzMsMTUwNjg1NDE2NC
-w3MDAxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0
-OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3OD
-QzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwt
-Njk5MDc4MDkwXX0=
+eyJoaXN0b3J5IjpbLTU2MTM1OTUwMCwtMjEwNjQ4NDczNiwtNz
+Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
+MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
+cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
+Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4ND
+M5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02
+OTkwNzgwOTBdfQ==
 -->
