@@ -80,11 +80,11 @@ Now that we have Solution Packager downloaded we can work on adding our solution
 ```PowerShell
 .\Tools\CoreTools\SolutionPackager.exe /action extract /zipfile {Path to file}\{solution filename}.zip /folder {Path to local repository}
 ```
-Once unpacked submit the output to . For this tutorial we are not going to worry about version control branching strategies but I tend to prefer [GitHub Flow](https://guides.github.com/introduction/flow/).
+Once unpacked submit the output to version control. 
 
 ## Moving solutions between environments using a YAML script
 
-Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following outlined below. For a full explanation of YAML schema for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
+Now that we have an unpacked solution and have checked it into version control we can work on automating deployment. I tend to follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following outlined below. For a full explanation of YAML schema for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
 
 ### Yaml script steps
  - [Create a new build pipeline](#create-a-new-build-pipeline)
@@ -197,7 +197,7 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTk3MDczMTIsLTIxMDY0ODQ3MzYsLT
+eyJoaXN0b3J5IjpbLTE0Mzk2MjU1MzcsLTIxMDY0ODQ3MzYsLT
 c0OTg1NzU2OSwxNDE4ODU1NTMwLDE4MDY3MTAwNzYsLTE2MDQy
 OTIxODksMTE0MzM4NjA1OSwxMjgyMTAzMzMsMTUwNjg1NDE2NC
 w3MDAxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0
