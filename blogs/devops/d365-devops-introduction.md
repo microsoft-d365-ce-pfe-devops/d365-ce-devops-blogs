@@ -30,7 +30,7 @@ The most basic workflow of Dynamics 365 CE development, deployment, and testing 
 Dynamics 365 CE solutions can be prepared for version control by using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog, we will include this in our automation process, for now let's learn the basics.
 
 ### What does solution packager do? 
-Essentially Solution Packager takes our Dynamics 365 CE exported solution zip file and breaks it out into a logical folder structure that is far more friendly for version control.  An unpacked solution can be version controlled far at a more granular level than a solution zip file so make it a good practice to always unpack solutions before committing them to your repository.  
+Essentially Solution Packager takes our Dynamics 365 CE exported solution zip file and breaks it out into a logical folder structure that is far more friendly for version control.
 
 ### Download solution packager
 To get started we will need to download a copy of the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) locally, which includes Solution Packager. 
@@ -188,7 +188,7 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjAxMzQ2MTksLTEzNjk5OTIzOTgsLT
+eyJoaXN0b3J5IjpbLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLT
 M0OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3
 ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NS
 wtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0NzQsLTEx
