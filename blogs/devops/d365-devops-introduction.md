@@ -84,9 +84,10 @@ Once unpacked submit the output to version control.
 
 ## Moving solutions between environments using a YAML script
 
-Now that we have an unpacked solution and have checked it into version control we can work on automating deployment. I tend to follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following outlined below. For a full explanation of YAML schema for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
+Now that we have an unpacked solution and have checked it into version control we can work on automating deployment. I tend to follow the [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that triggers on commits to the master branch and performs the steps outlined below. For a full explanation of YAML schema for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
 
 ### Yaml script steps
+
  - [Create a new build pipeline](#create-a-new-build-pipeline)
  - [Define name, trigger, and pool type](#define-name-trigger-and-pool-type)
  - [Download and install Solution Packager](#download-and-install-solution-packager)
@@ -197,11 +198,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mzk2MjU1MzcsLTIxMDY0ODQ3MzYsLT
-c0OTg1NzU2OSwxNDE4ODU1NTMwLDE4MDY3MTAwNzYsLTE2MDQy
-OTIxODksMTE0MzM4NjA1OSwxMjgyMTAzMzMsMTUwNjg1NDE2NC
-w3MDAxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0
-OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3OD
-QzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwt
-Njk5MDc4MDkwXX0=
+eyJoaXN0b3J5IjpbLTQxMjIyNDA5NiwtMjEwNjQ4NDczNiwtNz
+Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
+MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
+cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
+Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4ND
+M5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02
+OTkwNzgwOTBdfQ==
 -->
