@@ -86,7 +86,11 @@ Now that we have an unpacked solution checked into version control we can work o
  - [Create a build artifact](#create-a-build-artifact ) 
  - [Deploy the build artifact to a target Dynamics 365 CE environment](#deploy-the-build-artifact-to-a-target-dynamics-365-ce-environment)
 #### Create a new build pipeline
-First and foremost we will need a new build pipeline to start from so let's head
+First and foremost we will need a new build pipeline to start from so let's head over to our Azure DevOps project repository to get this started. 
+
+1. Navigate to your Azure DevOps project repository. For example, *https://dev.azure.com/{username}/D365-CE-DevOps-Tutorial*
+2. Click Pipelines, then click Builds.
+3. 
 #### Define name, trigger, and pool type
 Our second step will be to setup the basics of our YAML script by defining how we can identify and trigger our build as well as what OS and tool set to use to complete our build.
 ```YAML
@@ -148,7 +152,7 @@ While our extracted solution is ideal for version control it's not going to help
 In the code above you will have noticed that there is now and environment variable section (env) that contains two variables *SolutionPath* and *SolutionName*. Both of the variables are defined in our Azure DevOps pipeline as *Solution.Path* and *Solution.Name* and allow us to define the path to our extracted solution within our repository and the desired output name of our solution e.g. *ContosoUniversity.zip*. Simply copying and pasting this script will not work so we will need to manually create theses variables in our pipeline using the steps below.
 
 ##### Steps to create pipeline variables
-1. Navigate to your Azure DevOps repository. For example, *https://dev.azure.com/<username>/D365-CE-DevOps-Tutorial*
+1. Navigate to your Azure DevOps repository. For example, *https://dev.azure.com/{username}/D365-CE-DevOps-Tutorial*
 2. Click Pipelines, then click Builds.
 3. 
 #### Create a build artifact
@@ -183,7 +187,7 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDU5ODg5NTIsMTAzMzIyNjAyMSw5ND
+eyJoaXN0b3J5IjpbLTExMTU5ODYzMzQsMTAzMzIyNjAyMSw5ND
 EzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1
 ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MS
 wtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0
