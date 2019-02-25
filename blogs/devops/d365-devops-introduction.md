@@ -66,7 +66,7 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 
 ### Unpacking a solution
 
-Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???}** copy of your solution or grab a copy of the unpacked Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial).
+Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???}** copy of your solution or grab a copy of the unpacked Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial). Also, to use Azure DevOps you will need to upload the extracted solution to an Azure Repo, GitHub or GitHub Enterprise re
 
 Powershell command to unpack Dynamics 365 CE solution:
 ```PowerShell
@@ -189,11 +189,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE2OTA2Njc0LDEwMzMyMjYwMjEsOTQxMz
-cxODUxLC0xMzAyMDc4NDM5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3
-MSwyMDI1MjIwNjY1LC02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLT
-E0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkw
-MDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nz
-cwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4
-MzU3NzU2XX0=
+eyJoaXN0b3J5IjpbLTEzMTAyNzc0NzQsMTAzMzIyNjAyMSw5ND
+EzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1
+ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MS
+wtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0
+OTAwNjk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5Mj
+U3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0z
+MDgzNTc3NTZdfQ==
 -->
