@@ -27,7 +27,7 @@ The most basic workflow of Dynamics 365 CE development, deployment, and testing 
 	 - There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series, it is expected that you know the basics or will [learn Git](https://try.github.io/) for version control.
 
 ## Version control for solutions
-Dynamics 365 CE solutions can be version controlled using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog we will include this in our automation process, for now let's learn the basics.
+Dynamics 365 CE solutions can be prepared for version control by using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog, we will include this in our automation process, for now let's learn the basics.
 
 What does solution packager do? Essentially the tool takes our solution zip file and breaks it down into logical chunks, e.g. Entities, web resources and plugins. An unpacked solution can be version controlled far at a more granular level than a solution zip file so make it a good practice to always unpack solutions before committing them to your repository.  
 
@@ -187,11 +187,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjk5OTIzOTgsLTM0OTI4Nzk0MiwxMD
-MzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2
-NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC
-0xMjQwMTQ3NDgxLC0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2
-NjA2MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMj
-EzNjAsMTA0ODkyNTc3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3
-NDAwNDc4NzRdfQ==
+eyJoaXN0b3J5IjpbLTIyMjQyNjAyLC0xMzY5OTkyMzk4LC0zND
+kyODc5NDIsMTAzMzIyNjAyMSw5NDEzNzE4NTEsLTEzMDIwNzg0
+MzksLTIwNjY5NjcyMDIsNTg3NDc1ODcxLDIwMjUyMjA2NjUsLT
+Y5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1
+MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0OD
+gxNCwxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02
+MjYzNzI3NzhdfQ==
 -->
