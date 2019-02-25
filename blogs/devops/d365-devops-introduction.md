@@ -146,7 +146,9 @@ While our extracted solution is ideal for version control it's not going to help
 In the code above you will have noticed that there is now and environment variable section (env) that contains two variables *SolutionPath* and *SolutionName*. Both of the variables are defined in our Azure DevOps pipeline as *Solution.Path* and *Solution.Name* and allow us to define the path to our extracted solution within our repository and the desired output name of our solution e.g. *ContosoUniversity.zip*. Simply copying and pasting this script will not work so we will need to manually create theses variables in our pipeline using the steps below.
 
 ##### Steps to create pipeline variables
-1. Navigate to your  
+1. Navigate to your Azure DevOps repository. For example, *https://dev.azure.com/<username>/D365-CE-DevOps-Tutorial*
+2. Click Pipelines, then click Builds.
+3. 
 #### Create a build artifact
 ```YAML
 - task: CopyFiles@2
@@ -179,11 +181,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MDc2NjQxNCwxMDMzMjI2MDIxLDk0MT
-M3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4
-NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC
-0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5
-MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNT
-c3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMw
-ODM1Nzc1Nl19
+eyJoaXN0b3J5IjpbNTI5Nzg0OTM3LDEwMzMyMjYwMjEsOTQxMz
+cxODUxLC0xMzAyMDc4NDM5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3
+MSwyMDI1MjIwNjY1LC02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLT
+E0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkw
+MDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nz
+cwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4
+MzU3NzU2XX0=
 -->
