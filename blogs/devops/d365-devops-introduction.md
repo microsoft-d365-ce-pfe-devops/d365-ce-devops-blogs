@@ -31,7 +31,7 @@ Solutions in Dynamics 365 CE are in essence a package containing any customizati
 
 Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution provides far more granularity. This is a great solution for team development as your developers can pack and import a solution from the repository, then export, unpack and commit changes back to the repository. For more on the benefits of using solution packager check out the article [*Use source control with solution files*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-source-control-solution-files) on Microsoft Docs. 
 
-*Note: Solution Packager does not automatically handle merge conflict resolution.
+**Note:** Solution Packager does not completely remove merge conflicts but does make them easier to manage.
 
 #### Example zip file directory structure
 ![Example zip file directory structure](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/zip-file-dir-structure.png?raw=true)
@@ -195,11 +195,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxODMyMjI1NywtNzQ5ODU3NTY5LDE0MT
-g4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5MjE4OSwxMTQzMzg2
-MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LDcwMDE2MzMzOSwtMT
-k0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5Mjg3OTQyLDEwMzMy
-MjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4NDM5LC0yMDY2OTY3Mj
-AyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02OTkwNzgwOTAsLTEy
-NDAxNDc0ODFdfQ==
+eyJoaXN0b3J5IjpbLTIxMDY0ODQ3MzYsLTc0OTg1NzU2OSwxND
+E4ODU1NTMwLDE4MDY3MTAwNzYsLTE2MDQyOTIxODksMTE0MzM4
+NjA1OSwxMjgyMTAzMzMsMTUwNjg1NDE2NCw3MDAxNjMzMzksLT
+E5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0OTI4Nzk0MiwxMDMz
+MjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2Nz
+IwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0x
+MjQwMTQ3NDgxXX0=
 -->
