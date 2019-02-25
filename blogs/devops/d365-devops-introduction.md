@@ -126,7 +126,8 @@ steps:
 ```
 
 #### Pack Solution from repository 
-While our extracted solution is ideal for version control it's not going to help us with importing our solution into downstream environments. We will need to pack the solution up, essentially reversing the extraction process a
+While our extracted solution is ideal for version control it's not going to help us with importing our solution into downstream environments. We will need to pack the solution up, essentially reversing the extraction to recreate our original zip file.
+
 ```YAML
 - powershell: |
     Start-Process tools/CoreTools/SolutionPackager.exe `
@@ -141,8 +142,8 @@ While our extracted solution is ideal for version control it's not going to help
     SolutionPath: $(Solution.Path)
     SolutionName: $(Solution.Name)
   displayName: 'Solution Packager: pack solution'
-
 ```
+In the code above you will have noticed that there is now and environment variable section (env) that 
 #### Create a build artifact
 ```YAML
 - task: CopyFiles@2
@@ -175,7 +176,7 @@ While our extracted solution is ideal for version control it's not going to help
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTk2NDk1NTksMTAzMzIyNjAyMSw5ND
+eyJoaXN0b3J5IjpbLTE2NDcwNDAyNjEsMTAzMzIyNjAyMSw5ND
 EzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1
 ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MS
 wtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0
