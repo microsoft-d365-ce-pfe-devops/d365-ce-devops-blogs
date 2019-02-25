@@ -94,12 +94,14 @@ Now that we have an unpacked solution and have checked it into version control w
  - [Pack solution from repository](#pack-solution-from-repository) 
  - [Create a build artifact](#create-a-build-artifact ) 
  - [Deploy the build artifact to a target Dynamics 365 CE environment](#deploy-the-build-artifact-to-a-target-dynamics-365-ce-environment)
+ 
 #### Create a new build pipeline
+
 First and foremost we will need a new build pipeline to start from so let's head over to our Azure DevOps project repository to get this started. 
 
 1. Navigate to your Azure DevOps project repository. For example, *https://dev.azure.com/{username}/D365-CE-DevOps-Tutorial*
-2. Click Pipelines, then click Builds.
-3. Click New, then click New Build Pipeline
+2. Click *Pipelines*, then click *Builds*.
+3. Click *New*, then click New Build Pipeline
 4. On the next screen we will select the location of your unpacked solution: Azure Repos, GitHub or GitHub Enterprise. Note that choosing GitHub requires that you authorize Azure DevOps to access the repository, the behavior otherwise is the same in our build pipelines.
 5. 
 #### Define name, trigger, and pool type
@@ -198,7 +200,7 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMjIyNDA5NiwtMjEwNjQ4NDczNiwtNz
+eyJoaXN0b3J5IjpbMTM5Njc3NDQ0NCwtMjEwNjQ4NDczNiwtNz
 Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
 MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
 cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
