@@ -30,7 +30,7 @@ The most basic workflow of Dynamics 365 CE development, deployment, and testing 
 Dynamics 365 CE solutions can be prepared for version control by using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog, we will include this in our automation process, for now let's learn the basics.
 
 ### What does solution packager do? 
-Essentially Solution Packager takes our solution zip file and breaks it down into a logical folder structure that is far easier for us mere mortals to interpret, i.e. A folder for individual Entities and related customization, web resources and plugins. An unpacked solution can be version controlled far at a more granular level than a solution zip file so make it a good practice to always unpack solutions before committing them to your repository.  
+Essentially Solution Packager takes our solution zip file and breaks it out into a logical folder structure that is far easier for us mere mortals to interpret, i.e. A folder for individual Entities and related customization, web resources and plugins. An unpacked solution can be version controlled far at a more granular level than a solution zip file so make it a good practice to always unpack solutions before committing them to your repository.  
 
 ### Download solution packager
 To get started we will need to download a copy of the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) locally, which includes Solution Packager. 
@@ -188,11 +188,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzcyNzc0MzgsLTEzNjk5OTIzOTgsLT
-M0OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3
-ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NS
-wtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0NzQsLTEx
-OTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MT
-Q4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEwMTQ2OTgs
-LTYyNjM3Mjc3OF19
+eyJoaXN0b3J5IjpbMTI4NTA2NzAyMCwtMTM2OTk5MjM5OCwtMz
+Q5Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4
+NDM5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC
+02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5
+NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxND
+g4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwt
+NjI2MzcyNzc4XX0=
 -->
