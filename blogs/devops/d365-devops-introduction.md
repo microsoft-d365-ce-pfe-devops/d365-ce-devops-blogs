@@ -29,7 +29,7 @@ The most basic workflow of Dynamics 365 CE development, deployment, and testing 
 ## Version control for solutions
 Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments; effectively solutions allow us to share the awesomeness we've created. When exported solutions are in the form of a zip file that when extracted contains folders for plugins, web resources, and workflows you've made as well as XML files defining the schema of any customization we have done. In this format, all of our schema is contained in one massive file, consider this as a binary file or distributed package. 
 
-Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution 
+Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution provides far more granularity.
 
 #### Example zip file directory structure
 ![Example zip file directory structure](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/zip-file-dir-structure.png?raw=true)
@@ -193,11 +193,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzY1MzYyNTgsMTgwNjcxMDA3NiwtMT
-YwNDI5MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0
-MTY0LDcwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OC
-wtMzQ5Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAy
-MDc4NDM5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNj
-Y1LC02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwt
-MTE5NTMyOTU0OF19
+eyJoaXN0b3J5IjpbMTQxODg1NTUzMCwxODA2NzEwMDc2LC0xNj
+A0MjkyMTg5LDExNDMzODYwNTksMTI4MjEwMzMzLDE1MDY4NTQx
+NjQsNzAwMTYzMzM5LC0xOTQ3Njg2ODc5LC0xMzY5OTkyMzk4LC
+0zNDkyODc5NDIsMTAzMzIyNjAyMSw5NDEzNzE4NTEsLTEzMDIw
+Nzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1ODcxLDIwMjUyMjA2Nj
+UsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC0x
+MTk1MzI5NTQ4XX0=
 -->
