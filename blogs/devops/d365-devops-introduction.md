@@ -31,11 +31,14 @@ Solutions in Dynamics 365 CE are in essence a package containing any customizati
 
 Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. 
 
-#### Zip file directory structure
+#### Example zip file directory structure
  - PluginAssemblies
  - WebResources
  - Workflows
- - 
+ - [Content_Types].xml
+ - customizations.xml 
+ - soluitons.xml
+
 #### Example extracted solution directory structure
  - AppModules
  - AppModuleSiteMaps
@@ -209,11 +212,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjkyMDM0MjksMTI4MjEwMzMzLDE1MD
-Y4NTQxNjQsNzAwMTYzMzM5LC0xOTQ3Njg2ODc5LC0xMzY5OTky
-Mzk4LC0zNDkyODc5NDIsMTAzMzIyNjAyMSw5NDEzNzE4NTEsLT
-EzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1ODcxLDIwMjUy
-MjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1ND
-c0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3Mywt
-MjA1NTE0ODgxNF19
+eyJoaXN0b3J5IjpbMTE0MzM4NjA1OSwxMjgyMTAzMzMsMTUwNj
+g1NDE2NCw3MDAxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIz
+OTgsLTM0OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMT
+MwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIy
+MDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0Nz
+QsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC0y
+MDU1MTQ4ODE0XX0=
 -->
