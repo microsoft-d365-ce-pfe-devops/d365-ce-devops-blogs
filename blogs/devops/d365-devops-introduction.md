@@ -103,7 +103,8 @@ First and foremost we will need a new build pipeline to start from so let's head
 2. Click *Pipelines*, then click *Builds*.
 3. Click *New*, then click *New Build Pipeline*
 4. On the next screen we will select the location of your unpacked solution: Azure Repos, GitHub or GitHub Enterprise. Note that choosing GitHub requires that you authorize Azure DevOps to access the repository, the behavior otherwise is the same in our build pipelines.
-5. Select 
+5. Select a repository
+6. Configure pipeline using the starter template
 
 ![Example pipeline setup using GitHub repo](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/create-new-build-pipeline.gif?raw=true)
 #### Define name, trigger, and pool type
@@ -202,11 +203,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MjIwMTAzOSwtMjEwNjQ4NDczNiwtNz
-Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
-MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
-cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
-Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4ND
-M5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02
-OTkwNzgwOTBdfQ==
+eyJoaXN0b3J5IjpbLTE2NTcyMzE3MTAsLTIxMDY0ODQ3MzYsLT
+c0OTg1NzU2OSwxNDE4ODU1NTMwLDE4MDY3MTAwNzYsLTE2MDQy
+OTIxODksMTE0MzM4NjA1OSwxMjgyMTAzMzMsMTUwNjg1NDE2NC
+w3MDAxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0
+OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3OD
+QzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwt
+Njk5MDc4MDkwXX0=
 -->
