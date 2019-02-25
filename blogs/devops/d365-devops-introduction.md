@@ -82,8 +82,8 @@ Now that we have an unpacked solution checked into version control we can work o
  - [Define name, trigger, and pool type](#define-name-trigger-and-pool-type)
  - [Download and install Solution Packager](#download-and-install-solution-packager)
  - [Pack solution from repository](#pack-solution-from-repository) 
- - Create a build artifact (packed solution)
- - Deploy the build artifact to a target Dynamics 365 CE environment
+ - [Create a build artifact](#create-a-build-artifact ) 
+ - [Deploy the build artifact to a target Dynamics 365 CE environment](#deploy-the-build-artifact-to-a-target-dynamics-365-ce environment)
 
 #### Define name, trigger, and pool type
 Our first step will be to setup the basics of our YAML script by defining how we can identify and trigger our build as well as what OS and tool set to use to complete our build.
@@ -142,7 +142,7 @@ steps:
   displayName: 'Solution Packager: pack solution'
 
 ```
-#### Create a build artifact (packed solution)
+#### Create a build artifact
 ```YAML
 - task: CopyFiles@2
   inputs:
@@ -174,11 +174,11 @@ steps:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NDc5ODc3NSwxMDMzMjI2MDIxLDk0MT
-M3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4
-NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC
-0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5
-MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNT
-c3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMw
-ODM1Nzc1Nl19
+eyJoaXN0b3J5IjpbLTE5NDY5OTEzNTgsMTAzMzIyNjAyMSw5ND
+EzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1
+ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MS
+wtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0
+OTAwNjk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5Mj
+U3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0z
+MDgzNTc3NTZdfQ==
 -->
