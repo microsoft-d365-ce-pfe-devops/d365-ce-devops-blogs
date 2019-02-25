@@ -1,14 +1,12 @@
 
 # Introduction to DevOps for Dynamics 365 Customer Engagement
   
-In this blog series, we will explore building out DevOps processes and practices for Dynamics 365 Customer Engagement (CE) by following the growth of our fictional company Contoso University. 
+In this blog series, we will explore building out DevOps processes and practices for Dynamics 365 Customer Engagement (CE) using Azure DevOps YAML based build pi
 
 What is DevOps?
 >DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. The contraction of “Dev” and “Ops” refers to replacing siloed Development and Operations to create multidisciplinary teams that now work together with shared and efficient practices and tools. Essential DevOps practices include agile planning, continuous integration, continuous delivery, and monitoring of applications. (Sam Guckenheimer, [What is DevOps?](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-devops))
 >
-An explanation of what DevOps is and a deeper look into the practices, processes, and principles as they apply more broadly can be found at [aka.ms/DevOps](https://aka.ms/Devops). For quick reference, we'll just include a note on what DevOps is before we move on...
-
-
+To learn more check out [aka.ms/DevOps](https://aka.ms/Devops).
 
 **Disclaimer**: This is by no means an exhaustive look into DevOps practices and principles. The intent is to take an applied look at how one may approach building out a DevOps practice and evolving their implementation over time. We will be sticking to YAML based build pipelines to build an understanding in the components and technologies used to achieve our goal. YAML pipelines will also allow us to easily submit each lesson into version control so that we may share our examples.
 
@@ -192,11 +190,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNDY3MDY0NiwtMzQ5Mjg3OTQyLDEwMz
-MyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4NDM5LC0yMDY2OTY3
-MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02OTkwNzgwOTAsLT
-EyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2
-MDYyNDk0LDExNDkwMDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMT
-M2MCwxMDQ4OTI1NzcwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0
-MDA0Nzg3NF19
+eyJoaXN0b3J5IjpbNTMyMjM0OTk1LC0zNDkyODc5NDIsMTAzMz
+IyNjAyMSw5NDEzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5Njcy
+MDIsNTg3NDc1ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMT
+I0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYw
+NjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMz
+YwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQw
+MDQ3ODc0XX0=
 -->
