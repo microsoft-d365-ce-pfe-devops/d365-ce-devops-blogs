@@ -64,11 +64,11 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 ```
 *The code above was sourced from the [*Download tools from NuGet*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/download-tools-nuget) Microsoft Docs article.
 
-### Unpacking a solution
+### Extract solution file
 
-Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???}** copy of your solution or grab a copy of the unpacked Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial). Also, to use Azure DevOps you will need to upload the extracted solution to an Azure Repo, GitHub or GitHub Enterprise re
+Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???}** copy of your solution or grab a copy of the unpacked Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial). Also, to use Azure DevOps you will need to upload the extracted solution to an Azure Repo, GitHub or GitHub Enterprise repository. 
 
-Powershell command to unpack Dynamics 365 CE solution:
+#### PowerShell command to extract Dynamics 365 CE solution:
 ```PowerShell
 .\Tools\CoreTools\SolutionPackager.exe /action extract /zipfile {Path to file}\ContosoUniversity_1_0_0_0.zip /folder {Path to local repository}
 ```
@@ -189,11 +189,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTAyNzc0NzQsMTAzMzIyNjAyMSw5ND
-EzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1
-ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MS
-wtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0
-OTAwNjk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5Mj
-U3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0z
-MDgzNTc3NTZdfQ==
+eyJoaXN0b3J5IjpbLTM0OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MT
+M3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4
+NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC
+0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5
+MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNT
+c3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMw
+ODM1Nzc1Nl19
 -->
