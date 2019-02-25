@@ -74,7 +74,7 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 
 ### Extract solution file
 
-Now that we have Solution Packager downloaded we can work on adding our solution to version control. If you are following along with your own setup you will need to export your solution from your environment. It is recommended to use an unmanaged solution for development purposes and managed for all other environments. If you just want to test grab a copy an unpacked solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial) in the lesson-1 folder. Keep in mind that we will be using Azure DevOps to create a deployment pipeline so you will need to upload the extracted solution to an Azure Repo, GitHub, or GitHub Enterprise repository. 
+Now that we have Solution Packager downloaded we can work on adding our solution to version control. If you are following along with your own setup you will need to export your solution from your environment. It is recommended to use an unmanaged solution for development purposes and managed for all other environments. Alternately, grab a copy an unpacked solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial) in the lesson-1 folder. Note that Azure DevOps pipelines integrate with Azure Repos, GitHub, and GitHub Enterprise repository. 
 
 #### PowerShell command to extract Dynamics 365 CE solution:
 ```PowerShell
@@ -197,7 +197,7 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTkyNDk0MCwtMjEwNjQ4NDczNiwtNz
+eyJoaXN0b3J5IjpbMTgzNjQwMTQ1NCwtMjEwNjQ4NDczNiwtNz
 Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
 MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
 cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
