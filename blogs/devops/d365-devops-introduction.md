@@ -152,7 +152,7 @@ steps:
 
 #### Pack Solution from repository 
 
-While our extracted solution is ideal for version control it's not going to help us with importing our solution into downstream environments. We will need to pack the solution up, essentially reversing the extraction to recreate our original zip file.
+While our extracted solution is ideal for version control it's not going to help us with importing our solution into downstream environments. To do that we will need to pack the solution, this is essentially reversing the extraction to recreate our original zip file.
 
 ```YAML
 - powershell: |
@@ -209,11 +209,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzAzNDc0NTcsNzA4NDYwODE0LC0xNj
-U3MjMxNzEwLC0yMTA2NDg0NzM2LC03NDk4NTc1NjksMTQxODg1
-NTUzMCwxODA2NzEwMDc2LC0xNjA0MjkyMTg5LDExNDMzODYwNT
-ksMTI4MjEwMzMzLDE1MDY4NTQxNjQsNzAwMTYzMzM5LC0xOTQ3
-Njg2ODc5LC0xMzY5OTkyMzk4LC0zNDkyODc5NDIsMTAzMzIyNj
-AyMSw5NDEzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIs
-NTg3NDc1ODcxXX0=
+eyJoaXN0b3J5IjpbLTE1NzU2NDQxNyw3MDg0NjA4MTQsLTE2NT
+cyMzE3MTAsLTIxMDY0ODQ3MzYsLTc0OTg1NzU2OSwxNDE4ODU1
+NTMwLDE4MDY3MTAwNzYsLTE2MDQyOTIxODksMTE0MzM4NjA1OS
+wxMjgyMTAzMzMsMTUwNjg1NDE2NCw3MDAxNjMzMzksLTE5NDc2
+ODY4NzksLTEzNjk5OTIzOTgsLTM0OTI4Nzk0MiwxMDMzMjI2MD
+IxLDk0MTM3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMiw1
+ODc0NzU4NzFdfQ==
 -->
