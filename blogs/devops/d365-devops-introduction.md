@@ -79,14 +79,16 @@ Once unpacked add your new files, commit and push. For this tutorial we are not 
 Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following outlined below. For a full explanation of YAML schema for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
 
 ### Yaml script steps
+ - [Create a new build pipeline](#create-a-new-build-pipeline)
  - [Define name, trigger, and pool type](#define-name-trigger-and-pool-type)
  - [Download and install Solution Packager](#download-and-install-solution-packager)
  - [Pack solution from repository](#pack-solution-from-repository) 
  - [Create a build artifact](#create-a-build-artifact ) 
  - [Deploy the build artifact to a target Dynamics 365 CE environment](#deploy-the-build-artifact-to-a-target-dynamics-365-ce-environment)
-
+#### Create a new build pipeline
+First and foremost we will need a new build pipeline to start from so let's head
 #### Define name, trigger, and pool type
-Our first step will be to setup the basics of our YAML script by defining how we can identify and trigger our build as well as what OS and tool set to use to complete our build.
+Our second step will be to setup the basics of our YAML script by defining how we can identify and trigger our build as well as what OS and tool set to use to complete our build.
 ```YAML
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
 
@@ -181,11 +183,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI5Nzg0OTM3LDEwMzMyMjYwMjEsOTQxMz
-cxODUxLC0xMzAyMDc4NDM5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3
-MSwyMDI1MjIwNjY1LC02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLT
-E0MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkw
-MDY5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nz
-cwLDEyMTAxNDY5OCwtNjI2MzcyNzc4LDc0MDA0Nzg3NCwtMzA4
-MzU3NzU2XX0=
+eyJoaXN0b3J5IjpbLTExMDU5ODg5NTIsMTAzMzIyNjAyMSw5ND
+EzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1
+ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MS
+wtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0
+OTAwNjk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5Mj
+U3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0z
+MDgzNTc3NTZdfQ==
 -->
