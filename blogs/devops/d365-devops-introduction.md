@@ -74,13 +74,13 @@ To get started we will need to download a copy of the [Dynamics 365 CE Core Tool
 
 ### Extract solution file
 
-Now that we have Solution Packager downloaded we can work on adding our solution to version control. If you are following along with your own setup you will need to export your solution from your environment. It is recommended to use an unmanaged solution for development purposes and managed for all other environments. Alternately, grab a copy an unpacked solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial) in the lesson-1 folder. Note that Azure DevOps pipelines integrate with Azure Repos, GitHub, and GitHub Enterprise repository. 
+Now that we have Solution Packager downloaded we can work on adding our solution to version control. If you are following along with your own setup you will need to export your solution from your environment. It is recommended to use an unmanaged solution for development purposes and managed for all other environments. Alternately, grab a copy an unpacked solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial) in the lesson-1 folder. Note that Azure DevOps build pipelines integrate with Azure Repos, GitHub, and GitHub Enterprise repository. 
 
 #### PowerShell command to extract Dynamics 365 CE solution:
 ```PowerShell
-.\Tools\CoreTools\SolutionPackager.exe /action extract /zipfile {Path to file}\ContosoUniversity_1_0_0_0.zip /folder {Path to local repository}
+.\Tools\CoreTools\SolutionPackager.exe /action extract /zipfile {Path to file}\{solution filename}.zip /folder {Path to local repository}
 ```
-Once unpacked add your new files, commit and push. For this tutorial we are not going to worry about version control branching strategies but I tend to prefer [GitHub Flow](https://guides.github.com/introduction/flow/).
+Once unpacked submit the output to . For this tutorial we are not going to worry about version control branching strategies but I tend to prefer [GitHub Flow](https://guides.github.com/introduction/flow/).
 
 ## Moving solutions between environments using a YAML script
 
@@ -197,11 +197,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNjQwMTQ1NCwtMjEwNjQ4NDczNiwtNz
-Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
-MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
-cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
-Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4ND
-M5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02
-OTkwNzgwOTBdfQ==
+eyJoaXN0b3J5IjpbLTIxMTk3MDczMTIsLTIxMDY0ODQ3MzYsLT
+c0OTg1NzU2OSwxNDE4ODU1NTMwLDE4MDY3MTAwNzYsLTE2MDQy
+OTIxODksMTE0MzM4NjA1OSwxMjgyMTAzMzMsMTUwNjg1NDE2NC
+w3MDAxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0
+OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3OD
+QzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwt
+Njk5MDc4MDkwXX0=
 -->
