@@ -29,7 +29,7 @@ The most basic workflow of Dynamics 365 CE development, deployment, and testing 
 ## Version control for solutions
 Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments; effectively solutions allow us to share the awesomeness we've created. When exported solutions are in the form of a zip file that when extracted contains folders for plugins, web resources, and workflows you've made as well as XML files defining the schema of any customization we have done. In this format, all of our schema is contained in one massive file, consider this as a binary file or distributed package. 
 
-Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution provides far more granularity. This is a great solution for team development as your developers can pack and import a solution from the repository, then export, unpack and commit changes back to the repository. For more on the benefits of using solution packager 
+Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution provides far more granularity. This is a great solution for team development as your developers can pack and import a solution from the repository, then export, unpack and commit changes back to the repository. For more on the benefits of using solution packager check out the article [*Use source control with solution files*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-source-control-solution-files) on Microsoft Docs.
 
 #### Example zip file directory structure
 ![Example zip file directory structure](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/zip-file-dir-structure.png?raw=true)
@@ -193,11 +193,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NTYyOTIyMDksMTQxODg1NTUzMCwxOD
-A2NzEwMDc2LC0xNjA0MjkyMTg5LDExNDMzODYwNTksMTI4MjEw
-MzMzLDE1MDY4NTQxNjQsNzAwMTYzMzM5LC0xOTQ3Njg2ODc5LC
-0xMzY5OTkyMzk4LC0zNDkyODc5NDIsMTAzMzIyNjAyMSw5NDEz
-NzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1OD
-cxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwt
-MTQyMzI1NDc0XX0=
+eyJoaXN0b3J5IjpbLTc0OTg1NzU2OSwxNDE4ODU1NTMwLDE4MD
+Y3MTAwNzYsLTE2MDQyOTIxODksMTE0MzM4NjA1OSwxMjgyMTAz
+MzMsMTUwNjg1NDE2NCw3MDAxNjMzMzksLTE5NDc2ODY4NzksLT
+EzNjk5OTIzOTgsLTM0OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3
+MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4Nz
+EsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0x
+NDIzMjU0NzRdfQ==
 -->
