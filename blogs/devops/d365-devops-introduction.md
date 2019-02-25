@@ -91,7 +91,8 @@ First and foremost we will need a new build pipeline to start from so let's head
 1. Navigate to your Azure DevOps project repository. For example, *https://dev.azure.com/{username}/D365-CE-DevOps-Tutorial*
 2. Click Pipelines, then click Builds.
 3. Click New, then click New Build Pipeline
-4. On the next screen we will select the location of our code, in this example we have used GitHub but you can stick to your preferred repo.
+4. On the next screen we will select the location of our code, in this example we have used GitHub but you can stick to your preferred website. If you use GitHub you will need to add a new connection and allow Azure DevOps access to your repository.
+5. If in st
 #### Define name, trigger, and pool type
 Our second step will be to setup the basics of our YAML script by defining how we can identify and trigger our build as well as what OS and tool set to use to complete our build.
 ```YAML
@@ -188,11 +189,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NjcwNDYsMTAzMzIyNjAyMSw5NDEzNz
-E4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1ODcx
-LDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMT
-QyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAw
-Njk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3Nz
-AsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgz
-NTc3NTZdfQ==
+eyJoaXN0b3J5IjpbMTcwMDMxODc5OSwxMDMzMjI2MDIxLDk0MT
+M3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4
+NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC
+0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5
+MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNT
+c3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMw
+ODM1Nzc1Nl19
 -->
