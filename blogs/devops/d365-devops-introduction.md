@@ -80,8 +80,8 @@ Now that we have an unpacked solution checked into version control we can work o
 
 ### Yaml script steps
  - [Define name, trigger, and pool type](#define-name-trigger-and-pool-type)
- - Download and install Solution Packager
- - [Pack Solution from repository](Pack Solution from repository) 
+ - [Download and install Solution Packager](#download-and-install-solution-packager)
+ - [Pack solution from repository](#pack-solution-from-repository) 
  - Create a build artifact (packed solution)
  - Deploy the build artifact to a target Dynamics 365 CE environment
 
@@ -174,7 +174,7 @@ steps:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMTMwMzcyOCwxMDMzMjI2MDIxLDk0MT
+eyJoaXN0b3J5IjpbLTM1NDc5ODc3NSwxMDMzMjI2MDIxLDk0MT
 M3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4
 NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC
 0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5
