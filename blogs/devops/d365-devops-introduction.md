@@ -29,15 +29,10 @@ The most basic workflow of Dynamics 365 CE development, deployment, and testing 
 ## Version control for solutions
 Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments; effectively solutions allow us to share the awesomeness we've created. When exported solutions are in the form of a zip file that when extracted contains folders for plugins, web resources, and workflows you've made as well as XML files defining the schema of any customization we have done. In this format, all of our schema is contained in one massive file, consider this as a binary file or distributed package. 
 
-Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. 
+Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution 
 
 #### Example zip file directory structure
- - PluginAssemblies
- - WebResources
- - Workflows
- - [Content_Types].xml
- - customizations.xml 
- - soluitons.xml
+![Example zip file directory structure](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/zip-file-dir-structure.png?raw=true)
 
 #### Example extracted solution directory structure
 ![Example extracted solution directory structure](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/ext-solution-dir-structure.png?raw=true)
@@ -198,11 +193,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNjcxMDA3NiwtMTYwNDI5MjE4OSwxMT
-QzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LDcwMDE2MzMz
-OSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5Mjg3OTQyLD
-EwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4NDM5LC0yMDY2
-OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02OTkwNzgwOT
-AsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwtMTE5NTMyOTU0OCwx
-MDY2MDYyNDk0XX0=
+eyJoaXN0b3J5IjpbLTE4MzY1MzYyNTgsMTgwNjcxMDA3NiwtMT
+YwNDI5MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0
+MTY0LDcwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OC
+wtMzQ5Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAy
+MDc4NDM5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNj
+Y1LC02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NCwt
+MTE5NTMyOTU0OF19
 -->
