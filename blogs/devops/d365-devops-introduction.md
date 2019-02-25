@@ -1,13 +1,11 @@
 
 # Introduction to DevOps for Dynamics 365 Customer Engagement
   
-In this blog series, DevOps processes for Dynamics 365 Customer Engagement (CE)
+In this blog series, we will explore building out DevOps processes and practices for Dynamics 365 Customer Engagement (CE) by utilizing Azur
 
 What is DevOps?
 >DevOps is the union of people, process, and products to enable continuous delivery of value to our end users. The contraction of “Dev” and “Ops” refers to replacing siloed Development and Operations to create multidisciplinary teams that now work together with shared and efficient practices and tools. Essential DevOps practices include agile planning, continuous integration, continuous delivery, and monitoring of applications. (Sam Guckenheimer, [What is DevOps?](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-devops))
 >
-To learn more check out [aka.ms/DevOps](https://aka.ms/Devops).
-
 **Disclaimer**: This is by no means an exhaustive look into DevOps practices and principles. The intent is to take an applied look at how one may approach building out a DevOps practice and evolving their implementation over time. We will be sticking to YAML based build pipelines to build an understanding in the components and technologies used to achieve our goal. YAML pipelines will also allow us to easily submit each lesson into version control so that we may share our examples.
 
 ## Getting started
@@ -190,11 +188,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzMzAyMTg4LC0zNDkyODc5NDIsMTAzMz
-IyNjAyMSw5NDEzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5Njcy
-MDIsNTg3NDc1ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMT
-I0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYw
-NjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMz
-YwLDEwNDg5MjU3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQw
-MDQ3ODc0XX0=
+eyJoaXN0b3J5IjpbLTE0MDQxNzE5MzgsLTM0OTI4Nzk0MiwxMD
+MzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2
+NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC
+0xMjQwMTQ3NDgxLC0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2
+NjA2MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMj
+EzNjAsMTA0ODkyNTc3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3
+NDAwNDc4NzRdfQ==
 -->
