@@ -79,13 +79,13 @@ Once unpacked add your new files, commit and push. For this tutorial we are not 
 Now that we have an unpacked solution checked into version control we can work on automating deployment. As mentioned in the [Unpacking a solution](#unpacking-a-solution) section, I follow the  [GitHub Flow](https://guides.github.com/introduction/flow/) development workflow that assumes anything in the master branch is always deployable. Given that we will build a simple YAML script that performs the following outlined below. For a full explanation of YAML schema for Azure Pipelines check out [aka.ms/yaml](http://aka.ms/yaml).
 
 ### Yaml script steps
- - Define name, trigger, and pool type
+ - [Define name, trigger, and pool type](#define-name-trigger-and-pool-type)
  - Download and install Solution Packager
- - Pack Solution from repository 
+ - [Pack Solution from repository](Pack Solution from repository) 
  - Create a build artifact (packed solution)
  - Deploy the build artifact to a target Dynamics 365 CE environment
 
-#### Define name, trigger and pool type
+#### Define name, trigger, and pool type
 Our first step will be to setup the basics of our YAML script by defining how we can identify and trigger our build as well as what OS and tool set to use to complete our build.
 ```YAML
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
@@ -174,11 +174,11 @@ steps:
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMzIyNjAyMSw5NDEzNzE4NTEsLTEzMD
-IwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1ODcxLDIwMjUyMjA2
-NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC
-0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1
-NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3NzAsMTIxMDE0Nj
-k4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0zMDgzNTc3NTYsMTk1
-MTQ3NTc0XX0=
+eyJoaXN0b3J5IjpbLTUyMTMwMzcyOCwxMDMzMjI2MDIxLDk0MT
+M3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4
+NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC
+0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5
+MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNT
+c3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMw
+ODM1Nzc1Nl19
 -->
