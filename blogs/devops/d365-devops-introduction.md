@@ -27,7 +27,7 @@ The most basic workflow of Dynamics 365 CE development, deployment, and testing 
 	 - There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series, it is expected that you know the basics or will [learn Git](https://try.github.io/) for version control.
 
 ## Version control for solutions
-Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments. When exported solutions are in the form of a zip file that when extracted contains folders for plugins, web resources, and workflows you've made as well as XML files defining the schema of any customization we have done. In this format all of our schema is contained in one massive file, consider this as a binary file  solutions can be prepared for version control by using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog, we will include this in our automation process, for now let's learn the basics.
+Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments effectively allowing us to . When exported solutions are in the form of a zip file that when extracted contains folders for plugins, web resources, and workflows you've made as well as XML files defining the schema of any customization we have done. In this format all of our schema is contained in one massive file, consider this as a binary file  solutions can be prepared for version control by using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog, we will include this in our automation process, for now let's learn the basics.
 
 ### What does solution packager do? 
 Essentially Solution Packager takes our Dynamics 365 CE exported solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. 
@@ -205,11 +205,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4MjEwMzMzLDE1MDY4NTQxNjQsNzAwMT
-YzMzM5LC0xOTQ3Njg2ODc5LC0xMzY5OTkyMzk4LC0zNDkyODc5
-NDIsMTAzMzIyNjAyMSw5NDEzNzE4NTEsLTEzMDIwNzg0MzksLT
-IwNjY5NjcyMDIsNTg3NDc1ODcxLDIwMjUyMjA2NjUsLTY5OTA3
-ODA5MCwtMTI0MDE0NzQ4MSwtMTQyMzI1NDc0LC0xMTk1MzI5NT
-Q4LDEwNjYwNjI0OTQsMTE0OTAwNjk3MywtMjA1NTE0ODgxNCwx
-MzY0MjIxMzYwXX0=
+eyJoaXN0b3J5IjpbMjIyMTUxODk5LDEyODIxMDMzMywxNTA2OD
+U0MTY0LDcwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5
+OCwtMzQ5Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMz
+AyMDc4NDM5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIw
+NjY1LC02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLTE0MjMyNTQ3NC
+wtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkwMDY5NzMsLTIw
+NTUxNDg4MTRdfQ==
 -->
