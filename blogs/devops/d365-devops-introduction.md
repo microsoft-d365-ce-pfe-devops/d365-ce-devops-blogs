@@ -9,7 +9,7 @@ What is DevOps?
 
 ## Getting started
 
-If you already have an Dynamics 365 CE environment, Azure DevOps and a solution ready to go skip to [Moving solutions between environments](#moving-solutions-between-environments). If you are new to all of this, please continue from here. 
+If you already have an Dynamics 365 CE environment, Azure DevOps and a solution ready to go skip to [Moving solutions between environments](#moving-solutions-between-environments-using-a-yaml-script). If you are new to all of this, please continue from here. 
 
 The most basic workflow of Dynamics 365 CE development, deployment, and functional testing consists primarily of manual processes. We modify, export, and import a solution(s) into a downstream environment, then manually test to ensure there are no issues with solution layering, integrations, etc. That gets old quick, what we really want is to automate as much as is reasonable given some set budget, level of expertise and business constraints. The first step we can take is to implement the practice of version control for our solutions and automate migration between environments. To accomplish this we will be using Azure DevOps.
 
@@ -209,11 +209,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA4NDYwODE0LC0xNjU3MjMxNzEwLC0yMT
-A2NDg0NzM2LC03NDk4NTc1NjksMTQxODg1NTUzMCwxODA2NzEw
-MDc2LC0xNjA0MjkyMTg5LDExNDMzODYwNTksMTI4MjEwMzMzLD
-E1MDY4NTQxNjQsNzAwMTYzMzM5LC0xOTQ3Njg2ODc5LC0xMzY5
-OTkyMzk4LC0zNDkyODc5NDIsMTAzMzIyNjAyMSw5NDEzNzE4NT
-EsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1ODcxLDIw
-MjUyMjA2NjVdfQ==
+eyJoaXN0b3J5IjpbLTE2NzAzNDc0NTcsNzA4NDYwODE0LC0xNj
+U3MjMxNzEwLC0yMTA2NDg0NzM2LC03NDk4NTc1NjksMTQxODg1
+NTUzMCwxODA2NzEwMDc2LC0xNjA0MjkyMTg5LDExNDMzODYwNT
+ksMTI4MjEwMzMzLDE1MDY4NTQxNjQsNzAwMTYzMzM5LC0xOTQ3
+Njg2ODc5LC0xMzY5OTkyMzk4LC0zNDkyODc5NDIsMTAzMzIyNj
+AyMSw5NDEzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIs
+NTg3NDc1ODcxXX0=
 -->
