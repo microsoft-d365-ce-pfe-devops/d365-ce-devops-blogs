@@ -44,7 +44,10 @@ Example exported solution directory structure
 - Other
 - PluginAssemblies
 - Roles
-- S
+- SdkMessageProcessingSteps
+- Templates
+- WebResources
+- Workflows
 
 ### Download solution packager
 To get started we will need to download a copy of the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) locally, which includes Solution Packager. 
@@ -202,11 +205,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzcyNzQ4NCwtMTk0NzY4Njg3OSwtMT
-M2OTk5MjM5OCwtMzQ5Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcx
-ODUxLC0xMzAyMDc4NDM5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MS
-wyMDI1MjIwNjY1LC02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLTE0
-MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkwMD
-Y5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nzcw
-LDEyMTAxNDY5OF19
+eyJoaXN0b3J5IjpbNzAwMTYzMzM5LC0xOTQ3Njg2ODc5LC0xMz
+Y5OTkyMzk4LC0zNDkyODc5NDIsMTAzMzIyNjAyMSw5NDEzNzE4
+NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1ODcxLD
+IwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMTQy
+MzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNj
+k3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3NzAs
+MTIxMDE0Njk4XX0=
 -->
