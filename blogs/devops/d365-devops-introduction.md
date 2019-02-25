@@ -27,7 +27,7 @@ The most basic workflow of Dynamics 365 CE development, deployment, and function
 	 - There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series, it is expected that you know the basics or will [learn Git](https://try.github.io/) for version control.
 
 ## Version control for solutions
-Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments. Effectively solutions allow us to share the awesomeness we've created with others. When exported from an environment solutions are in the form of a zip file. When extracted a solution directory contains folders for plugins, web resources, and any workflows we have made as well as XML files defining the schema of any customization we may have done. In this format, all of our schema is contained in one massive file. Consider this zip file as a binary in developer jargon or in layman's terms as a tidy package with a fancy bow; put more simply, it's not really easy to see whats inside. 
+Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments. Effectively solutions allow us to share the awesomeness we've created with others. When exported from an environment solutions are in the form of a zip file. When extracted a solution directory contains folders for plugins, web resources, and any workflows we have made as well as XML files defining the schema of any customization we may have done. In this format, all of our schema is contained in one massive file. Consider this zip file as a binary in developer jargon or in layman's terms it's a tidy package with a fancy bow; i.e. it's not really easy to see whats inside and it's a poor format for version control. 
 
 Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). Solution packager essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution provides far more granularity. 
 
@@ -197,11 +197,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU2ODU1ODIzLC0yMTA2NDg0NzM2LC03ND
-k4NTc1NjksMTQxODg1NTUzMCwxODA2NzEwMDc2LC0xNjA0Mjky
-MTg5LDExNDMzODYwNTksMTI4MjEwMzMzLDE1MDY4NTQxNjQsNz
-AwMTYzMzM5LC0xOTQ3Njg2ODc5LC0xMzY5OTkyMzk4LC0zNDky
-ODc5NDIsMTAzMzIyNjAyMSw5NDEzNzE4NTEsLTEzMDIwNzg0Mz
-ksLTIwNjY5NjcyMDIsNTg3NDc1ODcxLDIwMjUyMjA2NjUsLTY5
-OTA3ODA5MF19
+eyJoaXN0b3J5IjpbMTI0NjQ4OTMwMCwtMjEwNjQ4NDczNiwtNz
+Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
+MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
+cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
+Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4ND
+M5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02
+OTkwNzgwOTBdfQ==
 -->
