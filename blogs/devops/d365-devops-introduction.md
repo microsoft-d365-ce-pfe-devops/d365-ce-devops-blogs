@@ -29,7 +29,9 @@ The most basic workflow of Dynamics 365 CE development, deployment, and testing 
 ## Version control for solutions
 Solutions in Dynamics 365 CE are in essence a package containing any customization we've done to our environment that we can export and import into other environments; effectively solutions allow us to share the awesomeness we've created. When exported solutions are in the form of a zip file that when extracted contains folders for plugins, web resources, and workflows you've made as well as XML files defining the schema of any customization we have done. In this format, all of our schema is contained in one massive file, consider this as a binary file or distributed package. 
 
-Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution provides far more granularity. This is a great solution for team development as your developers can pack and import a solution from the repository, then export, unpack and commit changes back to the repository. For more on the benefits of using solution packager check out the article [*Use source control with solution files*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-source-control-solution-files) on Microsoft Docs, just note that solution packager does 
+Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager), which essentially takes our Dynamics 365 CE solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. As you can see from the examples below our extracted solution provides far more granularity. This is a great solution for team development as your developers can pack and import a solution from the repository, then export, unpack and commit changes back to the repository. For more on the benefits of using solution packager check out the article [*Use source control with solution files*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-source-control-solution-files) on Microsoft Docs. 
+
+*Note: Solution Packager does not automatically handle merge conflict resolution.
 
 #### Example zip file directory structure
 ![Example zip file directory structure](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/zip-file-dir-structure.png?raw=true)
@@ -193,11 +195,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzU0MzI4NjY2LC03NDk4NTc1NjksMTQxOD
-g1NTUzMCwxODA2NzEwMDc2LC0xNjA0MjkyMTg5LDExNDMzODYw
-NTksMTI4MjEwMzMzLDE1MDY4NTQxNjQsNzAwMTYzMzM5LC0xOT
-Q3Njg2ODc5LC0xMzY5OTkyMzk4LC0zNDkyODc5NDIsMTAzMzIy
-NjAyMSw5NDEzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMD
-IsNTg3NDc1ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0
-MDE0NzQ4MV19
+eyJoaXN0b3J5IjpbMTIxODMyMjI1NywtNzQ5ODU3NTY5LDE0MT
+g4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5MjE4OSwxMTQzMzg2
+MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LDcwMDE2MzMzOSwtMT
+k0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5Mjg3OTQyLDEwMzMy
+MjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4NDM5LC0yMDY2OTY3Mj
+AyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02OTkwNzgwOTAsLTEy
+NDAxNDc0ODFdfQ==
 -->
