@@ -37,7 +37,7 @@ Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-
 #### Example extracted solution directory structure
 ![Example extracted solution directory structure](https://github.com/paulbreuler/d365-PFE-Blogs/blob/DevOps-Intro-Blog/media/devops/ext-solution-dir-structure.png?raw=true)
 
-Solution Packager is a great solution for team development as your developers can pack and import a solution from your repository, make changes, then export, unpack, and commit changes back to the repository. For more on the benefits of using solution packager check out the article [*Use source control with solution files*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-source-control-solution-files) on Microsoft Docs. 
+Solution Packager is a great solution for team development as your developers can pack and import a solution from your repository, make changes. Then once the developer's works is done export, unpack, and commit changes back to the repository. For more on the benefits of using solution packager and example scenarios check out the article [*Use source control with solution files*](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-source-control-solution-files) on Microsoft Docs. 
 
 **Note:** Solution Packager does not completely remove merge conflicts but does make them easier to manage.
 
@@ -197,11 +197,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU2MTM1OTUwMCwtMjEwNjQ4NDczNiwtNz
-Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
-MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
-cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
-Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4ND
-M5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02
-OTkwNzgwOTBdfQ==
+eyJoaXN0b3J5IjpbLTExODUxODAzMTQsLTIxMDY0ODQ3MzYsLT
+c0OTg1NzU2OSwxNDE4ODU1NTMwLDE4MDY3MTAwNzYsLTE2MDQy
+OTIxODksMTE0MzM4NjA1OSwxMjgyMTAzMzMsMTUwNjg1NDE2NC
+w3MDAxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0
+OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3OD
+QzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwt
+Njk5MDc4MDkwXX0=
 -->
