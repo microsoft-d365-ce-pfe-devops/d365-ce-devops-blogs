@@ -42,7 +42,7 @@ The extra granularity of an unpacked solution makes it ideal for team developmen
 **Note:** Solution Packager does not completely remove merge conflicts but does make them easier to manage.
 
 ### Download solution packager
-To get started with  we will need to download a copy of the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) locally, which includes Solution Packager. 
+To get started we will need to download a copy of the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) locally, which includes Solution Packager. 
 
 #### Steps to download
 1. Open a PowerShell Terminal
@@ -74,7 +74,7 @@ To get started with  we will need to download a copy of the [Dynamics 365 CE Cor
 
 ### Extract solution file
 
-Now that we have Solution Packager downloaded we can work on adding our Contoso University to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???}** copy of your solution or grab a copy of the unpacked Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial). Also, to use Azure DevOps you will need to upload the extracted solution to an Azure Repo, GitHub or GitHub Enterprise repository. 
+Now that we have Solution Packager downloaded we can work on adding our solution to version control. If you are following along with your own setup you will need to export a **{Managed, unmanaged or both???}** copy of your solution or grab a copy of the unpacked Contoso University solution from our [GitHub repo](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial). Also, to use Azure DevOps you will need to upload the extracted solution to an Azure Repo, GitHub or GitHub Enterprise repository. 
 
 #### PowerShell command to extract Dynamics 365 CE solution:
 ```PowerShell
@@ -197,11 +197,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTAwNzgyNzQsLTIxMDY0ODQ3MzYsLT
-c0OTg1NzU2OSwxNDE4ODU1NTMwLDE4MDY3MTAwNzYsLTE2MDQy
-OTIxODksMTE0MzM4NjA1OSwxMjgyMTAzMzMsMTUwNjg1NDE2NC
-w3MDAxNjMzMzksLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0
-OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3OD
-QzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwt
-Njk5MDc4MDkwXX0=
+eyJoaXN0b3J5IjpbLTIxNjU2NzgxMiwtMjEwNjQ4NDczNiwtNz
+Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
+MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
+cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
+Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4ND
+M5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02
+OTkwNzgwOTBdfQ==
 -->
