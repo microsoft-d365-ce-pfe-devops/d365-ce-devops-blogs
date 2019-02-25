@@ -11,7 +11,7 @@ What is DevOps?
 
 If you already have an Dynamics 365 CE environment, Azure DevOps and a solution ready to go skip to [Moving solutions between environments](#moving-solutions-between-environments). If you are new to all of this, please continue from here. 
 
-The most basic workflow of Dynamics 365 CE development, deployment, and testing is consists primarily of manual processes. We modify, export, and import a solution(s) into a downstream environment, then manually test to ensure there are no issues with solution layering, integrations, etc. That gets old quick; what we really want is to automate as much as is reasonable given some set budget, level of expertise and business constraints. The first step we can take is to implement the practice of version control for our solutions and automate migration between environments. To accomplish this we will be using Azure DevOps.
+The most basic workflow of Dynamics 365 CE development, deployment, and functional testing consists primarily of manual processes. We modify, export, and import a solution(s) into a downstream environment, then manually test to ensure there are no issues with solution layering, integrations, etc. That gets old quick, what we really want is to automate as much as is reasonable given some set budget, level of expertise and business constraints. The first step we can take is to implement the practice of version control for our solutions and automate migration between environments. To accomplish this we will be using Azure DevOps .
 
 **What we will need**
 
@@ -195,11 +195,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDY0ODQ3MzYsLTc0OTg1NzU2OSwxND
-E4ODU1NTMwLDE4MDY3MTAwNzYsLTE2MDQyOTIxODksMTE0MzM4
-NjA1OSwxMjgyMTAzMzMsMTUwNjg1NDE2NCw3MDAxNjMzMzksLT
-E5NDc2ODY4NzksLTEzNjk5OTIzOTgsLTM0OTI4Nzk0MiwxMDMz
-MjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2Nz
-IwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0x
-MjQwMTQ3NDgxXX0=
+eyJoaXN0b3J5IjpbLTU1MjcwODcxNiwtMjEwNjQ4NDczNiwtNz
+Q5ODU3NTY5LDE0MTg4NTU1MzAsMTgwNjcxMDA3NiwtMTYwNDI5
+MjE4OSwxMTQzMzg2MDU5LDEyODIxMDMzMywxNTA2ODU0MTY0LD
+cwMDE2MzMzOSwtMTk0NzY4Njg3OSwtMTM2OTk5MjM5OCwtMzQ5
+Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcxODUxLC0xMzAyMDc4ND
+M5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MSwyMDI1MjIwNjY1LC02
+OTkwNzgwOTBdfQ==
 -->
