@@ -143,7 +143,7 @@ While our extracted solution is ideal for version control it's not going to help
     SolutionName: $(Solution.Name)
   displayName: 'Solution Packager: pack solution'
 ```
-In the code above you will have noticed that there is now and environment variable section (env) that 
+In the code above you will have noticed that there is now and environment variable section (env) that contains two variables *SolutionPath* and *SolutionName*. Both of the variables are defined in our Azure DevOps pipeline as *Solution.Path* and *Solution.Name*, simply copying and pasting this sc
 #### Create a build artifact
 ```YAML
 - task: CopyFiles@2
@@ -176,11 +176,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDcwNDAyNjEsMTAzMzIyNjAyMSw5ND
-EzNzE4NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1
-ODcxLDIwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MS
-wtMTQyMzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0
-OTAwNjk3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5Mj
-U3NzAsMTIxMDE0Njk4LC02MjYzNzI3NzgsNzQwMDQ3ODc0LC0z
-MDgzNTc3NTZdfQ==
+eyJoaXN0b3J5IjpbLTczMjg4MTE2MywxMDMzMjI2MDIxLDk0MT
+M3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4
+NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC
+0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5
+MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNT
+c3MCwxMjEwMTQ2OTgsLTYyNjM3Mjc3OCw3NDAwNDc4NzQsLTMw
+ODM1Nzc1Nl19
 -->
