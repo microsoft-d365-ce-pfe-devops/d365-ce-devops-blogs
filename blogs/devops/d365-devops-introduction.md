@@ -32,6 +32,20 @@ Dynamics 365 CE solutions can be prepared for version control by using [Solution
 ### What does solution packager do? 
 Essentially Solution Packager takes our Dynamics 365 CE exported solution zip file and breaks it out into a logical folder structure that is far more friendly for version control.
 
+Example exported solution directory structure
+ - AppModules
+ - AppModuleSiteMaps
+ - Entities
+	 - Accounts
+	 - Contacts
+	 - etc.
+- InteractionCentricDashboards
+- OptionSets
+- Other
+- PluginAssemblies
+- Roles
+- S
+
 ### Download solution packager
 To get started we will need to download a copy of the [Dynamics 365 CE Core Tools Nuget package](https://www.nuget.org/packages/Microsoft.CrmSdk.CoreTools) locally, which includes Solution Packager. 
 
@@ -188,11 +202,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDc2ODY4NzksLTEzNjk5OTIzOTgsLT
-M0OTI4Nzk0MiwxMDMzMjI2MDIxLDk0MTM3MTg1MSwtMTMwMjA3
-ODQzOSwtMjA2Njk2NzIwMiw1ODc0NzU4NzEsMjAyNTIyMDY2NS
-wtNjk5MDc4MDkwLC0xMjQwMTQ3NDgxLC0xNDIzMjU0NzQsLTEx
-OTUzMjk1NDgsMTA2NjA2MjQ5NCwxMTQ5MDA2OTczLC0yMDU1MT
-Q4ODE0LDEzNjQyMjEzNjAsMTA0ODkyNTc3MCwxMjEwMTQ2OTgs
-LTYyNjM3Mjc3OF19
+eyJoaXN0b3J5IjpbLTE1MzcyNzQ4NCwtMTk0NzY4Njg3OSwtMT
+M2OTk5MjM5OCwtMzQ5Mjg3OTQyLDEwMzMyMjYwMjEsOTQxMzcx
+ODUxLC0xMzAyMDc4NDM5LC0yMDY2OTY3MjAyLDU4NzQ3NTg3MS
+wyMDI1MjIwNjY1LC02OTkwNzgwOTAsLTEyNDAxNDc0ODEsLTE0
+MjMyNTQ3NCwtMTE5NTMyOTU0OCwxMDY2MDYyNDk0LDExNDkwMD
+Y5NzMsLTIwNTUxNDg4MTQsMTM2NDIyMTM2MCwxMDQ4OTI1Nzcw
+LDEyMTAxNDY5OF19
 -->
