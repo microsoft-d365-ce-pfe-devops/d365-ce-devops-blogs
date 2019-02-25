@@ -152,7 +152,7 @@ steps:
 
 #### Pack Solution from repository 
 
-While our extracted solution is ideal for version control it's not going to help us with importing our solution into downstream environments. To do that we will need to pack the solution, this is essentially reversing the extraction to recreate our original zip file.
+While our extracted solution is ideal for version control it's not going to help us with importing our solution into downstream environments. To do that we will need to pack the solution back into it's original zip file state.
 
 ```YAML
 - powershell: |
@@ -209,7 +209,7 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzU2NDQxNyw3MDg0NjA4MTQsLTE2NT
+eyJoaXN0b3J5IjpbLTI3MzgxMjMxMiw3MDg0NjA4MTQsLTE2NT
 cyMzE3MTAsLTIxMDY0ODQ3MzYsLTc0OTg1NzU2OSwxNDE4ODU1
 NTMwLDE4MDY3MTAwNzYsLTE2MDQyOTIxODksMTE0MzM4NjA1OS
 wxMjgyMTAzMzMsMTUwNjg1NDE2NCw3MDAxNjMzMzksLTE5NDc2
