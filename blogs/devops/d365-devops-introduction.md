@@ -27,12 +27,12 @@ The most basic workflow of Dynamics 365 CE development, deployment, and testing 
 	 - There are a number of tools to make version control easier such as [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.atlassian.com/software/sourcetree), and [GitKraken](https://www.gitkraken.com/) to name a few. For this series, it is expected that you know the basics or will [learn Git](https://try.github.io/) for version control.
 
 ## Version control for solutions
-Dynamics 365 CE solutions can be prepared for version control by using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog, we will include this in our automation process, for now let's learn the basics.
+Solutions in Dynamics 365 CE are in essence the way we move our customizations from one envi solutions can be prepared for version control by using [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/compress-extract-solution-file-solutionpackager). This tool is included as part of a Nuget package so we will need to fire up a PowerShell console to download a copy; in a future blog, we will include this in our automation process, for now let's learn the basics.
 
 ### What does solution packager do? 
-Essentially Solution Packager takes our Dynamics 365 CE exported solution zip file and breaks it out into a logical folder structure that is far more friendly for version control.
+Essentially Solution Packager takes our Dynamics 365 CE exported solution zip file and breaks it out into a logical folder structure that is far more friendly for version control. 
 
-Example exported solution directory structure
+#### Example extracted solution directory structure
  - AppModules
  - AppModuleSiteMaps
  - Entities
@@ -205,11 +205,11 @@ In the code above you will have noticed that there is now and environment variab
 
 *[CE]: Customer Engagement
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAwMTYzMzM5LC0xOTQ3Njg2ODc5LC0xMz
-Y5OTkyMzk4LC0zNDkyODc5NDIsMTAzMzIyNjAyMSw5NDEzNzE4
-NTEsLTEzMDIwNzg0MzksLTIwNjY5NjcyMDIsNTg3NDc1ODcxLD
-IwMjUyMjA2NjUsLTY5OTA3ODA5MCwtMTI0MDE0NzQ4MSwtMTQy
-MzI1NDc0LC0xMTk1MzI5NTQ4LDEwNjYwNjI0OTQsMTE0OTAwNj
-k3MywtMjA1NTE0ODgxNCwxMzY0MjIxMzYwLDEwNDg5MjU3NzAs
-MTIxMDE0Njk4XX0=
+eyJoaXN0b3J5IjpbMTQ0NjkyMjg3Myw3MDAxNjMzMzksLTE5ND
+c2ODY4NzksLTEzNjk5OTIzOTgsLTM0OTI4Nzk0MiwxMDMzMjI2
+MDIxLDk0MTM3MTg1MSwtMTMwMjA3ODQzOSwtMjA2Njk2NzIwMi
+w1ODc0NzU4NzEsMjAyNTIyMDY2NSwtNjk5MDc4MDkwLC0xMjQw
+MTQ3NDgxLC0xNDIzMjU0NzQsLTExOTUzMjk1NDgsMTA2NjA2Mj
+Q5NCwxMTQ5MDA2OTczLC0yMDU1MTQ4ODE0LDEzNjQyMjEzNjAs
+MTA0ODkyNTc3MF19
 -->
