@@ -33,11 +33,12 @@ Enter [Solution Packager](https://docs.microsoft.com/en-us/dynamics365/customer-
 
 #### Example zip file directory structure
 
-![Example zip file directory structure](https://github.com/paulbreuler/d365-ce-devops-blogs/blob/DevOps-Intro-Blog/media/devops/zip-file-dir-structure.png?raw=true)
+![Example zip file directory structure](https://github.com/paulbreuler/d365-ce-devops-blogs/blob/master/media/devops/zip-file-dir-structure.png?raw=true)
+
 
 #### Example extracted solution directory structure
 
-![Example extracted solution directory structure](https://github.com/paulbreuler/d365-ce-devops-blogs/blob/DevOps-Intro-Blog/media/devops/ext-solution-dir-structure.png?raw=true)
+![Example extracted solution directory structure](https://github.com/paulbreuler/d365-ce-devops-blogs/blob/master/media/devops/ext-solution-dir-structure.png?raw=true)
 
 **Note**: 
 - The extra granularity of an unpacked solution makes it ideal for team development. Developers can pack and import a solution from a repository into their various development environments, make changes, export, unpack, and commit the solution back to the repository. For more on the benefits of using solution packager and example scenarios check out the article  [Use source control with solution files](https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/use-source-control-solution-files)  on Microsoft Docs. 
@@ -116,7 +117,7 @@ First and foremost we will need a new build pipeline, so let's head over to our 
 
 *Note that choosing starter pipeline will name you file azure-pipelines.yml so you'll want to remain the file later and update the path in your pipeline settings.
 
-![Example pipeline setup using GitHub repo](https://github.com/paulbreuler/d365-ce-devops-blogs/blob/DevOps-Intro-Blog/media/devops/create-new-build-pipeline.gif?raw=true)
+![Example pipeline setup using GitHub repo](https://github.com/paulbreuler/d365-ce-devops-blogs/blob/master/media/devops/create-new-build-pipeline.gif?raw=true)
 
 #### Define name, trigger, and pool type
 
@@ -216,7 +217,7 @@ For our script to be able to access the variables defined in our script, we will
 
 *If you queue your build ensure the branch where your YAML file is saved is correct or you may get an error. Or navigate back to the pipeline YAML editor and run from there. 
 
-![Add pipeline variables demo](https://github.com/paulbreuler/d365-ce-devops-blogs/blob/DevOps-Intro-Blog/media/devops/add-pipeline-variables.gif?raw=true)
+![Add pipeline variables demo](https://github.com/paulbreuler/d365-ce-devops-blogs/blob/master/media/devops/add-pipeline-variables.gif?raw=true)
 
 
 #### Publish build artifacts
@@ -273,7 +274,7 @@ This time for step 4 we will add 3 new variables
 
 *Mark variables that you want to modify at queue time to settable at queue time.
 
-![Example extracted solution directory structure](https://github.com/paulbreuler/d365-ce-devops-blogs/blob/DevOps-Intro-Blog/media/devops/pipeline-settings-variables.png?raw=true)
+![Example extracted solution directory structure](https://github.com/paulbreuler/d365-ce-devops-blogs/blob/master/media/devops/pipeline-settings-variables.png?raw=true)
 
 That's it, now you can click *Save and run* on the top left of the editor. Once the build has been kicked off click the build name in the notification banner to watch the build run. After the build has successfully completed your solution will be imported into the specified target environment and that's that. 
 
