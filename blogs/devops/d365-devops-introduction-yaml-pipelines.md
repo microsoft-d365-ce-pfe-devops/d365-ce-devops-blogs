@@ -1,5 +1,5 @@
 
-# Introduction to DevOps for Dynamics 365 Customer Engagement
+# Introduction to DevOps for Dynamics 365 Customer Engagement using YAML Based Azure Pipelines
   
 In this blog series, we will explore building out DevOps processes and practices for Dynamics 365 Customer Engagement (CE) by utilizing YAML based Azure Pipelines.  In this first blog, we will cover version controlling solutions and the basics of automating deployment.
 
