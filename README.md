@@ -1,5 +1,4 @@
-# Dynamics 365 PFE Blogs
 
-## Setup repo for dev
+GitHub repository with lesson files - https://github.com/paulbreuler/D365-CE-DevOps-Tutorial
 
-npm install
+Please see the [wiki](https://github.com/paulbreuler/d365-ce-devops-blogs/wiki) for more information.
