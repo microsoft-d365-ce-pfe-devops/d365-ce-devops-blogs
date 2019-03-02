@@ -1,4 +1,4 @@
-# Refactoring Pipelines and Using YAML to Unpack Dynamics 365 for Customer Engagement Solutions 
+# Refactoring Pipelines and Using YAML to Unpack Dynamics 365 for Customer Engagement Solutions
 
 Welcome to the next entry in our blog series on [DevOps for Dynamics 365 for Customer Engagement](https://blogs.msdn.microsoft.com/crminthefield/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines/). Last time, we covered the following:
 
@@ -16,7 +16,7 @@ Later on, we will be creating a new pipeline to automate unpacking solutions. Th
 [Step templates](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#step-template) allow us to pull one or more steps from another file into our main pipeline. This opens a realm of possibilities for writing clean, re-usable YAML. Let's start with a simple template for installing the core tools (which includes Solution Packager):
 
 
-[steps/install-core-tools.yml](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/steps/install-core-tools.yml)
+[steps/install-core-tools.yml](https://github.com/tyler-hogsett-microsoft/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/steps/install-core-tools.yml)
 ```YAML
 steps:
   - script: md tools
@@ -39,7 +39,7 @@ steps:
 
 Now, in our pipeline for packing a solution, we can reference this template in place of the steps we'd written previously:
 
-[pack-import-solution.yml](https://github.com/paulbreuler/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/pack-import-solution.yml)
+[pack-import-solution.yml](https://github.com/tyler-hogsett-microsoft/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/pack-import-solution.yml)
 ```YAML
 #...
 
