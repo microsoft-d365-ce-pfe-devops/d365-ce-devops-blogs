@@ -15,8 +15,6 @@ Later on, we will be creating a new pipeline to automate unpacking solutions. Th
 
 [Step templates](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#step-template) allow us to pull one or more steps from another file into our main pipeline. This opens a realm of possibilities for writing clean, re-usable YAML. Let's start with a simple template for installing the core tools (which includes Solution Packager):
 
-
-[steps/install-core-tools.yml](https://github.com/tyler-hogsett-microsoft/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/steps/install-core-tools.yml)
 ```YAML
 steps:
   - script: md tools
@@ -39,16 +37,23 @@ steps:
 
 Now, in our pipeline for packing a solution, we can reference this template in place of the steps we'd written previously:
 
-[pack-import-solution.yml](https://github.com/tyler-hogsett-microsoft/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/pack-import-solution.yml)
 ```YAML
-#...
-
 steps:
 - template: steps/install-core-tools.yml
-
-#...
 ```
+*Excerpt from: [pack-import-solution.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/pack-import-solution.yml)*
 
 ### Making Pipelines Re-usable
 
-In a future blog post, we will be adding more solutions to our architecture, and we will be using the same pipelines we've built for those solutions as well.
+In future blog posts, we will be adding more solutions to our architecture. There are many strategies for organizing your Dynamics 365 solution architecture in source control. For the purposes for this article, we will assume that we are creating a separate repository for each solution. Furthermore, we will create a separate repository for our pipeline templates. You can import our pipeline repository, our create your own.
+
+#### Import a Pipeline Repository
+
+1. Open your existing Azure DevOps project.
+2. Click *Repos*
+3. Click the currently selected repository at the top, and click *Import repository*.
+4. Make sure that *Source type* is set to *Git*, and for the clone URL, insert the URL to your repository, or use ours at https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines.
+5. Give the new repository a name (e.g. "Pipelines").
+6. Click *Import*.
+
+**TODO** Insert GIF for importing Pipeline Repository.
