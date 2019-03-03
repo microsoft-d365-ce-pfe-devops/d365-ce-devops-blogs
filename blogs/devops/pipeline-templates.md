@@ -41,7 +41,7 @@ Now, in our pipeline for packing a solution, we can reference this template in p
 steps:
 - template: steps/install-core-tools.yml
 ```
-*Excerpt from: [pack-import-solution.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/pack-import-solution.yml)*
+*Excerpt from: [pack-import-solution.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines/blob/master/pack-import-solution.yml)*
 
 ### Making Pipelines Re-usable
 
