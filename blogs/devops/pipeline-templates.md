@@ -56,4 +56,6 @@ In future blog posts, we will be adding more solutions to our architecture. Ther
 5. Give the new repository a name (e.g. "Pipelines").
 6. Click *Import*.
 
-**TODO** Insert GIF for importing Pipeline Repository.
+**TODO**
+- Insert GIF for importing Pipeline Repository.
+- Tag Pipeline repository for Lesson 2
