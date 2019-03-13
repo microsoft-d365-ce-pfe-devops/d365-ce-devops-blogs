@@ -33,7 +33,7 @@ jobs:
 
 Later on, we will be creating a new pipeline to automate unpacking solutions. The first step in that pipeline is going to install Solution Packager, but [we've already done that](https://blogs.msdn.microsoft.com/crminthefield/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines/#download-and-install-solution-packager). So let's look at how we can reuse those steps without the guilt of copying and pasting code.
 
-### Introducing Step Templates
+#### Introducing Step Templates
 
 While job templates provide a way to build reusable sequences of tasks, [step templates](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#step-template) allow us to create granular sequences of tasks that can be consumed by our pipelines and jobs. This opens a realm of possibilities for writing clean, reusable YAML. Let's start with a simple template for installing the core tools (which includes Solution Packager):
 
@@ -90,6 +90,37 @@ jobs:
 
 Note that if you are using an Azure Repo (`type: git`), you will not need to specify an `endpoint`. If you are using GitHub for your repository, you will need to create a service endpoint if you don't have one already.
 
+### Using Variable Groups
+
+In our last article, we introduced the concept of variables in our pipelines. Variables allow us to parameterize a pipeline for each time it is run, and provide a secure way for us to store sensitive information, such as passwords or tokens.
+
+Often times, a variable will be scoped much further than the lifetime of one pipeline. For example, a service account's credentials will be reused by many pipelines. In order to reuse the values of variables, we organize them in our libraries as variable groups.
+
+#### Steps to Create a Variable Group
+
+1. Click or hover over *Pipelines*, click *Library*.
+2. Click *+ Variable Group*.
+3. Type a name for your variable group under *Variable group name:*. In this example, we are going to be replacing the variables we use for the Dynamics 365 CE service account we created in the last article, so our name should somehow reflect that.
+4. Click *+ Add* to start adding variables to the group.
+5. When done, click *Save*.
+
+![Create a Variable Group Demo](../../media/devops/create-variable-group.gif)
+
+The variable group will not be available to our pipeline until we link it to our pipeline.
+
+#### Steps to Link a Variable Group to a Pipeline
+
+1. Click or hover over *Pipelines*, click *Builds*.
+2. Click the pipeline you want to modify.
+3. Click *Edit*.
+4. Click on the vertical ellipsis at the top-right corner, click *Variables*.
+5. Click *Variable groups*.
+6. Click *Link variable group*.
+7. Select the variable group you want to link, and then click *Link*.
+8. Save your changes.
+
+![Create a Variable Group Demo](../../media/devops/link-variable-group.gif)
+
 Now that we've invested some time in making our pipeline code reusable, let's capitalize on our investment and add another pipeline to our belt.
 
 ## Unpack Dynamics 365 CE Solution Into Source Control
@@ -102,7 +133,7 @@ In the last article, we walked through [using the solution packager](https://blo
 
 This pipeline will need to perform the following:
 
-1. Check out the solution repository for editing.
+1. [Check out the solution repository for editing.](#working-with-git-in-a-yaml-pipeline)
 2. Export the solution ZIP files (both managed and unmanaged) from Dynamics 365 CE
 3. Unpack the solution files into the solution directory.
 4. Commit and push the changes back into the repository.
