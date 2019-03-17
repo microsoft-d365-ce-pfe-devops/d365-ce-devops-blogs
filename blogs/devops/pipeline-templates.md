@@ -129,23 +129,135 @@ In the last article, we walked through [using the solution packager](https://blo
 
 - Automation of repetitive steps.
 - Freedom from client-side development tooling.
-- Empowerment to non-developers (e.g. business analysts) to commit changes to source control.
+- Ability for non-developers (e.g. business analysts) to commit changes to source control.
 
 This pipeline will need to perform the following:
 
-1. [Check out the solution repository for editing.](#working-with-git-in-a-yaml-pipeline)
-2. Export the solution ZIP files (both managed and unmanaged) from Dynamics 365 CE
-3. Unpack the solution files into the solution directory.
-4. Commit and push the changes back into the repository.
+1. [Check out the solution repository for editing.](#Working-With-Git-in-a-YAML-Pipeline)
+2. [Export the solution ZIP files (both managed and unmanaged) from Dynamics 365 CE](#Export-Solution-From-Dynamics-365-CE)
+3. [Unpack the solution files into the solution directory.](#Execute-SolutionPackager-in-YAML-Pipeline)
+4. [Commit and push the changes back into the repository.](#Commit-Changes-to-Source-Control-in-YAML-Pipeline)
 
 ### Working With Git in a YAML Pipeline
 
-When a pipeline runs, it checks out the remote repository for read only. We will need to escalate our credentials so that we can make changes to the local repository and commit and push them back to the remote repo. 
+When a pipeline runs, it checks out the target branch of the remote repository as a [detached head](https://git-scm.com/docs/git-checkout#_detached_head), which effectively renders it read-only. We will need to reattach to the target branch using our credentials so that we can make changes to the local repository and commit/push them back to the remote repo.
+
+As of the time of this writing, there is no way to use a service connection within a pipeline to write back to a repository, so we will need to supply credentials using another variable group:
+
+![GitHub Service Account](../../media/devops/github-service-account.png)
+
+**Note:** While supplying a password will work here, for security reasons, it's best to use a [personal access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) so that we can restrict our code to have the minimal permissions needed for executing our pipeline.
+
+Now we can use the git command line to escalate our credentials:
+
+```YAML
+- powershell: |
+    Set-Location $($env:BuildSourcesDirectory)
+    
+    $username = [uri]::EscapeDataString($env:GitHubServiceAccountUsername)
+    $token = [uri]::EscapeDataString($env:GitHubServiceAccountToken)
+    $remoteUrl = "$env:BuildRepositoryUri.git".Replace(
+      "https://",
+      "https://$($username):$($token)@")
+    git remote set-url origin $remoteUrl
+
+    git config user.email $env:BuildRequestedForEmail
+    git config user.name $env:BuildRequestedFor
+
+    git checkout $env:BuildSourceBranchName
+  env:
+    BuildSourcesDirectory: $(Build.SourcesDirectory)
+    GitHubServiceAccountUsername: $(GitHubServiceAccount.Username)
+    GitHubServiceAccountToken: $(GitHubServiceAccount.Token)
+    BuildRepositoryUri: $(Build.Repository.Uri)
+    BuildRequestedForEmail: $(Build.RequestedForEmail)
+    BuildRequestedFor: $(Build.RequestedFor)
+    BuildSourceBranchName: $(Build.SourceBranchName)
+```
+*Excerpt from [jobs/export-unpack-commit-solution.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines/blob/master/jobs/export-unpack-commit-solution.yml)*
+
+**TODO** Explain this code block
 
 ### Export Solution From Dynamics 365 CE
 
 The first step in the last article was to manually export the solution from our source environment. We will now replicate those steps in our YAML pipeline.
 
+```YAML
+- powershell: Install-Module Microsoft.Xrm.Data.Powershell -Scope CurrentUser -Force
+  displayName: 'Install Microsoft.Xrm.Data.PowerShell'
+
+- powershell: |
+    $connection = Get-CrmConnection `
+      -ConnectionString `
+        ("AuthType = Office365;" + `
+        "Username = $env:DynamicsServiceAccountUserName;" + `
+        "Password = $env:DynamicsServiceAccountPassword;" + `
+        "Url = https://$env:EnvironmentName.crm.dynamics.com")
+
+    Export-CrmSolution `
+      -conn $connection `
+      -SolutionName $($env:SolutionName) `
+      -SolutionZipFileName "$env:AgentWorkFolder\$env:SolutionName.zip"
+    
+    Export-CrmSolution `
+      -conn $connection `
+      -SolutionName $($env:SolutionName) `
+      -SolutionZipFileName "$env:AgentWorkFolder\$($env:SolutionName)_managed.zip" `
+      -Managed
+  env:
+    DynamicsServiceAccountUserName: $(DynamicsServiceAccount.UserName)
+    DynamicsServiceAccountPassword: $(DynamicsServiceAccount.Password)
+    EnvironmentName: $(Environment.Name)
+    SolutionName: $(Solution.Name)
+    AgentWorkFolder: $(Agent.WorkFolder)
+  displayName: 'Export solution'
+```
+*Excerpt from [jobs/export-unpack-commit-solution.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines/blob/master/jobs/export-unpack-commit-solution.yml)*
+
+**TODO** Explain this code block
+
+### Execute SolutionPackager in YAML Pipeline
+
+```YAML
+- powershell: Remove-Item $env:SolutionName/solution -Recurse -Verbose
+  env:
+    SolutionName: $(Solution.Name)
+  displayName: 'Clear existing unpacked solution'
+
+- template: ../steps/install-core-tools.yml
+
+- powershell: |
+    Start-Process tools/CoreTools/SolutionPackager.exe `
+      -ArgumentList `
+        "/action: Extract", `
+        "/zipfile: $env:AgentWorkFolder/$env:SolutionName.zip", `
+        "/folder: $env:SolutionName/solution", `
+        "/packagetype: Both" `
+      -Wait `
+      -NoNewWindow
+  env:
+    AgentWorkFolder: $(Agent.WorkFolder)
+    SolutionName: $(Solution.Name)
+  displayName: 'Unpack solution'
+```
+*Excerpt from [jobs/export-unpack-commit-solution.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines/blob/master/jobs/export-unpack-commit-solution.yml)*
+
+**TODO** Explain this code block
+
+### Commit Changes to Source Control in YAML Pipeline
+
+```YAML
+- powershell: |
+    git add $env:SolutionName/*
+    git commit -m "Solution modification during build $($env:Build_BuildNumber)"
+    git push --set-upstream origin master
+  env:
+    SolutionName: $(Solution.Name)
+  displayName: 'Commit solution changes'
+```
+*Excerpt from [jobs/export-unpack-commit-solution.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines/blob/master/jobs/export-unpack-commit-solution.yml)*
+
+**TODO** Explain this code block
+
 **TODO**
-- Insert GIF for importing Pipeline Repository.
 - Tag Pipeline repository for Lesson 2
