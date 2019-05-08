@@ -6,11 +6,14 @@ For a deeper look into changes announced during the Build conference check out t
 
 Rather than re-hash the basics and everything else we've done to this point I will urge you to check out the [first blog]((https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)) in the series. In this blog, we will look at the new pipeline features, add stages to our build and complete a solution deployment using multi-stage YAML pipelines. 
 
-- [Updating our build script for a multi-stage setup](#updating-our-build-script-for-a-multi-stage-setup)
-  - [Steps to create pipeline variables](#steps-to-create-pipeline-variables)
-- [Adding the release stage](#adding-the-release-stage)
-  - [Download artifacts](#download-artifacts)
-  - [Import solution into target environment](#import-solution-into-target-environment)
+- [Introduction to DevOps for Dynamics 365 Customer Engagement using YAML Based Azure Pipelines - Part 1.5](#introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines---part-15)
+  - [Getting started](#getting-started)
+    - [Updating our build script for a multi-stage setup](#updating-our-build-script-for-a-multi-stage-setup)
+      - [Steps to create pipeline variables](#steps-to-create-pipeline-variables)
+    - [Adding the release stage](#adding-the-release-stage)
+      - [Download artifacts](#download-artifacts)
+      - [Import solution into target environment](#import-solution-into-target-environment)
+  - [Additional Resources](#additional-resources)
 
 ## Getting started
 
@@ -117,7 +120,7 @@ For our script to be able to access the variables defined in our script, we will
 5. Click the *Save & queue* drop down and click Save
 6. Enter a comment and click *Save*
 
-![setup-pipeline-variables](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/blob/ef1878fdb12e11b75c4ee5e99ae8cd26434cb022/media/devops/multi-stage-pipelines/setup-pipeline-variables.gif)
+![setup-pipeline-variables](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/blob/ef1878fdb12e11b75c4ee5e99ae8cd26434cb022/media/devops/multi-stage-pipelines/setup-pipeline-variables.gif?raw=true)
 
 ### Adding the release stage
 
