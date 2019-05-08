@@ -117,7 +117,7 @@ For our script to be able to access the variables defined in our script, we will
 5. Click the *Save & queue* drop down and click Save
 6. Enter a comment and click *Save*
 
-![setup-pipeline-variables](..\..\media\devops\multi-stage-pipelines\setup-pipeline-variables.gif)
+![setup-pipeline-variables](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/blob/ef1878fdb12e11b75c4ee5e99ae8cd26434cb022/media/devops/multi-stage-pipelines/setup-pipeline-variables.gif)
 
 ### Adding the release stage
 
