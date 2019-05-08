@@ -4,7 +4,7 @@ In our [last blog](https://community.dynamics.com/crm/b/crminthefield/archive/20
 
 For a deeper look into changes announced during the Build conference check out the [What's new with Azure Pipelines](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/) blog and the [announcement for YAML Release in Azure Pipelines]( https://mybuild.techcommunity.microsoft.com/sessions/77791?source=sessions#top-anchor) session at Build.
 
-Rather than re-hash the basics and everything else we've done to this point I will urge you to check out the [first blog]((https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)) in the series. In this blog, we will look at the new pipeline features, add stages to our build and complete a solution deployment using multi-stage YAML pipelines. 
+Rather than re-hash the basics and everything else we've done to this point I will urge you to check out the [first blog]((https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)) in the series. In this blog, we will look at the new pipeline features, add stages to our build and complete a solution deployment using multi-stage YAML pipelines.
 
 - [Introduction to DevOps for Dynamics 365 Customer Engagement using YAML Based Azure Pipelines - Part 1.5](#introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines---part-15)
   - [Getting started](#getting-started)
@@ -17,19 +17,19 @@ Rather than re-hash the basics and everything else we've done to this point I wi
 
 ## Getting started
 
-If multi-stage pipelines is not generally available when you read this you will first need to enable the preview feature. This can be accomplished using the following steps.
+If multi-stage pipelines are not generally available when you read this you will first need to enable the preview feature. This can be accomplished using the following steps.
 
 1. Navigate to your Azure DevOps instance (e.g. https://dev.azure.com/example/project)
 2. Click your profile icon in the top right of the page.
 3. In the drop-down click *Preview features*
 4. In the Preview feature pane toggle *Multi-stage pipelines*
-5. Close the pane and your are all set to go.
+5. Close the pane and you are all set to go.
 
-TODO Gif to enable feature
+![enable preview feature](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/blob/f0916cb1c6187d503882b43e2381820d5bc0b421/media/devops/multi-stage-pipelines/enable-preview.gif?raw=true)
 
 ### Updating our build script for a multi-stage setup
 
-Below is the complete script from the first blog with new syntax to enable the code to be used in multiple stages. The notable changes in the section is the addition of the `stages` and `job` schema. Stages are collections of jobs that will allow us to logically divide our pipeline between various continuous integration and continuous deployment processes. Jobs are collections of steps that will help us logically divide work in our stages. In both cases we can set dependencies and conditions on other processes or run in parallel.
+Below is the complete script from the first blog with new syntax to enable the code to be used in multiple stages. The notable changes in the section are the addition of the `stages` and `job` schema. Stages are collections of jobs that will allow us to logically divide our pipeline between various continuous integration and continuous deployment processes. Jobs are collections of steps that will help us logically divide work into stages. In both cases, we can set dependencies and conditions on other processes or run in parallel.
 
 ```yaml
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
@@ -124,7 +124,7 @@ For our script to be able to access the variables defined in our script, we will
 
 ### Adding the release stage
 
-Now that we have completed our build stage we can create a new stage to consume and deploy the solution artifact we published earlier. For added utility we will use a [deployment job](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/deployment-jobs?view=azure-devops) to track deployments to our downstream environments. For this example, our release stage will be dependent on the success of the build stage using [dependencies](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml#dependencies) and [conditions](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml#conditions). Note that by default stages are sequential so this change is more for demonstration than necessity. 
+Now that we have completed our build stage we can create a new stage to consume and deploy the solution artifact we published earlier. For added utility, we will use a [deployment job](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/deployment-jobs?view=azure-devops) to track deployments to our downstream environments. For this example, our release stage will be dependent on the success of the build stage using [dependencies](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml#dependencies) and [conditions](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml#conditions). Note that by default stages are sequential so this change is more for demonstration than necessity. 
 
 ```yaml
  - stage: Release
@@ -150,9 +150,9 @@ Now that we have completed our build stage we can create a new stage to consume 
 
 **Schema explanation**
 
-- [**deployment**](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/deployment-jobs?view=azure-devops) - a deployment is special type of job focused on deploying apps to your environments allowing you to track deployments to specific environments. 
+- [**deployment**](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/deployment-jobs?view=azure-devops) - a deployment is a special type of job focused on deploying apps to your environments allowing you to track deployments to specific environments.
 - [**environment**](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops) - the name of the environment we wish to deploy to. <u>Note that if you provide an environment name for an environment that you have not explicitly created one will be automatically created without associated resources</u>, which is what we want in this case.
-- **strategy** - at the time of writing only the runOnce strategy is avaiable, this step will run the deployment  exactly one time.
+- **strategy** - at the time of writing only the runOnce strategy is available, this step will run the deployment exactly one time.
 - **deploy** - the entry point to our deployment steps.
 
 #### Download artifacts
@@ -173,16 +173,16 @@ Note that because we have logical separation using jobs we must publish and down
 While this snippet of code is very simple I will demonstrate adding it via the new visual task pane in the YAML editor as it can be very handy for adding pre-made tasks in a quick and efficient manner.
 
 1. Open your pipeline editor
-2. On the right you should see a task pane. If not, click *Show assistant* in the top right of the editor window.
+2. On the right, you should see a task pane. If not, click *Show assistant* in the top right of the editor window.
 3. In the search box type *download build artifacts*
-4. Click the *Download Build Artifacts* taks
+4. Click the *Download Build Artifacts* task
 5. Enter your artifact name (e.g. drop)
 6. Ensure that you have clicked the line in your editor where you would like to have the task added.
-7.  Click Add
+7. Click Add
 8. Update indentation as needed.
 9. Save you pipeline and run to test your changes.
 
-**TODO gif to add task**
+![Add task using task assistant](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/blob/f0916cb1c6187d503882b43e2381820d5bc0b421/media/devops/multi-stage-pipelines/task-assistant-usage.gif?raw=true)
 
 #### Import solution into target environment
 
@@ -224,7 +224,7 @@ This time for step 3 we will add 3 new variables
   - **value**: [example@contoso.onmicrosoft.com](mailto:example@contoso.onmicrosoft.com)
 - name: `serviceAccount.password`
   - **value**: hopefully not [hunter2](http://bash.org/?244321=)
-  - For password variable be sure to select the lock symbol to change the type of the field to secret.
+  - For the password variable be sure to select the lock symbol to change the type of the field to secret.
 
 That's it, now click Save to commit your changes, then click Run to start the pipeline. Once started you will be redirected to the pipeline summary to see the action in real-time. Click on the various stage cards to view details. Once the build is completed you can click *Environments* on the left navigation pane to view past deployments to the environment we created earlier. 
 
