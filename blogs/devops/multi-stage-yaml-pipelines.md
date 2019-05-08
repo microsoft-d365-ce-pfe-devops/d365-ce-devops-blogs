@@ -1,10 +1,16 @@
 # Introduction to DevOps for Dynamics 365 Customer Engagement using YAML Based Azure Pipelines - Part 1.5
 
-In our [last blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines) we learned why it is important to version control our solutions and explored how to pack a solution from a repository for deployment to downstream environments. Now it's time to create a proper setup. During the Microsoft Build 2019 developer conference multi-stage pipelines were announced enabling us to create a CI/CD pipeline using multi-stage pipelines, which will allow us to properly perform continuous deployment on our solutions.
+In our [last blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines) we learned why it is important to version control our solutions and explored how to pack a solution from a repository for deployment to downstream environments. Now it's time to create a more complete. During the Microsoft Build 2019 developer conference, multi-stage pipelines were announced enabling us to create a CI/CD pipeline using multi-stage pipelines, which will allow us to properly perform continuous deployment on our solutions.
 
 For a deeper look into changes announced during the Build conference check out the [What's new with Azure Pipelines](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/) blog and the [announcement for YAML Release in Azure Pipelines]( https://mybuild.techcommunity.microsoft.com/sessions/77791?source=sessions#top-anchor) session at Build.
 
-Rather than re-hash the basics and everything else we've done to this point I urge you to check out the [first blog]((https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)) in the series. In this blog, we will look at the new pipeline features, add stages to our build and complete a solution deployment using multi-stage YAML pipelines. 
+Rather than re-hash the basics and everything else we've done to this point I will urge you to check out the [first blog]((https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)) in the series. In this blog, we will look at the new pipeline features, add stages to our build and complete a solution deployment using multi-stage YAML pipelines. 
+
+- [Updating our build script for a multi-stage setup](#updating-our-build-script-for-a-multi-stage-setup)
+  - [Steps to create pipeline variables](#steps-to-create-pipeline-variables)
+- [Adding the release stage](#adding-the-release-stage)
+  - [Download artifacts](#download-artifacts)
+  - [Import solution into target environment](#import-solution-into-target-environment)
 
 ## Getting started
 
@@ -21,8 +27,6 @@ TODO Gif to enable feature
 ### Updating our build script for a multi-stage setup
 
 Below is the complete script from the first blog with new syntax to enable the code to be used in multiple stages. The notable changes in the section is the addition of the `stages` and `job` schema. Stages are collections of jobs that will allow us to logically divide our pipeline between various continuous integration and continuous deployment processes. Jobs are collections of steps that will help us logically divide work in our stages. In both cases we can set dependencies and conditions on other processes or run in parallel.
-
-In the following section we will add the deploy stage and explore some new features.
 
 ```yaml
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
@@ -102,8 +106,6 @@ Review the Microsoft Docs page for [Jobs](https://docs.microsoft.com/en-us/azure
 
 For our script to be able to access the variables defined in our script, we will need to manually create them in our pipeline settings using the following steps:
 
-*Don't forget to click *Save and run* before attempting to navigate away.
-
 1. Click the ellipsis (…) on the top right of the page and in the drop-down click *Variables*
 2. Click *+ Add* in the pipeline variables view to add a new variable.
 3. Perform step 3 twice and add the following variables
@@ -115,11 +117,11 @@ For our script to be able to access the variables defined in our script, we will
 5. Click the *Save & queue* drop down and click Save
 6. Enter a comment and click *Save*
 
-### Adding the deployment stage
+![setup-pipeline-variables](..\..\media\devops\multi-stage-pipelines\setup-pipeline-variables.gif)
 
-To add a build stage we will use a [deployment job](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/deployment-jobs?view=azure-devops) as an abstract shell to track deployments to our downstream environments.  Note that by default stages are sequential so this change is more for verbosity than necessity in this simple example with two stages but will become more important as our pipeline expands. To run stages in parallel you can simply change the dependsOn statement to be equal to an empty array (i.e. `dependsOn: []`).
+### Adding the release stage
 
-For this example, we will make our release stage dependent and our build stage with the condition that Release will not run unless Build succeeds. 
+Now that we have completed our build stage we can create a new stage to consume and deploy the solution artifact we published earlier. For added utility we will use a [deployment job](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/deployment-jobs?view=azure-devops) to track deployments to our downstream environments. For this example, our release stage will be dependent on the success of the build stage using [dependencies](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml#dependencies) and [conditions](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/stages?view=azure-devops&tabs=yaml#conditions). Note that by default stages are sequential so this change is more for demonstration than necessity. 
 
 ```yaml
  - stage: Release
@@ -145,8 +147,8 @@ For this example, we will make our release stage dependent and our build stage w
 
 **Schema explanation**
 
-- **deployment** - a deployment is special type of job focused on deploying apps to your environments allowing you to track deployments to specific environments. 
-- **environment** - the name of the environment we wish to deploy to. <u>Note that if you provide an environment name for an environment that you have not explicitly created one will be automatically created without associated resources</u>, which is what we want in this case.
+- [**deployment**](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/deployment-jobs?view=azure-devops) - a deployment is special type of job focused on deploying apps to your environments allowing you to track deployments to specific environments. 
+- [**environment**](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops) - the name of the environment we wish to deploy to. <u>Note that if you provide an environment name for an environment that you have not explicitly created one will be automatically created without associated resources</u>, which is what we want in this case.
 - **strategy** - at the time of writing only the runOnce strategy is avaiable, this step will run the deployment  exactly one time.
 - **deploy** - the entry point to our deployment steps.
 
@@ -221,17 +223,18 @@ This time for step 3 we will add 3 new variables
   - **value**: hopefully not [hunter2](http://bash.org/?244321=)
   - For password variable be sure to select the lock symbol to change the type of the field to secret.
 
-That's it, now click Save to commit your changes, then click Run to start the pipeline. Once started you will be redirected to the pipeline summary to see the action in real-time. Click on the various stage cards to view details.
+That's it, now click Save to commit your changes, then click Run to start the pipeline. Once started you will be redirected to the pipeline summary to see the action in real-time. Click on the various stage cards to view details. Once the build is completed you can click *Environments* on the left navigation pane to view past deployments to the environment we created earlier. 
 
-Once the build is completed you can click *Environments* on the left navigation pane to view past deployments to the environment we created earlier. 
+If you would like to use some pre-made tasks and leverage the task assistant we discussed in the [download artifacts](#download-artifacts) section check out [Dynamics 365 Build Tools](https://marketplace.visualstudio.com/items?itemName=WaelHamze.xrm-ci-framework-build-tasks).  
 
-In our next blog we will explore templates to make our pipeline code reusable.
+In our upcoming blog(s) we will explore templates to make our pipeline code reusable and look at some new tooling to improve our continuous integration process.
 
-## References
+## Additional Resources
 
 - [aka.ms/YAML](https://aka.ms/YAML)
 - [Announcement for YAML Release in Azure Pipelines]( https://mybuild.techcommunity.microsoft.com/sessions/77791?source=sessions#top-anchor)
 
 - [What's new with Azure Pipelines](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)
 - Example code - https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial
+- [Dynamics 365 Build Tools](https://marketplace.visualstudio.com/items?itemName=WaelHamze.xrm-ci-framework-build-tasks) - Azure Pipeline tasks for automating build & deployment
 
