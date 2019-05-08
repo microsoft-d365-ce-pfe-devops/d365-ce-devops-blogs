@@ -130,7 +130,7 @@ For our pipeline to be able to access the variables defined in code, we will nee
    - name: `solution.name`
      - **value**: <desired zip file name. In this example, *contosoUniversity*>
    - name: `solution.path`
-     - **value**: <path to repository location of extracted solution. in this example, *Lesson-1/ExtractedSolution/*>
+     - **value**: <path to repository location of extracted solution. in this example, *Lesson-1.5/ExtractedSolution/*>
 4. Checkmark both as *Settable at queue time*
 5. Click the *Save & queue* drop down and click Save
 6. Enter a comment and click *Save*
@@ -236,7 +236,7 @@ The only change to our actual deployment code from the [first blog](https://comm
 **Important** - We have added some environment variables. We will need to edit our pipeline settings once more following the [steps to create pipeline variables](#steps-to-create-pipeline-variables) section to add the three new variables below.
 
 - **name**: `environment.name` 
-  - **value**: <Dynamics 365 CE org name e.g. **contoso**.crm.dynamics.com, name only>
+  - **value**: <Dynamics 365 CE org name e.g. **contoso**.crm.dynamics.com, name only>. If your org is in another geo update the YAML script accordingly.
 - name: `serviceAccount.upn`
   - **value**: [example@contoso.onmicrosoft.com](mailto:example@contoso.onmicrosoft.com)
 - name: `serviceAccount.password`
