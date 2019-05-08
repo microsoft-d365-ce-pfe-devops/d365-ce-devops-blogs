@@ -1,6 +1,6 @@
 # Introduction to DevOps for Dynamics 365 Customer Engagement using YAML Based Azure Pipelines - Part 1.5
 
-In our [last blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines) we learned why it is important to version control our solutions and explored how to pack a solution from a repository for deployment to downstream environments. Now it's time to create a more complete. During the Microsoft Build 2019 developer conference, multi-stage pipelines were announced enabling us to create a CI/CD pipeline using multi-stage pipelines, which will allow us to properly perform continuous deployment on our solutions.
+In our [last blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines) we learned why it is important to version control our solutions and explored how to pack a solution from a repository for deployment to downstream environments. Now it's time to create a more complete pipeline. During the Microsoft Build 2019 developer conference, multi-stage pipelines were announced enabling us to create a CI/CD pipeline using multi-stage pipelines, which will allow us to properly perform continuous deployment on our solutions.
 
 For a deeper look into changes announced during the Build conference check out the [What's new with Azure Pipelines](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/) blog and the [announcement for YAML Release in Azure Pipelines]( https://mybuild.techcommunity.microsoft.com/sessions/77791?source=sessions#top-anchor) session at Build.
 
@@ -13,6 +13,7 @@ Rather than re-hash the basics and everything else we've done to this point I wi
     - [Adding the release stage](#adding-the-release-stage)
       - [Download artifacts](#download-artifacts)
       - [Import solution into target environment](#import-solution-into-target-environment)
+        - [Add deployment variables](#add-deployment-variables)
   - [Additional Resources](#additional-resources)
 
 ## Getting started
@@ -29,7 +30,21 @@ If multi-stage pipelines are not generally available when you read this you will
 
 ### Updating our build script for a multi-stage setup
 
-Below is the complete script from the first blog with new syntax to enable the code to be used in multiple stages. The notable changes in the section are the addition of the `stages` and `job` schema. Stages are collections of jobs that will allow us to logically divide our pipeline between various continuous integration and continuous deployment processes. Jobs are collections of steps that will help us logically divide work into stages. In both cases, we can set dependencies and conditions on other processes or run in parallel.
+Below is the complete script from the first blog that enables us to deploy any unpacked solution stored in version control; this time with new syntax to enable the code to be used in multiple stages. The notable changes in the section are the addition of the `stages` and `job` schema. Stages are collections of jobs that will allow us to logically divide our pipeline between various continuous integration and continuous deployment processes. Jobs are collections of steps that will help us logically divide work into stages. In both cases, we can set dependencies and conditions on other processes or run in parallel.
+
+If starting from scratch create a new pipeline and select the starter pipeline configuration. The steps are the essentially the same as the original blog but Builds has been replaced with Pipelines. **If you haven't unpacked your solution and checked it into version control go back to the [first blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines) for more information.** **Alternately, you can [fork the tutorial repository on GitHub](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial) and use the Lesson-1.5 folder for setup.**
+
+1. Navigate to your Azure DevOps project repository. For example, *https://dev.azure.com/{username}/D365-CE-DevOps-Tutorial*
+2. Click *Pipelines*, then click *Pipelines*.
+3. Click *New*, then click *New Pipeline*
+5. On the next screen, we will select the location of our unpacked solution: Azure Repos, GitHub, or another service. Note that choosing GitHub or other services requires that you authorize Azure DevOps to access the repository, the behavior otherwise is the same in our build pipelines.
+6. Select the repository containing the unpacked solution files.
+7. Configure pipeline using the Starter pipeline option and copy/paste the script below replacing the starter script. If you have forked the repo on GitHub choose the existing YAML script in the Lesson-1.5 directory.
+7. Click *Save and run*
+8. Enter a commit message and click *Save and run* again
+9. Click *Cancel* to stop the build
+10. Click the ellipsis (…) in the top right 
+11. In the drop-down, click edit pipeline. We will need to add some variables to make things function correctly. follow the [steps to create pipeline variables](#steps-to-create-pipeline-variables) below to continue.
 
 ```yaml
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
@@ -107,11 +122,11 @@ Review the Microsoft Docs page for [Jobs](https://docs.microsoft.com/en-us/azure
 
 #### Steps to create pipeline variables
 
-For our script to be able to access the variables defined in our script, we will need to manually create them in our pipeline settings using the following steps:
+For our pipeline to be able to access the variables defined in code, we will need to manually create the variables in our pipeline settings using the following steps:
 
 1. Click the ellipsis (…) on the top right of the page and in the drop-down click *Variables*
 2. Click *+ Add* in the pipeline variables view to add a new variable.
-3. Perform step 3 twice and add the following variables
+3. Perform step 3 two times to add the following variables
    - name: `solution.name`
      - **value**: <desired zip file name. In this example, *contosoUniversity*>
    - name: `solution.path`
@@ -119,6 +134,8 @@ For our script to be able to access the variables defined in our script, we will
 4. Checkmark both as *Settable at queue time*
 5. Click the *Save & queue* drop down and click Save
 6. Enter a comment and click *Save*
+
+You may now run the script setting the variables for solution name and solution path if you have not defined them in your variable settings. The result should be a new build artifact named drop that contains you packed solution as both managed and unmanaged. 
 
 ![setup-pipeline-variables](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/blob/ef1878fdb12e11b75c4ee5e99ae8cd26434cb022/media/devops/multi-stage-pipelines/setup-pipeline-variables.gif?raw=true)
 
@@ -157,7 +174,7 @@ Now that we have completed our build stage we can create a new stage to consume 
 
 #### Download artifacts
 
-Note that because we have logical separation using jobs we must publish and download artifacts to use an artifact in later jobs.
+Continuing on with our script we will need to download the solution artifact we publisher earlier. The reason we need to download the artifact is because we have logical separation using jobs in which artifacts are not shared across boundaries.
 
 ```yaml
             - task: DownloadBuildArtifacts@0
@@ -186,7 +203,7 @@ While this snippet of code is very simple I will demonstrate adding it via the n
 
 #### Import solution into target environment
 
-The only change to our deployment example from the [initial blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines#import-solution-into-target-environment) other than moving to a release stage is the addition of running the import as an asynchronous call to avoid timeouts noted by previous readers.
+The only change to our actual deployment code from the [first blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines#import-solution-into-target-environment) other than moving to a release stage and using deployment jobs is that we are now importing asynchronously. Importing asynchronously will help us avoid import timeout issues as noted by readers of the first blog. 
 
 ```yaml
             - powershell: Install-Module Microsoft.Xrm.Data.Powershell -Scope CurrentUser -Force
@@ -214,9 +231,9 @@ The only change to our deployment example from the [initial blog](https://commun
 
 *Note that indentation has been left for copy/paste purposes. If you have issues with the script check your indentation.
 
-**Important** - We have added some environment variables so we will need to edit our pipeline settings once more following the steps in the [Steps to create pipeline variables](#steps-to-create-pipeline-variables) section.
+##### Add deployment variables
 
-This time for step 3 we will add 3 new variables
+**Important** - We have added some environment variables. We will need to edit our pipeline settings once more following the [steps to create pipeline variables](#steps-to-create-pipeline-variables) section to add the three new variables below.
 
 - **name**: `environment.name` 
   - **value**: <Dynamics 365 CE org name e.g. **contoso**.crm.dynamics.com, name only>
