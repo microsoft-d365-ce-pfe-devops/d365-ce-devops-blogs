@@ -7,12 +7,12 @@ For a deeper look into changes announced during the Build conference check out t
 Rather than re-hash the basics and everything else we've done to this point I will urge you to check out the [first blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines) in the series. In this blog, we will look at the new pipeline features, add stages to our build, and complete a solution deployment using multi-stage YAML pipelines.
 
   - [Getting started](#getting-started)
-    - [Updating our build script for a multi-stage setup](#updating-our-build-script-for-a-multi-stage-setup)
-      - [Steps to create pipeline variables](#steps-to-create-pipeline-variables)
-    - [Adding the release stage](#adding-the-release-stage)
-      - [Download artifacts](#download-artifacts)
-      - [Import solution into target environment](#import-solution-into-target-environment)
-        - [Add deployment variables](#add-deployment-variables)
+  - [Updating our build script for a multi-stage setup](#updating-our-build-script-for-a-multi-stage-setup)
+    - [Steps to create pipeline variables](#steps-to-create-pipeline-variables)
+  - [Adding the release stage](#adding-the-release-stage)
+    - [Download artifacts](#download-artifacts)
+    - [Import solution into target environment](#import-solution-into-target-environment)
+     - [Add deployment variables](#add-deployment-variables)
   - [Additional Resources](#additional-resources)
 
 ## Getting started
@@ -34,7 +34,7 @@ Below you will find the complete script from the first blog that enables us to d
 If starting from scratch create a new pipeline and select the starter pipeline configuration. The steps are the essentially the same as the original blog but Builds has been replaced with Pipelines. **If you haven't unpacked your solution and checked it into version control go back to the [first blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines) for more information.** **Alternately, you can [fork the tutorial repository on GitHub](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial) and use the Lesson-1.5 folder for setup.** See the steps below to create a new pipeline.
 
 1. Navigate to your Azure DevOps project repository. For example, *https://dev.azure.com/{username}/D365-CE-DevOps-Tutorial*
-2. Click *Pipelines*, then click *Pipelines*.
+2. Hover over *Pipelines*, then click *Pipelines* in the fly-out menu.
 3. Click *New*, then click *New Pipeline*
 5. On the next screen, we will select the location of our unpacked solution: Azure Repos, GitHub, or another service. Note that choosing GitHub or other services requires that you authorize Azure DevOps to access the repository, the behavior otherwise is the same in our build pipelines.
 6. Select the repository containing the unpacked solution files.
@@ -196,7 +196,7 @@ While this snippet of code is very simple I will demonstrate adding it via task 
 6. Ensure that you have clicked the line in your editor where you would like to have the task added.
 7. Click Add
 8. Update indentation as needed.
-9. Save you pipeline and run to test your changes.
+9. Save your pipeline and run to test your changes.
 
 ![Add task using task assistant](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/blob/f0916cb1c6187d503882b43e2381820d5bc0b421/media/devops/multi-stage-pipelines/task-assistant-usage.gif?raw=true)
 
