@@ -33,7 +33,7 @@ Below you will find the complete script from the first blog that enables us to d
 
 If you are following along from the first blog I have called out the changes that have been made. Otherwise, follow the steps below to implement the updated solution deployment script using a multi-stage pipeline. **If you haven't unpacked your solution and checked it into version control go back to the [first blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines) for more information.** **Alternately, you can [fork the tutorial repository on GitHub](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial) and use the Lesson-1.5 folder for setup.** 
 
-If you are starting from scratch follow the steps below to create a new pipeline.
+If you are starting from scratch or have forked the tutorial repo follow the steps below to create a new pipeline.
 
 1. Navigate to your Azure DevOps project repository. For example, *https://dev.azure.com/{username}/D365-CE-DevOps-Tutorial*
 2. Hover over *Pipelines*, then click *Pipelines* in the fly-out menu.
