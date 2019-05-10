@@ -4,9 +4,12 @@ In our [last blog](https://community.dynamics.com/crm/b/crminthefield/archive/20
 
 For a deeper look into changes announced during the Build conference check out the [What's new with Azure Pipelines](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/) blog and the [announcement for YAML Release in Azure Pipelines]( https://mybuild.techcommunity.microsoft.com/sessions/77791?source=sessions#top-anchor) session at Build.
 
-Rather than re-hash the basics and everything else we've done to this point I will urge you to check out the [first blog]((https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)) in the series. In this blog, we will look at the new pipeline features, add stages and complete a solution deployment using multi-stage YAML pipelines. The goal being to automate solution deployment from our source control management (SCM) system as highlighted in the flow diagram below.
+Rather than re-hash the basics and everything else we've done to this point I will urge you to check out the [first blog]((https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)) in the series. In this blog, we will look at the new pipeline features, add stages and complete a solution deployment using multi-stage YAML pipelines. The goal, for now, being to automate solution deployment from our source control management (SCM) system as highlighted in the flow diagram below. In the future, we will look at adding more automation and explore different concepts.
 
-![Pipeline flow - blog goal state](../../media/devops/multi-stage-pipelines/blog-pipeline-graphic.png)
+<p align="center">
+  <img src="https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/blob/a652a56baaf70807179f1c201b59fdb78526d00e/media/devops/multi-stage-pipelines/blog-pipeline-graphic.png">
+</p>
+
 
   - [Getting started](#getting-started)
     - [Updating our build script for a multi-stage setup](#updating-our-build-script-for-a-multi-stage-setup)
@@ -19,7 +22,7 @@ Rather than re-hash the basics and everything else we've done to this point I wi
 
 ## Getting started
 
-If multi-stage pipelines are not generally available when you read this you will first need to enable the preview feature. This can be accomplished using the following steps.
+If multi-stage pipelines are not enabled by default when you read this you will first need to enable the preview feature. This can be accomplished using the following steps. 
 
 1. Navigate to your Azure DevOps instance (e.g. https://dev.azure.com/example/project)
 2. Click your profile icon in the top right of the page.
