@@ -4,15 +4,17 @@ In our [last blog](https://community.dynamics.com/crm/b/crminthefield/archive/20
 
 For a deeper look into changes announced during the Build conference check out the [What's new with Azure Pipelines](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/) blog and the [announcement for YAML Release in Azure Pipelines]( https://mybuild.techcommunity.microsoft.com/sessions/77791?source=sessions#top-anchor) session at Build.
 
-Rather than re-hash the basics and everything else we've done to this point I will urge you to check out the [first blog](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines) in the series. In this blog, we will look at the new pipeline features, add stages to our build, and complete a solution deployment using multi-stage YAML pipelines.
+Rather than re-hash the basics and everything else we've done to this point I will urge you to check out the [first blog]((https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)) in the series. In this blog, we will look at the new pipeline features, add stages and complete a solution deployment using multi-stage YAML pipelines. The goal being to automate solution deployment from our source control management (SCM) system as highlighted in the flow diagram below.
+
+![Pipeline flow - blog goal state](../../media/devops/multi-stage-pipelines/blogs-pipeline-graphic.png)
 
   - [Getting started](#getting-started)
-  - [Updating our build script for a multi-stage setup](#updating-our-build-script-for-a-multi-stage-setup)
-    - [Steps to create pipeline variables](#steps-to-create-pipeline-variables)
-  - [Adding the release stage](#adding-the-release-stage)
-    - [Download artifacts](#download-artifacts)
-    - [Import solution into target environment](#import-solution-into-target-environment)
-     - [Add deployment variables](#add-deployment-variables)
+    - [Updating our build script for a multi-stage setup](#updating-our-build-script-for-a-multi-stage-setup)
+      - [Steps to create pipeline variables](#steps-to-create-pipeline-variables)
+    - [Adding the release stage](#adding-the-release-stage)
+      - [Download artifacts](#download-artifacts)
+      - [Import solution into target environment](#import-solution-into-target-environment)
+        - [Add deployment variables](#add-deployment-variables)
   - [Additional Resources](#additional-resources)
 
 ## Getting started
@@ -258,4 +260,3 @@ In our upcoming blog(s) we will explore templates to make our pipeline code reus
 - [What's new with Azure Pipelines](https://devblogs.microsoft.com/devops/whats-new-with-azure-pipelines/)
 - Example code - https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial
 - [Dynamics 365 Build Tools](https://marketplace.visualstudio.com/items?itemName=WaelHamze.xrm-ci-framework-build-tasks) - Azure Pipeline tasks for automating build & deployment
-
