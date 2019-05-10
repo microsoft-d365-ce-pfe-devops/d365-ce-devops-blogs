@@ -6,7 +6,7 @@ For a deeper look into changes announced during the Build conference check out t
 
 Rather than re-hash the basics and everything else we've done to this point I will urge you to check out the [first blog]((https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)) in the series. In this blog, we will look at the new pipeline features, add stages and complete a solution deployment using multi-stage YAML pipelines. The goal being to automate solution deployment from our source control management (SCM) system as highlighted in the flow diagram below.
 
-![Pipeline flow - blog goal state](../../media/devops/multi-stage-pipelines/blogs-pipeline-graphic.png)
+![Pipeline flow - blog goal state](../../media/devops/multi-stage-pipelines/blog-pipeline-graphic.png)
 
   - [Getting started](#getting-started)
     - [Updating our build script for a multi-stage setup](#updating-our-build-script-for-a-multi-stage-setup)
