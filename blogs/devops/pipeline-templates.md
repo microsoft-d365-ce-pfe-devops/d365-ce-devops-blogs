@@ -91,7 +91,7 @@ stages:
 - template: stages/build.yml@templates
 - template: stages/release.yml@templates
 ```
-*[azure-repos-build-release.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/azure-repos-build-release.yml)*
+*[azure-repos-build-release.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/Part-1/azure-repos-build-release.yml)*
 
 #### Pipeline Templates in GitHub
 
@@ -143,7 +143,7 @@ stages:
 - template: stages/build.yml@templates
 - template: stages/release.yml@templates
 ```
-*[azure-repos-build-release.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/azure-repos-build-release.yml)*
+*[azure-repos-build-release.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/Part-1/azure-repos-build-release.yml)*
 
 After the changes we've made, if you attempt to run your Build & Release pipeline manually, you shouldn't notice any change in behavior.
 
