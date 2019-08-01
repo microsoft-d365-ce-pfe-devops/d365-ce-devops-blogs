@@ -1,4 +1,4 @@
-# Modularizing Pipelines and Implementing PowerApps Checker in DevOps for Dynamics 365 for Customer Engagement Solutions
+# Refactoring Azure DevOps Pipelines and Implementing PowerApps Checker in DevOps for Dynamics 365 for Customer Engagement Solutions - DevOps Part 2
 
 Welcome to the next entry in our blog series on DevOps for Dynamics 365 for Customer Engagement (D365 CE). Up until now, we've covered the following:
 
@@ -35,18 +35,18 @@ As a new deliverable in our DevOps environment, we will be enforcing some code q
 
 It is very likely your D365 CE deployment will consist of more than one solution. While the components that comprise your solution may be distinct, the pipelines you use to deploy these solutions will be quite similar, if not completely identical. That said, it would be an ironic shame if we were to start copying and pasting our code while incorporating *DevOps*.
 
-There are many strategies for organizing your D365 CE solution architecture in source control. We will be exploring some of them in later blog posts, but for the purposes for this article, let's assume that we've landed on a strategy which includes us storing our pipeline templates in a separate repository. You can import, fork, or directly reference [our pipeline repository](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines), or create your own.
+There are many strategies for organizing your D365 CE solution architecture in source control. We will be exploring some of them in later blog posts, but for the purposes of this article, let's assume that we've landed on a strategy which includes storing our pipeline templates in a separate repository. You can import, fork, or directly reference [our pipeline repository](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines), or create your own.
 
 ### Introducing Stage Templates
 
-[Stage templates](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#stage-templates) let us write the YAML for our stages in separate files, enabling us to gain the power of new multi-stage pipelines combined with the cleanliness of modularity. At the time of writing this article, there are templates for stages, jobs, steps, and variables. Eventually, we will be using each of them, but for now, we'll start with stage templates, leaving the world a little better than when we found it.
+[Stage templates](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#stage-templates) allow us to write the YAML for our stages in separate files, enabling us to gain the power of new multi-stage pipelines combined with the cleanliness of modularity. At the time of writing this article, there are templates for stages, jobs, steps, and variables. Eventually, we will be using each of them, but for now, we'll start with stage templates, leaving the world a little better than we found it.
 
 ```YAML
 stages:
 - stage: Build
   jobs:
-    - job:
-      displayName: "Pack Solution from repository"
+  - job:
+    displayName: "Pack Solution from repository"
 ```
 *Excerpt from [stages/build.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines/blob/blog-part-2.0/stages/build.yml)*
 
@@ -73,7 +73,7 @@ Since the stage templates we've created are tracked in an external repository, w
 
 #### Pipeline Templates in Azure Repos
 
-If you chose to import our repository or create your own in Azure Repos, as explained in the [documentation for the `type` parameter](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#type), you can simply reference it by name in a `repository` entry.
+If you chose to import our repository or create your own in Azure Repos, you can simply reference it by name in a `repository` entry, as explained in the [documentation for the `type` parameter](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#type).
 
 ```YAML
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
@@ -95,7 +95,7 @@ stages:
 
 #### Pipeline Templates in GitHub
 
-If you are using GitHub for your repository, you will need to create a [service connection](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml) if you don't have one already. Be sure to adhere to the principle of least privilege. That is, you only need to read from a public repository, make sure your service connection only has that privilege.
+If you are using GitHub for your repository, you will need to create a [service connection](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml), if you don't have one already. Be sure to adhere to the principle of least privilege. That is, you only need to read from a public repository, make sure your service connection only has that privilege.
 
 ##### Steps to Create a GitHub Service Endpoint
 
@@ -123,7 +123,7 @@ If you are using GitHub for your repository, you will need to create a [service 
 
 ![Create a service connection in Azure DevOps](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/azdops-create-service-connection.gif)
 
-Now that you have a service connection, following the [documentation for the `type` parameter](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#type), you can reference your repository by name, set the `endpoint` parameter to the name of your service connection. Also, if you want to point to a specific version of the external repository, supply the tag in the `ref` parameter. For example, if you are using our public pipelines repository, for the purposes of this tutorial, enter a value of `refs/tags/blog-part-2.0` for a version consistent with what we've learned so far. We will be updating this in a moment.
+Now that you have a service connection, following the [documentation for the `type` parameter](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#type), you can reference your repository by name and set the `endpoint` parameter to the name of your service connection. Also, if you want to point to a specific version of the external repository, supply the tag in the `ref` parameter. For example, if you are using our public pipelines repository, for the purposes of this tutorial, enter a value of `refs/tags/blog-part-2.0` for a version consistent with what we've learned so far. We will be updating this in a moment.
 
 ```YAML
 name: $(BuildDefinitionName)-$(Date:yyyyMMdd).$(Rev:.r)
@@ -145,21 +145,24 @@ stages:
 ```
 *[azure-repos-build-release.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/Part-1/azure-repos-build-release.yml)*
 
-After the changes we've made, if you attempt to run your Build & Release pipeline manually, you shouldn't notice any change in behavior.
+After the changes we've made, if you attempt to run your Build & Release pipeline, you shouldn't notice any change in behavior.
 
 ## Include PowerApps Checker in a Pipeline
 
 At the time of writing, the D365 CE product group has just released the [PowerApps checker PowerShell Module](https://community.dynamics.com/365/b/365teamblog/archive/2019/06/26/automatically-validate-your-solutions-using-the-powerapps-checker-powershell-module). It's currently in preview, and an official DevOps task for invoking it will be available in the near future. However, since it's possible to call it non-interactively, we don't have to wait! Let's add it to our environment and provide a report on our built solution.
 
-For the purposes of this stage, we will be using the [Get-PowerAppsCheckerRulesets](https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.checker.powershell/get-powerappscheckerrulesets?view=pa-ps-latest) and [Invoke-PowerAppsChecker](https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.checker.powershell/invoke-powerappschecker?view=pa-ps-latest) cmdlets. In order to call these, we're going to need a few new variables in our pipeline. At a minimum, we will need the following:
+For the purposes of this stage, we will be using the  [Invoke-PowerAppsChecker](https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.checker.powershell/invoke-powerappschecker?view=pa-ps-latest) cmdlet. In order to call this, we're going to need a few new variables in our pipeline. At a minimum, we will need the following:
 - Geography (or ApiUrl)
 - Azure Tenant Id
 - Client Application Id
 - Client Application Secret
+- Ruleset Id
 
 ### Create an Application Registration for PowerApps Checker
 
-In order to add the last two from that list, we will neet to [create an Application Regsitration in Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal). Per the [documentation on PowerApps Checker](https://docs.microsoft.com/en-us/powershell/powerapps/overview?view=pa-ps-latest#powerapps-checker-authentication-and-authorization), provide the following options when creating your App Registration:
+In order to add the Client Application Id / Secret, we will need to create an App Registration in Azure Active Directory. The [documentation on PowerApps Checker](https://docs.microsoft.com/en-us/powershell/powerapps/overview?view=pa-ps-latest#powerapps-checker-authentication-and-authorization) includes a [script to do this for you](https://docs.microsoft.com/en-us/powershell/powerapps/overview?view=pa-ps-latest#sample-script-to-create-an-aad-application). If you'd rather do this manually from the portal, you can follow [the instructions in the "How to"](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal), using the configurations provided below. If you choose to use the script, you can skip to [generating a client secret](#generate-a-secret-for-an-app-registration).  
+
+Per the documentation on PowerApps Checker, provide the following options when creating your App Registration:
 - Redirect URI
   - Type: *Public client (mobile & desktop)*
   - Redirect URI: *urn:ietf:wg:oauth:2.0:oob*
@@ -170,7 +173,7 @@ Then, in *API permissions*, grant access to the *PowerApps-Advisor* API, giving 
 
 ![Grant application permissions of Analysis.All for the PowerApps-Advisor API](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/powerapps-checker-api-permissions.gif)
 
-Finally, generate a secret for the registration.
+Finally, <span id="generate-a-secret-for-an-app-registration">generate a secret for the registration.</span>
 
 ![Generate a client secret](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/powerapps-checker-secret.gif)
 
@@ -189,13 +192,21 @@ You can get **azure.tenantId** and **powerAppsChecker.clientId** from the *Overv
 
 ![PowerApps Checker Client Application Registration Overview](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/app-registration-overview.png)
 
+#### Retrieve the Ruleset Id
+
+The final variable we will need in order to invoke PowerApps Checker is **powerAppsChecker.rulesetId**. You can use the [Get-PowerAppsCheckerRulesets](https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.checker.powershell/get-powerappscheckerrulesets?view=pa-ps-latest) cmdlet to retrieve the available guids. At the time of writing, there are [two rulesets available](https://docs.microsoft.com/en-us/powerapps/developer/common-data-service/checker/webapi/overview#rulesets-and-rules). The guids will never change, so you are free to store these as a variable to re-use them for your pipelines.
+
+- **powerAppsChecker.rulesetId**
+  - *083a2ef5-7e0e-4754-9d88-9455142dc08b* for AppSource Certification
+  - *0ad12346-e108-40b8-a956-9a8f95ea18c9* for Solution Checker
+
 ### Install Sarif Viewer Build Tab
 
-The PowerApps Checker service will generate a JSON file following the [SARIF](http://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) schema. Once we invoke the service from our pipeline, we will want a convenient way to view the results. The Microsoft DevLabs team has released an experimental [open-source](https://github.com/microsoft/sarif-azuredevops-extension) Azure DevOps extension for this called [Sarif Viewer Build Tab](https://marketplace.visualstudio.com/items?itemName=sariftools.sarif-viewer-build-tab). Open that link and install it into your Azure DevOps organization in order to view the results of PowerApps Checker within your Pipeline summary.
+The PowerApps Checker service will generate a JSON file following the [SARIF](http://docs.oasis-open.org/sarif/sarif/v2.0/sarif-v2.0.html) schema. Once we invoke the service from our pipeline, we will want a convenient way to view the results. The Microsoft DevLabs team has released an experimental, [open-source](https://github.com/microsoft/sarif-azuredevops-extension) Azure DevOps extension for this called [Sarif Viewer Build Tab](https://marketplace.visualstudio.com/items?itemName=sariftools.sarif-viewer-build-tab). Open that link and install it into your Azure DevOps organization in order to view the results of PowerApps Checker within your Pipeline summary.
 
 ### Invoke PowerApps Checker From a Test Stage in a Pipeline 
 
-We now have all of the pieces in place to add an additional stage to our Pipeline and start invoking PowerApps Checker. Add the following YAML file to your pipelines repository, or if you're referencing ours, update your reference to use the [blog-part-2.1 release](), which contains the newest *test.yml* file.
+We now have all of the pieces in place to add an additional stage to our Pipeline and start invoking PowerApps Checker. Add the following YAML file to your pipelines repository, or if you're referencing ours, update your reference to use the [blog-part-2.1 tag](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines/tree/blog-part-2.1), which contains the newest *test.yml* file.
 
 ```YAML
 stages:
@@ -205,54 +216,58 @@ stages:
   condition: succeeded('Build')
 
   jobs:
-    - job:
-      displayName: 'Run PowerApps Checker'
+  - job:
+    displayName: 'Run PowerApps Checker'
 
-      pool:
-        vmImage: 'vs2017-win2016'
+    pool:
+      vmImage: 'vs2017-win2016'
 
-      steps:
-      - task: DownloadBuildArtifacts@0
-        inputs:
-          buildType: 'current'
-          downloadType: 'single'
-          artifactName: 'drop'
-          downloadPath: '$(System.ArtifactsDirectory)'
+    steps:
+    - task: DownloadBuildArtifacts@0
+      inputs:
+        buildType: 'current'
+        downloadType: 'single'
+        artifactName: 'drop'
+        downloadPath: '$(System.ArtifactsDirectory)'
+      
+    - powershell: Install-Module -Name Microsoft.PowerApps.Checker.PowerShell -Scope CurrentUser -Force
+      displayName: 'Install Microsoft.PowerApps.Checker.PowerShell'
+    
+    - powershell: |
+        md '$(Common.TestResultsDirectory)\powerapps-checker'
+
+        Import-Module Microsoft.PowerApps.Checker.PowerShell
+        $ruleset = New-Object Microsoft.PowerApps.Checker.Client.Models.Ruleset
+        $ruleset.Id = [Guid]::Parse('$(powerAppsChecker.rulesetId)')
         
-      - powershell: Install-Module -Name Microsoft.PowerApps.Checker.PowerShell -Scope CurrentUser -Force
-        displayName: 'Install Microsoft.PowerApps.Checker.PowerShell'
-      
-      - powershell: |
-          md '$(Common.TestResultsDirectory)\powerapps-checker'
-          $rulesets = Get-PowerAppsCheckerRulesets -Geography $(azure.geography)
-          Invoke-PowerAppsChecker `
-            -Geography $(azure.geography) `
-            -ClientApplicationId $(powerAppsChecker.clientId) `
-            -TenantId $(azure.tenantId) `
-            -Ruleset $rulesets `
-            -FileUnderAnalysis '$(System.ArtifactsDirectory)\drop\packedSolution\$(solution.name)_managed.zip' `
-            -OutputDirectory '$(Common.TestResultsDirectory)\powerapps-checker' `
-            -ClientApplicationSecret (ConvertTo-SecureString -AsPlainText -Force -String '$(powerAppsChecker.clientSecret)')
-        displayName: 'Invoke PowerApps Checker'
+        Invoke-PowerAppsChecker `
+          -Geography $(azure.geography) `
+          -ClientApplicationId $(powerAppsChecker.clientId) `
+          -TenantId $(azure.tenantId) `
+          -Ruleset $ruleset `
+          -FileUnderAnalysis '$(System.ArtifactsDirectory)\drop\packedSolution\$(solution.name)_managed.zip' `
+          -OutputDirectory '$(Common.TestResultsDirectory)\powerapps-checker' `
+          -ClientApplicationSecret (ConvertTo-SecureString -AsPlainText -Force -String '$(powerAppsChecker.clientSecret)')
+      displayName: 'Invoke PowerApps Checker'
 
-      - powershell: md '$(Common.TestResultsDirectory)\powerapps-checker\unzipped'
-        displayName: 'Create folder for unzipped results'
+    - powershell: md '$(Common.TestResultsDirectory)\powerapps-checker\unzipped'
+      displayName: 'Create folder for unzipped results'
 
-      - task: ExtractFiles@1
-        inputs:
-          archiveFilePatterns: '$(Common.TestResultsDirectory)\powerapps-checker\*.zip'
-          destinationFolder: '$(Common.TestResultsDirectory)\powerapps-checker\unzipped'
-        displayName: 'Extract results to folder'
-      
-      - task: PublishBuildArtifacts@1
-        inputs:
-          pathtoPublish: '$(Common.TestResultsDirectory)\powerapps-checker\unzipped'
-          artifactName: CodeAnalysisLogs
-        displayName: 'Publish PowerApps Checker report artifacts'
+    - task: ExtractFiles@1
+      inputs:
+        archiveFilePatterns: '$(Common.TestResultsDirectory)\powerapps-checker\*.zip'
+        destinationFolder: '$(Common.TestResultsDirectory)\powerapps-checker\unzipped'
+      displayName: 'Extract results to folder'
+    
+    - task: PublishBuildArtifacts@1
+      inputs:
+        pathtoPublish: '$(Common.TestResultsDirectory)\powerapps-checker\unzipped'
+        artifactName: CodeAnalysisLogs
+      displayName: 'Publish PowerApps Checker report artifacts'
 ```
 *[stages/test.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-Pipelines/blob/blog-part-2.1/stages/test.yml)*
 
-Note that at the time of writing, it is important that your artifact be called "CodeAnalysisLogs." The current version of the Sarif Viewer Build Tab extension is hard-coded only read from that folder. Also, since the you need the sarif files to be extracted
+Note that at the time of writing, it is important that your artifact be called "CodeAnalysisLogs". The current version of the Sarif Viewer Build Tab extension is hard-coded to only read from that folder. Also, the tab extension will not read from zip files, so you need to extract the SARIF files into that folder.
 
 You will also need to update your main YAML file to include a reference to the newly created stage:
 
@@ -271,9 +286,9 @@ resources:
       endpoint: pipeline-templates
 
 stages:
-  - template: stages/build.yml@templates
-  - template: stages/test.yml@templates
-  - template: stages/release.yml@templates
+- template: stages/build.yml@templates
+- template: stages/test.yml@templates
+- template: stages/release.yml@templates
 ```
 *[github-build-test-release.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/Part-2/github-build-test-release.yml)*
 
@@ -283,10 +298,10 @@ Once you've committed that, you should be able to run your pipeline and watch as
 
 ![PowerApps Checker Scans Tab (No Results)](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/powerapps-checker-no-results.png)
 
-However, right now, if you are using the sample solution from our tutorial repository, this view is pretty unexciting. Feel free to verify it by adding a solution component that violates a PowerApps Checker rule. Alternatively, you can download and check in the newest ExtractedSolution folder from our repository for a version of the solution containing a JavaScript file that should throw off some red flags:
+However, right now, if you are using the sample solution from our tutorial repository, this view is pretty unexciting. Feel free to verify it by adding a solution component that violates a PowerApps Checker rule. Alternatively, you can download and check in the newest [ExtractedSolution](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/tree/master/Lesson-2/ExtractedSolution) folder from our [tutorial repository](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/) for a version of the solution containing a JavaScript file that should throw off some red flags:
 
 ![PowerApps Checker Scans Tab (No Results)](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/powerapps-checker-bad-javascript.png)
 
-That's it for this article! There's still plenty of room to add value here. As a fun challenge for yourself, see if you can parse the results of the PowerApps Checker programmatically and actually cause the Test stage to fail if any results are found. We will be providing a solution to this in our next entry.
+That's it for this article! There's still plenty of room to add value here. As a fun challenge for yourself, see if you can parse the results of the PowerApps Checker programmatically and actually cause the Test stage to fail if any results are found. We will be providing a solution to this in our next entry. (**Hint:** The PowerApps Checker result includes a property called *IssueSummary*.)
 
-Thanks for reading, feel free to ask any questions in the comments below, and happy DevOps-ing!
+Thanks for reading, feel free to ask any questions in the comments section below, and happy DevOps-ing!
