@@ -190,7 +190,7 @@ Now that we have a client application that we can use to authenticate with the P
 
 You can get **azure.tenantId** and **powerAppsChecker.clientId** from the *Overview* tab for the App registration you created.
 
-![PowerApps Checker Client Application Registration Overview](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/app-registration-overview.png)
+<img alt="PowerApps Checker Client Application Registration Overview" src="https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/app-registration-overview.png" width="675" />
 
 #### Retrieve the Ruleset Id
 
@@ -296,7 +296,7 @@ stages:
 
 Once you've committed that, you should be able to run your pipeline and watch as the Test stage completes prior to beginning the Release stage. Once the Test stage completes, from the Pipeline review, you should see a "Scans" tab, which will show the results of the PowerApps Checker.
 
-![PowerApps Checker Scans Tab (No Results)](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/powerapps-checker-no-results.png)
+<img alt="PowerApps Checker Scans Tab (No Results)" src="https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/powerapps-checker-no-results.png" width="800" />
 
 However, right now, if you are using the sample solution from our tutorial repository, this view is pretty unexciting. Feel free to verify it by adding a solution component that violates a PowerApps Checker rule. Alternatively, you can download and check in the newest [ExtractedSolution](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/tree/master/Lesson-2/ExtractedSolution) folder from our [tutorial repository](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/) for a version of the solution containing a JavaScript file that should throw off some red flags:
 
