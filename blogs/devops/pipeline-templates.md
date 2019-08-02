@@ -167,7 +167,7 @@ Per the documentation on PowerApps Checker, provide the following options when c
   - Type: *Public client (mobile & desktop)*
   - Redirect URI: *urn:ietf:wg:oauth:2.0:oob*
 
-![Create a Client Application in Azure Active Directory](https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/powerapps-checker-client.png =700x)
+<img alt="Create a Client Application in Azure Active Directory" src="https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/powerapps-checker-client.png" width="700"/>
 
 Then, in *API permissions*, grant access to the *PowerApps-Advisor* API, giving Application permissions to Analysis.All.
 
