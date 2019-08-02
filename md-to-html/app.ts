@@ -1,6 +1,7 @@
 import arg from "arg";
-import { launch } from "puppeteer";
 import { promises as fs } from "fs";
+import fetch from "node-fetch";
+import pretty from "pretty";
 
 const args = arg({
     "--file": String,
@@ -10,23 +11,56 @@ const file = args["--file"];
 
 const queries: RegExSearch[] = [
     {
+        search: /[\s\S]*<article class="markdown-body[^>]*>([\s\S]*)<\/article>[\s\S]*/,
+        replace: "$1"
+    },
+    {
         search: / rel="[^"]*"/g,
         replace: ""
+    },
+    {
+        search: /<h([0-9])><a id="user-content-([^"]*).*<svg.*\/svg><\/a>/g,
+        replace: "<h$1 id=\"$2\">"
+    },
+    {
+        search: /<a href="https:\/\/community.dynamics.com/g,
+        replace: "<a href=\""
+    },
+    {
+        search: /<a href="([^"]*)">/g,
+        replace: "<a target=\"_blank\" href=\"$1\">"
+    },
+    {
+        search: /<\/div>\n<p>/g,
+        replace: "</div>\n<p style=\"font-size: 85%; text-align: right;\">"
+    },
+    {
+        search: /<div [^>]*><pre>/g,
+        replace: "<div><pre style=\"background-color: #f6f8fa; border-radius: 3px; font-size: 85%; line-height: 1.45; margin-bottom: 0px; padding: 16px;\">"
+    },
+    {
+        search: /<span class="pl-ent">/g,
+        replace: "<span style=\"color: #22863a;\">"
+    },
+    {
+        search: /<span class="pl-s">/g,
+        replace: "<span style=\"color: #032f62;\">"
+    },
+    {
+        search: /<span class="pl-pds">/g,
+        replace: "<span style=\"color: #032f62;\">"
     }
 ];
 
 (async () => {
-    const browser = await launch();
-    const page = await browser.newPage();
-    await page.goto(`https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/blob/master/blogs/devops/${file}.md`);
-    await page.waitForSelector(".markdown-body");
-    const containerHandle = await page.$(".markdown-body");
-    let contents = await page.evaluate(container => container.innerHTML, containerHandle) as string;
+    const response = await fetch(`https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/blob/master/blogs/devops/${file}.md`);
+    let contents = await response.text();
     queries.forEach(query => {
         contents = contents.replace(query.search, query.replace);
     });
+    contents = pretty(contents);
     await fs.writeFile("output.html", contents);
-    await browser.close();
+    console.log("output created.");
 })();
 
 interface RegExSearch {

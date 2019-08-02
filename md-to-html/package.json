@@ -9,7 +9,11 @@
   "author": "Microsoft Dynamics 365 for Customer Engagement PFE Team",
   "license": "ISC",
   "dependencies": {
+    "@types/node-fetch": "^2.5.0",
+    "@types/pretty": "^2.0.0",
     "arg": "^4.1.1",
+    "node-fetch": "^2.6.0",
+    "pretty": "^2.0.0",
     "ts-node": "^8.3.0",
     "typescript": "^3.5.3"
   },

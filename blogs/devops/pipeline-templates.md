@@ -3,11 +3,11 @@
 Welcome to the next entry in our blog series on DevOps for Dynamics 365 for Customer Engagement (D365 CE). Up until now, we've covered the following:
 
 - [Introduction to DevOps for Dynamics 365 Customer Engagement using YAML Based Azure Pipelines](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)
-    - Unpack PowerApps solutions into source control.
-    - Use YAML pipelines to pack solutions and import them into a target environment.
-    - [Introduction to DevOps for Dynamics 365 Customer Engagement using YAML Based Azure Pipelines - Part 1.5](https://community.dynamics.com/crm/b/crminthefield/archive/2019/05/09/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines-part-1-5)
-        - Take advantage of the [new multi-stage YAML pipelines](https://mybuild.techcommunity.microsoft.com/sessions/77791?source=sessions#top-anchor) in Azure DevOps to break our pipeline into logical stages.
-        - Download build artifacts for the deployment stage of our pipeline.
+  - Unpack PowerApps solutions into source control.
+  - Use YAML pipelines to pack solutions and import them into a target environment.
+  - [Introduction to DevOps for Dynamics 365 Customer Engagement using YAML Based Azure Pipelines - Part 1.5](https://community.dynamics.com/crm/b/crminthefield/archive/2019/05/09/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines-part-1-5)
+    - Take advantage of the [new multi-stage YAML pipelines](https://mybuild.techcommunity.microsoft.com/sessions/77791?source=sessions#top-anchor) in Azure DevOps to break our pipeline into logical stages.
+    - Download build artifacts for the deployment stage of our pipeline.
 
 This article will build on the material covered so far, so if you want to follow along and you haven't walked through those articles yet, I'd recommend you do so.
 
