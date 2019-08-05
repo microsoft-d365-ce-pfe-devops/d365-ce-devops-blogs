@@ -23,7 +23,7 @@ const queries: RegExSearch[] = [
         replace: "<h$1 id=\"$2\">"
     },
     {
-        search: /(<div[^>]*>)<a[^>]*>(<img[^>]*>)<\/a><\/div>/g,
+        search: /<div style="display: none;"><a[^>]*>(<img[^>]*>)<\/a><\/div>/g,
         replace: "$1$2</div>"
     },
     {

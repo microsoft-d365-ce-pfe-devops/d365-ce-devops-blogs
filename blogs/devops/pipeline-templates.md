@@ -1,6 +1,6 @@
 # Refactoring Azure DevOps Pipelines and Implementing PowerApps Checker in DevOps for Dynamics 365 for Customer Engagement Solutions - DevOps Part 2
 
-<div style="display: none;"><img src="https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/blog-icon.png"/></div>
+<div><img src="https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/blog-icon.png"/></div>
 
 Welcome to the next entry in our blog series on DevOps for Dynamics 365 for Customer Engagement (D365 CE). Up until now, we've covered the following:
 
