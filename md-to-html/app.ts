@@ -23,6 +23,10 @@ const queries: RegExSearch[] = [
         replace: "<h$1 id=\"$2\">"
     },
     {
+        search: /<h1 .*/g,
+        replace: ""
+    },
+    {
         search: /<a href="https:\/\/community.dynamics.com/g,
         replace: "<a href=\""
     },

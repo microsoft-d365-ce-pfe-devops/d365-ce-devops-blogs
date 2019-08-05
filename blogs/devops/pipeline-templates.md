@@ -1,5 +1,7 @@
 # Refactoring Azure DevOps Pipelines and Implementing PowerApps Checker in DevOps for Dynamics 365 for Customer Engagement Solutions - DevOps Part 2
 
+<div style="display: none;"><img src="https://https://github.com/microsoft-d365-ce-pfe-devops/d365-ce-devops-blogs/raw/master/media/devops/pipeline-templates/blog-icon.png"/></div>
+
 Welcome to the next entry in our blog series on DevOps for Dynamics 365 for Customer Engagement (D365 CE). Up until now, we've covered the following:
 
 - [Introduction to DevOps for Dynamics 365 Customer Engagement using YAML Based Azure Pipelines](https://community.dynamics.com/crm/b/crminthefield/archive/2019/02/27/introduction-to-devops-for-dynamics-365-customer-engagement-using-yaml-based-azure-pipelines)
@@ -83,9 +85,9 @@ trigger:
 
 resources:
   repositories:
-    - repository: templates
-      type: git
-      name: pipeline-templates
+  - repository: templates
+    type: git
+    name: pipeline-templates
 
 stages:
 - template: stages/build.yml@templates
@@ -133,11 +135,11 @@ trigger:
 
 resources:
   repositories:
-    - repository: templates
-      type: github
-      name: microsoft-d365-ce-pfe-devops/D365-CE-Pipelines
-      ref: refs/tags/blog-part-2.0
-      endpoint: pipeline-templates
+  - repository: templates
+    type: github
+    name: microsoft-d365-ce-pfe-devops/D365-CE-Pipelines
+    ref: refs/tags/blog-part-2.0
+    endpoint: pipeline-templates
 
 stages:
 - template: stages/build.yml@templates
@@ -279,11 +281,11 @@ trigger:
 
 resources:
   repositories:
-    - repository: templates
-      type: github
-      name: microsoft-d365-ce-pfe-devops/D365-CE-Pipelines
-      ref: refs/tags/blog-part-2.1
-      endpoint: pipeline-templates
+  - repository: templates
+    type: github
+    name: microsoft-d365-ce-pfe-devops/D365-CE-Pipelines
+    ref: refs/tags/blog-part-2.1
+    endpoint: pipeline-templates
 
 stages:
 - template: stages/build.yml@templates
