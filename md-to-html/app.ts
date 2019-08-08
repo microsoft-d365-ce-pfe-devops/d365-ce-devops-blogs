@@ -44,7 +44,7 @@ const queries: RegExSearch[] = [
     },
     {
         search: /<div [^>]*><pre>/g,
-        replace: "<div style=\"overflow-x: scroll;\"><pre style=\"background-color: #f6f8fa; border-radius: 3px; font-size: 85%; line-height: 1.45; margin-bottom: 0px; padding: 16px;\">"
+        replace: "<div><pre style=\"background-color: #f6f8fa; border-radius: 3px; font-size: 85%; line-height: 1.45; margin-bottom: 0px; padding: 16px;\">"
     },
     {
         search: /<span class="pl-ent">/g,
