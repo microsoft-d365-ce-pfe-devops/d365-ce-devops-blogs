@@ -23,8 +23,8 @@ const queries: RegExSearch[] = [
         replace: "<h$1 id=\"$2\">"
     },
     {
-        search: /<div style="display: none;"><a[^>]*>(<img[^>]*>)<\/a><\/div>/g,
-        replace: "$1$2</div>"
+        search: /<div><a[^>]*>(<img[^>]*>)<\/a><\/div>/g,
+        replace: "<div style=\"display: none;\">$1</div>"
     },
     {
         search: /<h1 .*/g,
@@ -35,16 +35,16 @@ const queries: RegExSearch[] = [
         replace: "<a href=\""
     },
     {
-        search: /<a href="([^"]*)">/g,
+        search: /<a href="([^#][^"]*)">/g,
         replace: "<a target=\"_blank\" href=\"$1\">"
     },
     {
-        search: /<\/div>\n<p>/g,
-        replace: "</div>\n<p style=\"font-size: 85%; text-align: right;\">"
+        search: /<\/pre><\/div>\n<p>/g,
+        replace: "</pre></div>\n<p style=\"font-size: 85%; text-align: right;\">"
     },
     {
         search: /<div [^>]*><pre>/g,
-        replace: "<div><pre style=\"background-color: #f6f8fa; border-radius: 3px; font-size: 85%; line-height: 1.45; margin-bottom: 0px; padding: 16px;\">"
+        replace: "<div style=\"overflow-x: scroll;\"><pre style=\"background-color: #f6f8fa; border-radius: 3px; font-size: 85%; line-height: 1.45; margin-bottom: 0px; padding: 16px;\">"
     },
     {
         search: /<span class="pl-ent">/g,
