@@ -151,7 +151,7 @@ After the changes we've made, if you attempt to run your Build & Release pipelin
 
 ## Include PowerApps Checker in a Pipeline
 
-At the time of writing, the D365 CE product group has just released the [PowerApps checker PowerShell Module](https://community.dynamics.com/365/b/365teamblog/archive/2019/06/26/automatically-validate-your-solutions-using-the-powerapps-checker-powershell-module). It's currently in preview, and an official DevOps task for invoking it will be available in the near future. However, since it's possible to call it non-interactively, we don't have to wait! Let's add it to our environment and provide a report on our built solution.
+At the time of writing, the D365 CE product group has just released the [PowerApps checker PowerShell Module](https://community.dynamics.com/365/b/365teamblog/archive/2019/06/26/automatically-validate-your-solutions-using-the-powerapps-checker-powershell-module). In conjunction with this module, they have also released an official DevOps task for invoking it, and we will cover this in another article in the near future. For the purposes of this article, we will be using the PowerShell module. Let's add it to our environment and provide a report on our built solution.
 
 For the purposes of this stage, we will be using the  [Invoke-PowerAppsChecker](https://docs.microsoft.com/en-us/powershell/module/microsoft.powerapps.checker.powershell/invoke-powerappschecker?view=pa-ps-latest) cmdlet. In order to call this, we're going to need a few new variables in our pipeline. At a minimum, we will need the following:
 - Geography (or ApiUrl)
@@ -293,8 +293,7 @@ stages:
 - template: stages/release.yml@templates
 ```
 *[github-build-test-release.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/Part-2/github-build-test-release.yml)*
-
-(Azure Repos version: *[azure-repos-build-test-release.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/Part-2/azure-repos-build-test-release.yml)*)
+<br/>(Azure Repos version: *[azure-repos-build-test-release.yml](https://github.com/microsoft-d365-ce-pfe-devops/D365-CE-DevOps-Tutorial/blob/master/Lesson-2/Part-2/azure-repos-build-test-release.yml)*)
 
 Once you've committed that, you should be able to run your pipeline and watch as the Test stage completes prior to beginning the Release stage. Once the Test stage completes, from the Pipeline review, you should see a "Scans" tab, which will show the results of the PowerApps Checker.
 
